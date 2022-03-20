@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRouters from '../Routers/AppRouters';
+import { GestWork } from './gestWork';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRouters />
+     <GestWork/>
   </React.StrictMode>,
   document.getElementById('root')
 );
