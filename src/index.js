@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { GestWork } from './gestWork';
+import { GestWork } from './GestWork';
 
 ReactDOM.render(
-  <React.StrictMode>
-     <GestWork/>
-  </React.StrictMode>,
+     <GestWork/>,
   document.getElementById('root')
 );
 
