@@ -3,11 +3,34 @@ import { Link } from "react-router-dom";
 import g from "../styles/assets/g.jpg.crdownload";
 import icon1 from "../styles/assets/icon1.svg";
 import  '../styles/StyleLogin.css';
+import {useForm } from '../hooks/useForm';
+import {useDispatch} from 'react-redux';
+import { LoginS, loginGoogle } from "../redux/actions/actionLogin";
 
 export const Login = () => {
+
+
+  const dispatch = useDispatch();
+
+  const [values,handleInputChange] = useForm({
+    email: '',
+    password: '',
+  })
+
+  const {email,password} = values
+
+  const handleLogin = (e)=>{
+    e.preventDefault();
+    dispatch(LoginS(email,password))
+  }
+const handleGoogle = () =>{
+  dispatch(loginGoogle())
+}
+
+
+
   return (
-    <div className="container w-75 bg-light  rounded shadow
-    ">
+    <div className="container w-75 bg-light  rounded shadow">
       <div className="row  align-items-stretch" >
         <div className="col bg mt-5 d-none d-lg-block col-xl-6 rounded">
 
@@ -20,7 +43,7 @@ export const Login = () => {
           <h2 className="fw-bold text-center py-5">Bienvenido</h2>
 
           {/* login */}
-          <form>
+          <form onSubmit={handleLogin}>
             <div className="mb-4">
               <label className="form-label">Correo Electronico</label>
               <input
@@ -28,7 +51,8 @@ export const Login = () => {
                 type="email"
                 placeholder="Correo"
                 name="email"
-                value=""
+                value={email}
+                onChange={handleInputChange}
               />
             </div>
             <div className="mb-4">
@@ -38,7 +62,9 @@ export const Login = () => {
                 type="password"
                 placeholder="Contraseña"
                 name="password"
-                value=""
+                value={password}
+                onChange={handleInputChange}
+
               />
             </div>
             <div className="my-3">
@@ -54,6 +80,7 @@ export const Login = () => {
               <button
                 type="submit"
                 className="btn btn-outline-danger w-100 my-1"
+                onClick={handleGoogle}
               >
                 <div className="row align-items-center">
                   <div className="col-3 text-center">
