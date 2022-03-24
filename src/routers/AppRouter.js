@@ -53,7 +53,7 @@ function AppRouter() {
         />
 
         <Route
-          path="/dashboard/*"
+          path="/*"
           element={
             <PrivateRoute isAuthenticated={isLoggedIn}>
               <DashboardRoutes />

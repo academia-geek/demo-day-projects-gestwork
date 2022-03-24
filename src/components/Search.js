@@ -1,6 +1,5 @@
-import { Button } from 'bootstrap'
 import React from 'react'
-import { Form, FormControl } from 'react-bootstrap'
+import { Button, Form, FormControl } from 'react-bootstrap'
 
 export const Search = () => {
   return (

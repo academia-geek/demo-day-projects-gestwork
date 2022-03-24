@@ -7,9 +7,9 @@ import { NavBar } from "../components/NavBar";
 export const DashboardRoutes = () => {
   return (
     <>
+      <NavBar />
+      <MenuNavigation />
       <Routes>
-        <MenuNavigation />
-        <NavBar />
         <Route path="/activeProcesses" element={<ActiveProcesses />} />
         {/* <Route path="/addProcess" element={<AddProcess/>}/>  */}
 
