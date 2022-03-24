@@ -1,8 +1,22 @@
+import { useFormik } from "formik";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import "../../styles/StyleAddProcess.css";
 
 export const AddProcess = () => {
+  const dispatch = useDispatch();
+
+  const formik = useFormik({
+    initialValues: {
+      url: "",
+      nombre: "",
+      areaencargada: "",
+      fecha: "",
+      responsable: "",
+      descripcion: "",
+    },
+  });
   return (
     <div>
       <div className="container mt-1">
@@ -14,7 +28,7 @@ export const AddProcess = () => {
               <input type="file" />
             </Col>
 
-            <Col xs={8} >
+            <Col xs={8}>
               <h1>Informacion de proceso</h1>
               <Row>
                 <Col>
@@ -34,6 +48,7 @@ export const AddProcess = () => {
                     className="form-control mt-2"
                     name="nombre"
                     autoComplete="off"
+                    onChange={formik.handleChange}
                     required
                   />
                 </Col>
@@ -47,6 +62,7 @@ export const AddProcess = () => {
                     className="form-control mt-2"
                     name="areaencargada"
                     autoComplete="off"
+                    onChange={formik.handleChange}
                   />
                 </Col>
                 <Col>
@@ -56,6 +72,7 @@ export const AddProcess = () => {
                     className="form-control mt-2"
                     name="fecha"
                     autoComplete="off"
+                    onChange={formik.handleChange}
                     required
                   />
                 </Col>
@@ -65,21 +82,23 @@ export const AddProcess = () => {
                 type="text"
                 className="form-control mt-2"
                 name="responsable"
+                onChange={formik.handleChange}
                 autoComplete="off"
               />
             </Col>
             <Row className="row-resum mt-3">
-            <Col className="col-resum">
-              <label>Resumen Proceso</label>
-              <textarea
-                className="form-control mt-2 w-50 m-auto texareaResum"
-                placeholder="Descripción"
-                name="descripcion"
-              ></textarea>
-            </Col>
+              <Col className="col-resum">
+                <label>Resumen Proceso</label>
+                <textarea
+                  className="form-control mt-2 w-50 m-auto texareaResum"
+                  placeholder="Descripción"
+                  name="descripcion"
+                  onChange={formik.handleChange}
+                ></textarea>
+              </Col>
+            </Row>
           </Row>
-          </Row>
-  
+
           <div className=" mt-4 container-btn-add">
             <input
               value="Subir"
