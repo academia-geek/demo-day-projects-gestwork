@@ -1,3 +1,10 @@
+
+:root {
+  --btnbg: #05BE50;
+  --btnColor: #fff;
+  --titlesColor: #0039A6;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;

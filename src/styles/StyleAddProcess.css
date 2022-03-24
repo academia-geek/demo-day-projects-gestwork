@@ -1,0 +1,36 @@
+body {
+  box-sizing: border-box;
+}
+.container {
+  width: 67% !important;
+  margin-left: 28% !important;
+}
+
+.subtitle-text {
+  color: var(--titlesColor);
+  font-weight: 400;
+}
+.col-resum {
+  text-align: center;
+}
+
+.texareaResum {
+  resize: none;
+}
+.container-btn-add {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-add-process {
+  background-color: var(--btnbg) !important;
+  color: var(--btnColor) !important;
+}
+
+.btn-add-process::placeholder {
+  color: var(--btnColor);
+}
+
+.row-form {
+  align-items: center;
+}
