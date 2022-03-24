@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AddProcess } from "../components/AddProcess";
 import { Login } from "../components/Login";
 import {SingUp} from "../components/Register/SingUp";
 
@@ -16,6 +17,12 @@ function AppRouter() {
         element=
         {
         <SingUp/>}
+          />
+      <Route
+        path='/addProcess'
+        element=
+        {
+        <AddProcess/>}
           />
 
       </Routes>
