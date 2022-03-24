@@ -3,6 +3,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import "../../styles/StyleAddProcess.css";
+import { guardarArchivo } from "../helpers/FileUpload";
 
 export const AddProcess = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,9 @@ export const AddProcess = () => {
             <Col xs={4}>
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
               <label className="mb-3">Sube propuesta</label>
-              <input type="file" />
+              <input type="file"
+              onChange={(e) => guardarArchivo(e)}
+              />
             </Col>
 
             <Col xs={8}>
