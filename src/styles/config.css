@@ -1,7 +1,8 @@
 
 :root {
-  --btnbg: rgb(41, 167, 108);
+  --btnbg: #05BE50;
   --btnColor: #fff;
+  --titlesColor: #0039A6;
 }
 
 *{

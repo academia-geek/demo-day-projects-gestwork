@@ -23,14 +23,16 @@ export const AddProcess = () => {
         <form className="form-group">
           <Row className="row-form">
             <Col xs={4}>
-              <h2>Sube tu proceso</h2>
-              <label>Sube propuesta</label>
+              <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
+              <label className="mb-3">Sube propuesta</label>
               <input type="file" />
             </Col>
 
             <Col xs={8}>
-              <h1>Informacion de proceso</h1>
-              <Row>
+              <h2 className="subtitle-text mb-5 text-center">
+                Información de proceso
+              </h2>
+              <Row className="mt-5">
                 <Col>
                   <label>N solicitud</label>
                   <input
@@ -54,7 +56,7 @@ export const AddProcess = () => {
                 </Col>
               </Row>
 
-              <Row>
+              <Row className="mt-4">
                 <Col>
                   <label>Area encargada</label>
                   <input
@@ -76,8 +78,8 @@ export const AddProcess = () => {
                     required
                   />
                 </Col>
-              </Row>
-              <label>Lider / responsable</label>
+              </Row >
+              <label className="mt-4">Lider / responsable</label>
               <input
                 type="text"
                 className="form-control mt-2"
@@ -86,9 +88,9 @@ export const AddProcess = () => {
                 autoComplete="off"
               />
             </Col>
-            <Row className="row-resum mt-3">
+            <Row className="row-resum mt-4">
               <Col className="col-resum">
-                <label>Resumen Proceso</label>
+                <label className="mb-3">Resumen Proceso</label>
                 <textarea
                   className="form-control mt-2 w-50 m-auto texareaResum"
                   placeholder="Descripción"

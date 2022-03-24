@@ -6,6 +6,10 @@ body {
   margin-left: 28% !important;
 }
 
+.subtitle-text {
+  color: var(--titlesColor);
+  font-weight: 400;
+}
 .col-resum {
   text-align: center;
 }
