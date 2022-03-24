@@ -1,20 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "../components/Login";
-import SingUp from "../components/SingUp";
+import {SingUp} from "../components/Register/SingUp";
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route
-        path='/'
+        path='/login'
         element={
           <Login />}
           />
            <Route
         path='/register'
-        element={
-          <SingUp />}
+        element=
+        {
+        <SingUp/>}
           />
 
       </Routes>
