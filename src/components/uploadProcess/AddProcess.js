@@ -1,19 +1,20 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import "../../styles/StyleAddProcess.css";
 
 export const AddProcess = () => {
   return (
     <div>
-      <div className="container">
+      <div className="container mt-1">
         <form className="form-group">
-          <Row>
+          <Row className="row-form">
             <Col xs={4}>
               <h2>Sube tu proceso</h2>
               <label>Sube propuesta</label>
               <input type="file" />
             </Col>
 
-            <Col xs={5}>
+            <Col xs={8} >
               <h1>Informacion de proceso</h1>
               <Row>
                 <Col>
@@ -67,24 +68,23 @@ export const AddProcess = () => {
                 autoComplete="off"
               />
             </Col>
-
-            <Row>
-              <Col>
-                <label>Resumen Proceso</label>
-
-                <textarea
-                  className="form-control mt-2 w-50"
-                  name="descripcion"
-                ></textarea>
-              </Col>
-            </Row>
+            <Row className="row-resum mt-3">
+            <Col className="col-resum">
+              <label>Resumen Proceso</label>
+              <textarea
+                className="form-control mt-2 w-50 m-auto texareaResum"
+                placeholder="Descripción"
+                name="descripcion"
+              ></textarea>
+            </Col>
           </Row>
-
-          <div className=" mt-2">
+          </Row>
+  
+          <div className=" mt-4 container-btn-add">
             <input
               value="Subir"
               type="submit"
-              className="btn btn-outline-dark"
+              className="btn btn-add-process px-5"
             />
           </div>
         </form>
