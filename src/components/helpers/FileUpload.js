@@ -15,7 +15,7 @@ export function guardarArchivo(e) {
     ) //send to Api
       .then((res) => res.json())
       .then((a) => {
-        console.log(a); //See response
+        console.log(a); //See response actualziar estado
       })
       .catch((e) => console.log(e)); // Or Error in console
   };

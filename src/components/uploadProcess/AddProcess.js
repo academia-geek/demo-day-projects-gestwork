@@ -1,11 +1,31 @@
+import { collection, getDocs } from "firebase/firestore";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
+import { db } from "../../firebase/firebaseConfig";
 import "../../styles/StyleAddProcess.css";
 import { guardarArchivo } from "../helpers/FileUpload";
 
 export const AddProcess = () => {
+  const [dataUser, setDataUser] = useState();
+
+  const getUser = async () => {
+    const querySnapshot = await getDocs(collection(db, "users"));
+    const users = [];
+    querySnapshot.forEach((doc) => {
+      users.push({
+        ...doc.data(),
+      });
+    });
+
+    setDataUser(users);
+  };
+
+  useEffect(() => {
+    getUser();
+  }, [dataUser]);
+
   const dispatch = useDispatch();
 
   const formik = useFormik({
@@ -26,9 +46,7 @@ export const AddProcess = () => {
             <Col xs={4}>
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
               <label className="mb-3">Sube propuesta</label>
-              <input type="file"
-              onChange={(e) => guardarArchivo(e)}
-              />
+              <input type="file" onChange={(e) => guardarArchivo(e)} />
             </Col>
 
             <Col xs={8}>
@@ -81,15 +99,16 @@ export const AddProcess = () => {
                     required
                   />
                 </Col>
-              </Row >
+              </Row>
               <label className="mt-4">Lider / responsable</label>
-              <input
-                type="text"
-                className="form-control mt-2"
-                name="responsable"
-                onChange={formik.handleChange}
-                autoComplete="off"
-              />
+              <select className="form-control mt-2">
+                {dataUser ? (
+                  dataUser.map((u) => <option key={u.id}>{u.name} / {u.cargo}</option>)
+                ) : (
+                  <option></option>
+                )}
+                ;
+              </select>
             </Col>
             <Row className="row-resum mt-4">
               <Col className="col-resum">
