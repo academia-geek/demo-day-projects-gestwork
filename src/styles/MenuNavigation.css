@@ -1,28 +1,30 @@
-ul {
-    list-style-type: none;
-    margin: 10px 10px 10px 10px;
-    padding: 0;
-    width: 25%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  li a {
-    display: block;
-    color: #000;
-    padding: 18px 16px;
-    text-decoration: none;
-    margin: 15px 2px;
-  }
-  
-  li a.active {
-    background-color: #999e9c;
-    color: white;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
+.menu {
+  list-style-type: none;
+  margin: 10px 10px 10px 10px;
+  padding: 0;
+  width: 25%;
+  background-color: var(--menuColor);
+  color: var(--btnColor);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.menu__item {
+  display: block;
+  color: var(--btnColor);
+  font-size: 24px;
+  padding: 18px 16px;
+  text-decoration: none;
+  margin: 65px 2px;
+}
+
+.menu__item.active {
+  /* background-color: #999e9c; */
+  color: white;
+}
+
+.menu__item:hover:not(.active) {
+  /* background-color: #555; */
+  color: white;
+}
