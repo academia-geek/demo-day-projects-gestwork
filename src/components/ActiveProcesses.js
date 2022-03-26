@@ -1,15 +1,15 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { Search } from "./Search";
+import { SearchProcesses } from "./SearchProcesses";
 
 export const ActiveProcesses = () => {
   return (
     <>
       <div className="container">
         <div>
-          <h2>Procesos Activos</h2>
+          <h2 className="title__section">Procesos Activos</h2>
         </div>
-        <Search />
+        <SearchProcesses />
         <section>
           <Card border="primary" style={{ width: "18rem" }}>
             <Card.Body>

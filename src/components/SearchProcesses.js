@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button, Form, FormControl } from 'react-bootstrap'
+import {Search } from 'grommet-icons';
 
-export const Search = () => {
+export const SearchProcesses = () => {
   return (
     <Form className="d-flex">
         <FormControl
@@ -10,7 +11,9 @@ export const Search = () => {
           className="me-2"
           aria-label="Search"
         />
-        <Button variant="outline-success">Search</Button>
+        <Button variant="outline-success" className=''>
+          <Search size='large' /> 
+        </Button>
       </Form>
   )
 }
