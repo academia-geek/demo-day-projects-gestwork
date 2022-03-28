@@ -40,7 +40,7 @@ export const AddProcess = () => {
   });
   return (
     <div>
-      <div className="container mt-1">
+      <div className="containerAdd mt-1">
         <form className="form-group">
           <Row className="row-form">
             <Col xs={4}>
