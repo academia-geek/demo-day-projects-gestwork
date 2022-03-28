@@ -4,7 +4,7 @@ import {Trash } from 'grommet-icons';
 export const AssignedProcesses = () => {
   return (
     <>
-    <div className="container">
+    <div className="containerAdd">
       <div>
         <h2 className='title__section'>Procesos Asignados</h2>
       </div>
