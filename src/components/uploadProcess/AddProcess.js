@@ -10,7 +10,7 @@ import "../../styles/StyleAddProcess.css";
 
 export const AddProcess = () => {
   const [dataUser, setDataUser] = useState();
-  const [user, setUser] = React.useState('users');
+  const [user, setUser] = React.useState("users");
 
   const getUser = async () => {
     const querySnapshot = await getDocs(collection(db, "users"));
@@ -39,14 +39,19 @@ export const AddProcess = () => {
       responsable: [],
       descripcion: "",
     },
-    onSubmit:(data) => {
-      dispatch(addProcessAsync(data))
-    }
+    onSubmit: (data) => {
+      dispatch(addProcessAsync(data));
+    },
   });
 
   const handleChangeUser = (event) => {
-    setUser(event.target.value)
-  }
+    setUser(event.target.value);
+  };
+
+  const handlePictureClick = () => {
+    document.querySelector("#fileSelector").click();
+  };
+
   function guardarArchivo(e) {
     var file = e.target.files[0]; //the file
     var reader = new FileReader(); //this for convert to Base64
@@ -65,12 +70,11 @@ export const AddProcess = () => {
         .then((res) => res.json())
         .then((file) => {
           console.log(file.url); //See response actualziar estado
-          formik.initialValues.url = file.url
+          formik.initialValues.url = file.url;
         })
         .catch((e) => console.log(e)); // Or Error in console
     };
   }
-  
 
   return (
     <div>
@@ -80,7 +84,20 @@ export const AddProcess = () => {
             <Col xs={4}>
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
               <label className="mb-3">Sube propuesta</label>
-              <input type="file" name="url" onChange={(e) => guardarArchivo(e)} />
+              <input
+                id="fileSelector"
+                type="file"
+                name="url"
+                style={{ display: 'none' }}
+                onChange={(e) => guardarArchivo(e)}
+              />
+              <button
+                className="btn btnAddFile"
+                onClick={handlePictureClick}
+                type="button"
+              >
+                SELECCIONAR ARCHIVO
+              </button>
             </Col>
 
             <Col xs={8}>
@@ -125,9 +142,18 @@ export const AddProcess = () => {
                 </Col>
               </Row>
               <label className="mt-4">Lider / responsable</label>
-              <select name='responsable' value={user} className="form-control mt-2" onChange={handleChangeUser}>
+              <select
+                name="responsable"
+                value={user}
+                className="form-control mt-2"
+                onChange={handleChangeUser}
+              >
                 {dataUser ? (
-                  dataUser.map((u) => <option key={u.id} value={u.name + u.cargo}>{u.name} / {u.cargo}</option>)
+                  dataUser.map((u) => (
+                    <option key={u.id} value={u.name + u.cargo}>
+                      {u.name} / {u.cargo}
+                    </option>
+                  ))
                 ) : (
                   <option></option>
                 )}

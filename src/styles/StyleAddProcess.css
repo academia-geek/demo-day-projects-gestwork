@@ -34,3 +34,8 @@ body {
 .row-form {
   align-items: center;
 }
+
+.btnAddFile{
+  color: var(--btnbg) !important;
+  border: 1px solid var(--btnbg) !important;
+}
