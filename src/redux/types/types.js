@@ -8,4 +8,5 @@ export const typesProcess = {
   add: "add",
   list: "list",
   delete: "delete",
+  searchProcess: "searchProcess"
 };

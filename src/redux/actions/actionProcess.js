@@ -12,7 +12,7 @@ export const addProcessAsync = (newProcess) => {
             position: 'center',
             icon: 'success',
             title: 'Tu propuesta se subio con exito.',
-            showConfirmButton: false,
+            showConfirmButton: true,
             timer: 5000
           })        
       })

@@ -12,7 +12,14 @@ export const processReducers = (state = inicialState, action) => {
       return {
         process: [action.payload],
       };
-
+    case typesProcess.delete: 
+      return {
+          process: state.process.filter(pro => pro.number !== action.payload)
+      };
+    case typesProcess.searchProcess: 
+      return {
+        process: action.payload
+      }
     default:
       return state;
   }

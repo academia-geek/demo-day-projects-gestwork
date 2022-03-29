@@ -1,19 +1,42 @@
 import React from 'react'
-import { Button, Form, FormControl } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 import {Search } from 'grommet-icons';
+import { useDispatch } from 'react-redux';
+import { useFormik } from 'formik';
+import * as Yup from 'yup'
+import { searchAsyn } from '../redux/actions/actionProcess';
+import '../styles/StyleActiveProcesses.css'
+import '../styles/config.css'
 
 export const SearchProcesses = () => {
+  const dispatch = useDispatch()
+
+  const formik = useFormik({
+    initialValues: {
+      search: ''
+    },
+    validationSchema: Yup.object({
+      search: Yup.string().required()
+    }),
+    onSubmit:({search}) => {
+      console.log(search)
+      dispatch(searchAsyn(search))
+    }
+  })
   return (
-    <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Buscar propuestas por nombres"
-          className="me-2"
+    <Form className="d-flex" onSubmit={formik.handleSubmit}>
+        <input
+          type="text"
+          name="search"
+          placeholder="Buscar propuestas por nombre"
+          className="input__search"
           aria-label="Search"
+          onChange={formik.handleInputChange}
+          required
         />
-        <Button variant="outline-success" className=''>
-          <Search size='large' /> 
-        </Button>
+        <button className='btn__search'>
+          <Search color='white'/> 
+        </button>
       </Form>
   )
 }
