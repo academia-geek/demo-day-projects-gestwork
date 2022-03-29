@@ -1,12 +1,12 @@
 .menu {
   list-style-type: none;
-  margin: 10px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
   padding: 0;
   width: 25%;
   background-color: var(--menuColor);
   color: var(--btnColor);
   position: fixed;
-  height: 100%;
+
   overflow: auto;
 }
 
