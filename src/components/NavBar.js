@@ -8,7 +8,7 @@ export const NavBar = () => {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-          <h1>GestWork</h1>
+          <div><img className="logoImg" src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt="logo"/></div>
         </Navbar.Brand>
         <h3 className="title_navBar">Mis Procesos</h3>
         <Navbar.Toggle aria-controls="navbarScroll" />
