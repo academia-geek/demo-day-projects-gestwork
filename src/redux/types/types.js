@@ -11,6 +11,7 @@ export const types = {
 export const typesProcess = {
   add: "add",
   list: "list",
+  edit: "edit",
   delete: "delete",
   searchProcess: "searchProcess"
 };
