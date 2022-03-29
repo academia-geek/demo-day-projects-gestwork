@@ -1,0 +1,23 @@
+.btn__search {
+    background-color: var(--btnbg);
+    color: var(--btnColor);
+    padding: 1%;
+    border: none;
+}
+
+.btn__process{
+    width: 20%;
+    background-color: #05BE50;
+    color: #fff;
+    padding: 1%;
+    border: none;
+    border-radius: 25px;
+}
+
+.card__process{
+    margin: 2% 0%;
+    width: 150px;
+}
+.input__search {
+    width: 82%;
+}

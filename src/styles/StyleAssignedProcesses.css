@@ -1,0 +1,19 @@
+.item__assigned {
+    margin: 20px;
+}
+
+.item__assigned--link {
+    margin: 2% 15%;
+}
+.icon__assigned {
+    margin: 1% 22%;
+}
+.eJqlpY {
+    display: inline-block;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    margin: 2% 32%;
+}
