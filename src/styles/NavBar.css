@@ -5,6 +5,11 @@
     padding-right: 10px;
     position: relative;
 }
+
+.logoImg{
+    width: 310px;
+    object-fit: cover;
+}
 .title_navBar {
     color: var(--titlesColor);
     padding-left: 50px;

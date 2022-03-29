@@ -75,6 +75,7 @@ export const AddProcess = () => {
         .catch((e) => console.log(e)); // Or Error in console
     };
   }
+  
 
   return (
     <div>
@@ -101,9 +102,7 @@ export const AddProcess = () => {
             </Col>
 
             <Col xs={8}>
-              <h2 className="subtitle-text mb-5 text-center">
-                Información de proceso
-              </h2>
+   
               <Row className="mt-5">
                 <Col>
                   <label>Nombre de la iniciativa</label>
@@ -127,6 +126,7 @@ export const AddProcess = () => {
                     name="areaEncargada"
                     autoComplete="off"
                     onChange={formik.handleChange}
+                    required
                   />
                 </Col>
                 <Col>
@@ -168,6 +168,7 @@ export const AddProcess = () => {
                   placeholder="Descripción"
                   name="descripcion"
                   onChange={formik.handleChange}
+                  required
                 ></textarea>
               </Col>
             </Row>
