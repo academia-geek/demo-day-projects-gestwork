@@ -1,7 +1,10 @@
 import { async } from "@firebase/util"
-import { collection, deleteDoc, doc, getDocs, query, where } from "firebase/firestore"
+import { collection, deleteDoc, doc, getDocs, query, where, addDoc } from "firebase/firestore"
 import { db } from "../../firebase/firebaseConfig"
 import { typesProcess } from "../types/types"
+import Swal from "sweetalert2";
+
+
 
 export const searchAsyn = (queryprocess) => {
     return async (dispatch) => {
@@ -44,3 +47,28 @@ export const deleteSync = (number) => {
         payload: number
     }
 }
+
+export const addProcessAsync = (newProcess) => {
+  return (dispatch) => {
+    addDoc(collection(db, "process"), newProcess)
+      .then((resp) => {
+        dispatch(addProcessSync(newProcess));
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Tu propuesta se subio con exito.',
+            showConfirmButton: false,
+            timer: 5000
+          })        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};
+export const addProcessSync = (process) => {
+  return {
+    type: typesProcess.add,
+    payload: process,
+  };
+};
