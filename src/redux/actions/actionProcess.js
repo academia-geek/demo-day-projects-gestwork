@@ -1,9 +1,7 @@
-import { async } from "@firebase/util"
 import { collection, deleteDoc, doc, getDocs, query, where, addDoc, updateDoc } from "firebase/firestore"
 import { db } from "../../firebase/firebaseConfig"
 import { typesProcess } from "../types/types"
 import Swal from "sweetalert2";
-import { update } from "lodash";
 
 
 

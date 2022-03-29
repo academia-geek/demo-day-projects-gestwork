@@ -2,12 +2,13 @@ import React from "react";
 import { Container, Form, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Notification } from "grommet-icons";
 import "../styles/NavBar.css";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand as={Link} to="/*">
           <div><img className="logoImg" src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt="logo"/></div>
         </Navbar.Brand>
         <h3 className="title_navBar">Mis Procesos</h3>
