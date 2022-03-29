@@ -6,7 +6,8 @@
   background-color: var(--menuColor);
   color: var(--btnColor);
   position: fixed;
-
+  /* position: relative; */
+  height: 100%;
   overflow: auto;
 }
 
