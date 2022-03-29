@@ -12,6 +12,7 @@ export const AddProcess = () => {
   const [dataUser, setDataUser] = useState();
   const [user, setUser] = React.useState("users");
   const [spinner, setSpinner] = useState(false);
+  const [spinnerLoad, setSpinnerLoad] = useState(false);
 
   const getUser = async () => {
     const querySnapshot = await getDocs(collection(db, "users"));
@@ -37,7 +38,7 @@ export const AddProcess = () => {
       nombre: "",
       areaEncargada: "",
       fecha: "",
-      responsable: "laura",
+      responsable: "",
       descripcion: "",
     },
     onSubmit: (data) => {
@@ -64,7 +65,7 @@ export const AddProcess = () => {
       //.. once finished..
       var rawLog = reader.result.split(",")[1]; //extract only thee file data part
       setSpinner(true);
-
+      setSpinnerLoad(true)
       var dataSend = {
         dataReq: { data: rawLog, name: file.name, type: file.type },
         fname: "uploadFilesToGoogleDrive",
@@ -94,7 +95,7 @@ export const AddProcess = () => {
           <Row className="row-form">
             <Col xs={4}>
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
-              <label className="mb-3">Sube propuesta</label>
+              <label className="mb-3">Sube propuesta</label><br/>
               <input
                 id="fileSelector"
                 type="file"
@@ -115,8 +116,9 @@ export const AddProcess = () => {
                     role="status"
                     aria-hidden="true"
                   />
+                  
                 ) : (
-                  "SELECCIONAR ARCHIVO"
+                 spinnerLoad ? "SUBIDO ARCHIVO": "SELECCIONAR ARCHIVO"
                 )}
               </button>
             </Col>
