@@ -10,6 +10,10 @@ export const loginReducer = (state = {}, action) => {
             id:action.payload.id,
             name: action.payload.displayname
         }
+        // case types.logout:
+        //     return{
+                
+        //     }
         default:
             return state;
     }
