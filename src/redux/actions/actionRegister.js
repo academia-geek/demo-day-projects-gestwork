@@ -19,7 +19,8 @@ export const registroEmailPasswordNombre = (name,email,cargo,password) => {
             title: 'Registro exitoso',
             showConfirmButton: true,
             timer: 5000
-          })            
+          })    
+
             const docuRef = doc(db, `users/${user.uid}`)
             setDoc(docuRef,{id:user.uid,name: user.displayName, email: user.email,cargo: cargo})
         })
