@@ -93,7 +93,7 @@ export const AddProcess = () => {
       <div className="containerAdd mt-1">
         <form className="form-group" onSubmit={formik.handleSubmit}>
           <Row className="row-form">
-            <Col xs={4}>
+            <Col xs={4} className="col-file">
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
               <label className="mb-3">Sube propuesta</label>
               <br />

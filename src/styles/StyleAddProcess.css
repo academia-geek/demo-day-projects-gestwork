@@ -35,7 +35,16 @@ body {
   align-items: center;
 }
 
-.btnAddFile{
+.btnAddFile {
   color: var(--btnbg) !important;
   border: 1px solid var(--btnbg) !important;
+}
+
+@media only screen and (max-width: 540px) {
+  .row-form {
+    flex-direction: column;
+  }
+  .col-file {
+    width: 65% !important;
+  }
 }
