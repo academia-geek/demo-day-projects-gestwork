@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
 import { SearchProcesses } from "./SearchProcesses";
 import '../styles/StyleActiveProcesses.css'
 import '../styles/config.css'
+import { useDispatch } from "react-redux";
+import { listProcessAsync } from "../redux/actions/actionProcess";
 
 
 export const ActiveProcesses = () => {
+
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(listProcessAsync())
+  }, [dispatch])
+
   return (
     <>
       <div className="containerAdd">

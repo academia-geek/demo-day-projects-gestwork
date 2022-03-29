@@ -25,6 +25,9 @@ console.log(user, 'ttt')
   return (
     <ul className='menu'>
       <li><Link to='/activeProcesses' className='menu__item'><Copy size='large' />Procesos Activos</Link></li>
+      <li><Link to='/' className='menu__item'><DocumentUpload size='large'/>Sube tu Procesos</Link></li>
+      <li><Link to='/assignedProcesses' className='menu__item'><Copy size='large' />Procesos Asignados</Link></li>
+      <li><Link to='/' className='menu__item'><Logout size='large' />Salir</Link></li>
       <li><Link to='/assignedProcesses' className='menu__item'><DocumentUpload size='large'/>Sube tu Procesos</Link></li>
     
       <Link to={'${user ? "/" : "/logout"}'} className="header-link">
