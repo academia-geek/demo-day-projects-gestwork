@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import {Trash } from 'grommet-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteProcess, listProcessAsync } from '../redux/actions/actionProcess';
+import { listProcessAsync } from '../redux/actions/actionProcess';
 
 export const AssignedProcesses = () => {
   const dispatch = useDispatch();
@@ -24,10 +23,10 @@ export const AssignedProcesses = () => {
       <section>
       {process.map((item , index) =>(  
         <ul key={index}>
-          <li className='item__assigned'>{item.name}{item.id}<span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcess(item.id))}/> </span></li>
-          <li className='item__assigned'>{item.name}{item.id}<span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcess(item.id))}/> </span></li>
-          <li className='item__assigned'>{item.name}{item.id}<span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcess(item.id))}/> </span></li>
-          <li className='item__assigned'>{item.name}{item.id}<span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcess(item.id))}/> </span></li>
+          <li>
+            <p className='item__assigned'>{item.nombre}{item.id}</p>   
+            <button className="btn__process">Ver</button>
+          </li>
         </ul>
          ))}
       </section>
