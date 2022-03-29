@@ -65,7 +65,7 @@ export const AddProcess = () => {
       //.. once finished..
       var rawLog = reader.result.split(",")[1]; //extract only thee file data part
       setSpinner(true);
-      setSpinnerLoad(true)
+      setSpinnerLoad(true);
       var dataSend = {
         dataReq: { data: rawLog, name: file.name, type: file.type },
         fname: "uploadFilesToGoogleDrive",
@@ -93,9 +93,10 @@ export const AddProcess = () => {
       <div className="containerAdd mt-1">
         <form className="form-group" onSubmit={formik.handleSubmit}>
           <Row className="row-form">
-            <Col xs={4}>
+            <Col xs={4} className="col-file">
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
-              <label className="mb-3">Sube propuesta</label><br/>
+              <label className="mb-3">Sube propuesta</label>
+              <br />
               <input
                 id="fileSelector"
                 type="file"
@@ -103,7 +104,9 @@ export const AddProcess = () => {
                 style={{ display: "none" }}
                 onChange={(e) => guardarArchivo(e)}
               />
+
               <button
+                disabled={spinnerLoad}
                 className="btn btnAddFile"
                 onClick={handlePictureClick}
                 type="button"
@@ -116,9 +119,10 @@ export const AddProcess = () => {
                     role="status"
                     aria-hidden="true"
                   />
-                  
+                ) : spinnerLoad ? (
+                  "SUBIDO ARCHIVO"
                 ) : (
-                 spinnerLoad ? "SUBIDO ARCHIVO": "SELECCIONAR ARCHIVO"
+                  "SELECCIONAR ARCHIVO"
                 )}
               </button>
             </Col>
@@ -169,7 +173,7 @@ export const AddProcess = () => {
                 className="form-control mt-2"
                 onChange={handleChangeUser}
               >
-                <option disabled={true} >Selecciona un responsable </option>
+                <option disabled={true}>Selecciona un responsable </option>
                 {dataUser ? (
                   dataUser.map((u) => (
                     <option key={u.id} value={u.name + u.cargo}>
