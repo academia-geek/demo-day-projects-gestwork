@@ -21,7 +21,6 @@ export const registroEmailPasswordNombre = (name,email,cargo,password) => {
             timer: 5000
           })    
 
-
             const docuRef = doc(db, `users/${user.uid}`)
             setDoc(docuRef,{id:user.uid,name: user.displayName, email: user.email,cargo: cargo})
         })
