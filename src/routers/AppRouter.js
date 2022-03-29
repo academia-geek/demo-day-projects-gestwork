@@ -6,6 +6,7 @@ import { DashboardRoutes } from "./DashboardRoutes";
 import PrivateRoute from "../routers/PrivateRoute";
 import PublicRoute from "../routers/PublicRoute";
 import { useEffect, useState } from "react";
+
 import { Register } from "../components/Register/Register";
 
 function AppRouter() {

@@ -5,7 +5,7 @@ import icon1 from "../styles/assets/icon1.svg";
 import  '../styles/StyleLogin.css';
 import {useForm } from '../hooks/useForm';
 import {useDispatch} from 'react-redux';
-import { LoginS, loginGoogle } from "../redux/actions/actionLogin";
+import { LoginS, loginGoogle, loginEmailPassword } from "../redux/actions/actionLogin";
 
 export const Login = () => {
 
@@ -21,7 +21,8 @@ export const Login = () => {
 
   const handleLogin = (e)=>{
     e.preventDefault();
-    dispatch(LoginS(email,password))
+ dispatch(loginEmailPassword(email,password))
+   console.log(email,password)
   }
 const handleGoogle = () =>{
   dispatch(loginGoogle())
