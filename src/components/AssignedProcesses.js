@@ -9,7 +9,7 @@ export const AssignedProcesses = () => {
   const {process} = useSelector(store => store.process)
   return (
     <>
-    <div className="container">
+    <div className="containerAdd">
       <div>
         <h2 className='title__section'>Procesos Asignados</h2>
       </div>

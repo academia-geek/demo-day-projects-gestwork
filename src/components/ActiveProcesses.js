@@ -8,7 +8,7 @@ import '../styles/config.css'
 export const ActiveProcesses = () => {
   return (
     <>
-      <div className="container">
+      <div className="containerAdd">
         <div>
           <h2 className="title__section">Procesos Activos</h2>
         </div>

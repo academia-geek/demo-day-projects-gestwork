@@ -1,3 +1,4 @@
+
 export function guardarArchivo(e) {
   var file = e.target.files[0]; //the file
   var reader = new FileReader(); //this for convert to Base64
@@ -15,7 +16,7 @@ export function guardarArchivo(e) {
     ) //send to Api
       .then((res) => res.json())
       .then((a) => {
-        console.log(a); //See response actualziar estado
+        console.log(a.url); //See response actualziar estado
       })
       .catch((e) => console.log(e)); // Or Error in console
   };

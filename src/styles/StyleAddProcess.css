@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
 }
-.container {
+.containerAdd {
   width: 67% !important;
   margin-left: 28% !important;
 }
@@ -33,4 +33,9 @@ body {
 
 .row-form {
   align-items: center;
+}
+
+.btnAddFile{
+  color: var(--btnbg) !important;
+  border: 1px solid var(--btnbg) !important;
 }
