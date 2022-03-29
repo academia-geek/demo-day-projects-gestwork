@@ -13,9 +13,13 @@ export const searchAsyn = (queryprocess) => {
         const datos = await getDocs(querySearch);
 
         const process = []
-        datos.forEach((docu) => {
-            process.push(docu.data())
-        })
+        datos.forEach((doc) => {
+            let data = doc.data();
+            data["id"] = doc.id;
+            process.push({
+              ...data,
+            });
+          });
         console.log(process)
         dispatch(searchSync(process))
     }
@@ -28,23 +32,41 @@ export const searchSync = (process) => {
     }
 }
 
-export const deleteProcessoAsync = (number) => {
-    return async(dispatch) => {
-        const deleteCollection = collection(db, "process");
-        const queryProcess = query(deleteCollection, where("number", "==", number))
-         
-        const datos = await getDocs(queryProcess);
-        datos.forEach((docu) => {
-            deleteDoc(doc(db,"process", docu.id));
-        })
-        dispatch()
+export const listProcessAsync = () => {
+  return async (dispatch) => {
+    const querySnapshot = await getDocs(collection(db, "process"));
+    const processes = [];
+    querySnapshot.forEach((doc) => {
+      let data = doc.data();
+      data["id"] = doc.id;
+      processes.push({
+        ...data,
+      });
+    });
+    dispatch(listSync(processes));
+  };
+};
+
+export const listSync = (process) => {
+    return {
+        type: typesProcess.list,
+        payload: process
     }
 }
 
-export const deleteSync = (number) => {
+
+export const deleteProcess = (id) => {
+    return async (dispatch) => {
+      deleteDoc(doc(db, "process", id));
+      dispatch(deleteSync(id));
+    //   dispatch(listProductAsync());
+    };
+};
+
+export const deleteSync = (id) => {
     return {
         type: typesProcess.delete,
-        payload: number
+        payload: id
     }
 }
 

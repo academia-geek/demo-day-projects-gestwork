@@ -19,7 +19,7 @@ export const SearchProcesses = () => {
       search: Yup.string().required()
     }),
     onSubmit:({search}) => {
-      console.log(search)
+      console.log(search);
       dispatch(searchAsyn(search))
     }
   })
