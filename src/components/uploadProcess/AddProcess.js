@@ -10,7 +10,6 @@ import "../../styles/StyleAddProcess.css";
 
 export const AddProcess = () => {
   const [dataUser, setDataUser] = useState();
-  const [user, setUser] = React.useState("users");
   const [spinner, setSpinner] = useState(false);
   const [spinnerLoad, setSpinnerLoad] = useState(false);
 
@@ -117,7 +116,10 @@ export const AddProcess = () => {
                     aria-hidden="true"
                   />
                 ) : spinnerLoad ? (
-                  "SUBIDO ARCHIVO"
+                  <img
+                  src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648658251/GestWork/icons8-file-47_wl0a51.png"
+                  alt="pdf"
+                />
                 ) : (
                   "SELECCIONAR ARCHIVO"
                 )}
