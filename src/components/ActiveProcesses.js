@@ -16,7 +16,9 @@ export const ActiveProcesses = () => {
   
   useEffect(() => {
     dispatch(listProcessAsync())
-  }, [])
+    console.log("holaaxD")
+
+  }, [dispatch])
 
   return (
     <>
@@ -27,7 +29,7 @@ export const ActiveProcesses = () => {
         <SearchProcesses />
         <section>
          {process.map((item, index) =>(
-          <Card border="primary" className="card__process" style={{ width: "48rem" }}>
+          <Card key={index} border="primary" className="card__process" style={{ width: "48rem" }}>
             <Card.Body>
               <div className="header__card">
                 <Card.Title>{item.id}{item.nombre}</Card.Title>

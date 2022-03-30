@@ -23,6 +23,7 @@ console.log(user, 'ttt')
 
 
   return (
+    <>
     <ul className='menu'>
       <li><Link to='/activeProcesses' className='menu__item'><Copy size='large' /><label className='ms-3'>Procesos Activos</label></Link></li>
       <li><Link to='/' className='menu__item'><DocumentUpload size='large'/><label className='ms-3'>Sube tus Procesos</label></Link></li>
@@ -37,5 +38,6 @@ console.log(user, 'ttt')
         </Link> */}
    
     </ul>
+    </>
   )
 }

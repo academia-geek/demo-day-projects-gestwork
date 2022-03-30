@@ -33,8 +33,11 @@ export const searchProcessSync = (process) => {
 
 export const listProcessAsync = () => {
   return async (dispatch) => {
+    
     const querySnapshot = await getDocs(collection(db, "process"));
     const processes = [];
+    console.log("probando activos")
+
     querySnapshot.forEach((doc) => {
       let data = doc.data();
       data["id"] = doc.id;
@@ -94,16 +97,20 @@ export const deleteProcessSync = (id) => {
 
 export const addProcessAsync = (newProcess) => {
   return (dispatch) => {
+    
     addDoc(collection(db, "process"), newProcess)
       .then((resp) => {
         dispatch(addProcessSync(newProcess));
+        console.log("Probando")    
+
         Swal.fire({
+
             position: 'center',
             icon: 'success',
             title: 'Tu propuesta se subio con exito.',
             showConfirmButton: false,
             timer: 5000
-          })        
+          })    
       })
       .catch((error) => {
         console.log(error);
