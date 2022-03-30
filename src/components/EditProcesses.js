@@ -1,12 +1,35 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { useForm } from '../hooks/useForm';
+import { editProcessSync } from '../redux/actions/actionProcess';
 
-const EditProcesses = () => {
+const EditProcesses = ({editData}) => {
+  console.log(editData);
+  const dispatch = useDispatch();
+
+  const [values, handleInputChange, reset] = useForm({
+    // url: editData.url,
+    // nombre: editData.nombre,
+    // areaEncargada: editData.areaEncargada,
+    // fecha: editData.fecha,
+    // responsable: editData.responsable,
+    // descripcion: editData.descripcion,
+    // id:editData.id
+  })
+
+  // const { nombre, areaEncargada, fecha, responsable, descripcion, id} = values
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // dispatch(editProcessSync(id, values))
+    reset();
+  }
   return (
     <div className="containerAdd">
     <h2 className="title__section">Información del Proceso</h2>
     <Col xs={6} className="mx-5">
-      <form className="form-group">
+      <form className="form-group" onSubmit={handleSubmit }>
         <Row className="mt-5">
           <label>N° de solicitud</label>
           <input
@@ -14,6 +37,7 @@ const EditProcesses = () => {
             name="numero proceso"
             className="form-control mt-2"
             autoComplete="off"
+            onChange={handleInputChange}
             required
           />
 
@@ -24,6 +48,7 @@ const EditProcesses = () => {
               className="form-control mt-2"
               name="nombre"
               autoComplete="off"
+              onChange={handleInputChange}
               required
             />
           </Row>
@@ -34,6 +59,7 @@ const EditProcesses = () => {
               className="form-control mt-2"
               name="areaEncargada"
               autoComplete="off"
+              onChange={handleInputChange}
               required
             />
             <label>Fecha Aproximada de solución</label>
@@ -42,6 +68,7 @@ const EditProcesses = () => {
               className="form-control mt-2"
               name="fecha"
               autoComplete="off"
+              onChange={handleInputChange}
               required
             />
           </Row>
