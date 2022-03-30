@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { listProcessAsync } from '../redux/actions/actionProcess';
 
 export const AssignedProcesses = () => {
@@ -23,9 +24,12 @@ export const AssignedProcesses = () => {
       <section>
       {process.map((item , index) =>(  
         <ul key={index}>
-          <li>
-            <p className='item__assigned'>{item.nombre}{item.id}</p>   
-            <button className="btn__process">Ver</button>
+          <li className='d-flex' >
+            <p className='item__assigned mx-5'>
+            <span className='primary h4'>Proceso:</span>{item.nombre}
+            <br/>
+            <span className='mx-2 h4'>N°:</span>{item.id}</p>   
+            <button className="btn__process"><Link to="/detailProcess">Ver</Link></button>
           </li>
         </ul>
          ))}
