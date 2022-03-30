@@ -1,8 +1,25 @@
 import { DocumentPdf, DocumentPpt, Home } from "grommet-icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Row, Button, Col } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { listProcessAsync } from "../redux/actions/actionProcess";
 
 const DetailProcess = () => {
+  const {id} = useParams();
+  const [detailItem, setDetailItem ] = useState([]);
+  const dispatch = useDispatch();
+  const {process} = useSelector(store => store.process)
+  console.log(process)
+
+  useEffect(() => {
+    dispatch(listProcessAsync())
+    const filterProcess = process.find(item => item.id === id)
+    if(filterProcess !== undefined) {
+      setDetailItem(filterProcess);
+    }
+  }, [dispatch])
+
   return (
     <div className="containerAdd">
       <h2 className="title__section">Información del Proceso</h2>
@@ -16,6 +33,8 @@ const DetailProcess = () => {
               name="numero proceso"
               className="form-control mt-2"
               autoComplete="off"
+              value= {detailItem.id}
+              disabled
               required
             />
 
@@ -26,6 +45,8 @@ const DetailProcess = () => {
                 className="form-control mt-2"
                 name="nombre"
                 autoComplete="off"
+                value= {detailItem.nombre}
+                disabled
                 required
               />
             </Row>
@@ -36,6 +57,8 @@ const DetailProcess = () => {
                 className="form-control mt-2"
                 name="areaEncargada"
                 autoComplete="off"
+                value= {detailItem.areaEncargada}
+                disabled
                 required
               />
               <label>Fecha Aproximada de solución</label>
@@ -44,14 +67,21 @@ const DetailProcess = () => {
                 className="form-control mt-2"
                 name="fecha"
                 autoComplete="off"
+                value= {detailItem.fecha}
+                disabled
                 required
               />
             </Row>
             <label className="mt-4">Lider / responsable</label>
-            <select name="responsable" className="form-control mt-2">
-              <option disabled={true}>Selecciona un responsable </option>
-              <option></option>
-            </select>
+            <input
+                type="text"
+                className="form-control mt-2"
+                name="responsable"
+                autoComplete="off"
+                value= {detailItem.responsable}
+                disabled
+                required
+              />
           </Row>
         </form>
       </Col>

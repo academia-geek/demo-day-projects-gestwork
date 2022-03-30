@@ -11,8 +11,7 @@ export const AssignedProcesses = () => {
 
   useEffect(() => {
     dispatch(listProcessAsync())
-    console.log(process)
-  },[])
+  }, [dispatch])
 
   return (
     <>
