@@ -47,11 +47,7 @@ export const AddProcess = () => {
     },
   });
 
-  const handleChangeUser = (event) => {
-    setUser(event.target.value);
-    console.log(event.target.value);
-    formik.initialValues.responsable = event.target.value;
-  };
+
 
   const handlePictureClick = () => {
     document.querySelector("#fileSelector").click();
@@ -77,9 +73,10 @@ export const AddProcess = () => {
       ) //send to Api
         .then((res) => res.json())
         .then((file) => {
-          console.log(file.url); //See response actualziar estado
 
-          formik.initialValues.url = file.url;
+          formik.values.url = file.url;
+          console.log(formik.values.url); //See response actualziar estado
+
           if (file.url !== null) {
             setSpinner(false);
           }
@@ -167,16 +164,16 @@ export const AddProcess = () => {
                 </Col>
               </Row>
               <label className="mt-4">Lider / responsable</label>
+
               <select
                 name="responsable"
-                value={user}
                 className="form-control mt-2"
-                onChange={handleChangeUser}
+                onChange={formik.handleChange}
               >
-                <option disabled={true}>Selecciona un responsable </option>
+                <option value="selected">Selecciona una opción</option>
                 {dataUser ? (
                   dataUser.map((u) => (
-                    <option key={u.id} value={u.name + u.cargo}>
+                    <option key={u.id} value={u.name + ' '+ u.cargo}>
                       {u.name} / {u.cargo}
                     </option>
                   ))
