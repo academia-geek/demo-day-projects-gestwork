@@ -6,6 +6,7 @@ import '../styles/StyleActiveProcesses.css'
 import '../styles/config.css'
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProcess, editProcessAsync, listProcessAsync } from "../redux/actions/actionProcess";
+import { Link } from "react-router-dom";
 
 
 export const ActiveProcesses = () => {
@@ -32,7 +33,11 @@ export const ActiveProcesses = () => {
           <Card key={index} border="primary" className="card__process" style={{ width: "48rem" }}>
             <Card.Body>
               <div className="header__card">
-                <Card.Title>{item.id}{item.nombre}</Card.Title>
+                <Card.Title>
+                <p className='item__assigned mx-5'>
+                <span className='primary h4'>Proceso:</span>{item.nombre}/  
+                <span className='mx-2 h4'>N°:</span>{item.id}</p> 
+                </Card.Title>
                 <div>
                   <span className='item__assigned--link'><Edit className="icon__assigned" color='plain' onClick={()=> dispatch(deleteProcess())}/> </span>
                   <span className='item__assigned--link'><Trash className="icon__assigned" color='plain' onClick={()=> dispatch(editProcessAsync())}/> </span>
@@ -41,7 +46,7 @@ export const ActiveProcesses = () => {
               <Card.Text>
                {item.descripcion}
               </Card.Text>
-              <button className="btn__process">Ver</button>
+              <button className="btn__process"><Link to="/detailProcess">Ver</Link></button>
             </Card.Body>
           </Card>
            ))}

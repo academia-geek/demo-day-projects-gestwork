@@ -56,22 +56,14 @@ export const listProcessSync = (process) => {
     }
 }
 
-export const editProcessAsync = (idProcess, process) => {
-  return async(dispatch) => {
-    const getCollection = collection(db, "process")
-    const queryEdit = query(getCollection, where("id", "==", idProcess))
-    const dbQuery = await getDocs(queryEdit)
-    let id
-    dbQuery.forEach(async(docu) => {
-      id = docu.id
-    })
-    console.log(id)
-    const docRef = doc(db, "process", id)
-    await updateDoc(docRef, process)
-    .then(() => listProcessAsync())
-    .then(()=> dispatch(listProcessAsync()))
-  }
-}
+
+export const editProcessAsync = (id, contentAll) => {
+  return async (dispatch) => {
+    updateDoc(doc(db, "process", id), contentAll);
+    dispatch(editProcessSync(contentAll));
+    dispatch(listProcessAsync());
+  };
+};
 
 export const editProcessSync = (process) => {
   return {
