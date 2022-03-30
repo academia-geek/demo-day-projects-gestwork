@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { db } from "../../firebase/firebaseConfig";
 import { addProcessAsync } from "../../redux/actions/actionProcess";
 import "../../styles/StyleAddProcess.css";
+// import { guardarArchivo } from "../helpers/FileUpload";
 
 export const AddProcess = () => {
   const [dataUser, setDataUser] = useState();
@@ -45,6 +46,8 @@ export const AddProcess = () => {
     },
   });
 
+
+
   const handlePictureClick = () => {
     document.querySelector("#fileSelector").click();
   };
@@ -69,6 +72,7 @@ export const AddProcess = () => {
       ) //send to Api
         .then((res) => res.json())
         .then((file) => {
+
           formik.values.url = file.url;
           console.log(formik.values.url); //See response actualziar estado
 
@@ -113,9 +117,9 @@ export const AddProcess = () => {
                   />
                 ) : spinnerLoad ? (
                   <img
-                    src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648658251/GestWork/icons8-file-47_wl0a51.png"
-                    alt="pdf"
-                  />
+                  src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648658251/GestWork/icons8-file-47_wl0a51.png"
+                  alt="pdf"
+                />
                 ) : (
                   "SELECCIONAR ARCHIVO"
                 )}
@@ -171,7 +175,7 @@ export const AddProcess = () => {
                 <option value="selected">Selecciona una opción</option>
                 {dataUser ? (
                   dataUser.map((u) => (
-                    <option key={u.id} value={u.name + " " + u.cargo}>
+                    <option key={u.id} value={u.name + ' '+ u.cargo}>
                       {u.name} / {u.cargo}
                     </option>
                   ))
