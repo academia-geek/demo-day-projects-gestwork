@@ -5,7 +5,7 @@ import { SearchProcesses } from "./SearchProcesses";
 import '../styles/StyleActiveProcesses.css'
 import '../styles/config.css'
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProcess, editProcessAsync, listProcessAsync } from "../redux/actions/actionProcess";
+import { deleteProcess, deleteProcessAsync, editProcessAsync, listProcessAsync } from "../redux/actions/actionProcess";
 import { Link } from "react-router-dom";
 import EditProcesses from "./EditProcesses";
 import DetailProcess from "./DetailProcess";
@@ -17,6 +17,7 @@ export const ActiveProcesses = () => {
 
   const [sendData, setSendData] = useState([]);
   const [detailData, setDetailData] = useState(false);
+  const [inactiveProcess, setInactiveProcess] = useState([])
 
   const {process} = useSelector(store => store.process)
   
@@ -31,8 +32,14 @@ export const ActiveProcesses = () => {
     console.log(getProcess);
     setSendData(getProcess);
   }
-  console.log(sendData);
+  // console.log(sendData);
 
+  // const disableProcess = (id) => {
+  //   const getProcess = process.find(item => item.id === id)
+  //   console.log(getProcess);
+  //   setInactiveProcess(getProcess);
+  // }
+  // console.log(inactiveProcess)
   return (
     <>
       <div className="containerAdd">
@@ -56,7 +63,11 @@ export const ActiveProcesses = () => {
                     <Edit className="icon__assigned" color='plain' onClick={()=> {editarProcess(item.id); setDetailData(true) }}/>
                   </span>
                   </Link>
-                  <span className='item__assigned--link'><Trash className="icon__assigned" color='plain' onClick={()=> dispatch(deleteProcess())}/></span>
+                  <span className='item__assigned--link'>
+                    {/* <Trash className="icon__assigned" color='plain' onClick={()=> dispatch(deleteProcessAsync(item.id))}/> */}
+                    <Trash className="icon__assigned" color='plain' onClick={()=> dispatch(deleteProcess(item.id))}/>
+                    {/* <Trash className="icon__assigned" color='plain' onClick={()=>{disableProcess(item.id)} }/> */}
+                  </span>
                 </div>
               </div>
               <Card.Text>
