@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { listProcessAsync } from "../redux/actions/actionProcess";
+import "../styles/StyleDetailProcess.css"
 
 const DetailProcess = () => {
   const { id } = useParams();
@@ -10,8 +11,6 @@ const DetailProcess = () => {
   const dispatch = useDispatch();
   const { process } = useSelector((store) => store.process);
   console.log(process);
-
-
 
   useEffect(() => {
     dispatch(listProcessAsync());
@@ -90,10 +89,17 @@ const DetailProcess = () => {
           <Row className="mt-4">
             <h3 className="title__section h3">Documento de la iniciativa</h3>
           </Row>
-          <Row className="mt-4">
-            <a href={detailItem.url} target="_black">
-              <img src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648758995/GestWork/icons8-pdf-file-64_lsk1q0.png" alt="pdf"/>
-            </a>
+          <Row className="w-59 mt-4">
+            <div>
+              <a className="verpdf" href={detailItem.url} target="_black">
+                <img
+                  src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648758995/GestWork/icons8-pdf-file-64_lsk1q0.png"
+                  alt="pdf"
+                />
+                <br />
+                <label style={{cursor:'pointer'}} className="me-5">Ver Pdf</label>
+              </a>
+            </div>
           </Row>
         </Col>
       </div>
