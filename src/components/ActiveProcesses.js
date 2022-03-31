@@ -48,27 +48,44 @@ export const ActiveProcesses = () => {
         </div>
         <SearchProcesses />
         <section>
-         {process.map((item, index) =>(
-          <Card key={index} border="primary" className="card__process" style={{ width: "48rem" }}>
-            <Card.Body>
-              <div className="header__card">
-                <Card.Title>
-                <p className='item__assigned mx-5'>
-                <span className='primary h4'>Proceso:</span>{item.nombre}/  
-                <span className='mx-2 h4'>N°:</span>{item.id}</p> 
-                </Card.Title>
-                <div>
-                  <Link to={'/editProcesses'}> 
-                  <span className='item__assigned--link'>
-                    <Edit className="icon__assigned" color='plain' onClick={()=> {editarProcess(item.id); setDetailData(true) }}/>
-                  </span>
-                  </Link>
-                  <span className='item__assigned--link'>
-                    {/* <Trash className="icon__assigned" color='plain' onClick={()=> dispatch(deleteProcessAsync(item.id))}/> */}
-                    <Trash className="icon__assigned" color='plain' onClick={()=> dispatch(deleteProcess(item.id))}/>
-                    {/* <Trash className="icon__assigned" color='plain' onClick={()=>{disableProcess(item.id)} }/> */}
-                  </span>
-                </div>
+        {process.map((item, index) => (
+            <Card
+              key={index}
+              border="primary"
+              className="card__process"
+              style={{ width: "46.5rem" }}
+            >
+              <Card.Body>
+                <div className="header__card">
+                  <Card.Title>
+                    <p className="item__assigned">
+                      <span className="primary h4">Proceso:</span>
+                      {item.nombre}/<span className="mx-2 h4">N°:</span>
+                      {item.id}
+                    </p>
+                  </Card.Title>
+                  <div>
+                    <Link to={"/editProcesses"}>
+                      <span className="item__assigned--link">
+                        <img
+                          src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648759675/GestWork/icons8-l%C3%A1piz-48_ptvvfb.png"
+                          alt="lapiz"
+                          className="me-3"
+                          style={{width:"30px"}}
+                          onClick={() => {
+                            editarProcess(item.id);
+                            setDetailData(true);
+                          }}
+                        />
+                      </span>
+                    </Link>
+                    <img
+                      src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648760168/GestWork/icons8-mensaje-borrado-30_bep2g1.png"
+                      alt="icondelete"
+                      style={{width:"30px"}}
+                      onClick={() => dispatch(deleteProcess(item.id))}
+                    />
+                  </div>
               </div>
               <Card.Text>
                {item.descripcion}
