@@ -22,7 +22,7 @@ export const processReducers = (state = inicialState, action) => {
       };
     case typesProcess.delete: 
       return {
-          process: state.process.filter(pro => pro.number !== action.payload)
+          process: state.process.filter(pro => pro.id !== action.payload)
       };
     case typesProcess.searchProcess: 
       return {

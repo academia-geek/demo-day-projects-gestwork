@@ -34,10 +34,11 @@ export const SearchProcesses = () => {
           placeholder="Buscar propuestas por nombre"
           className="input__search"
           aria-label="Search"
-          onChange={formik.handleInputChange}
+          // onChange={formik.handleInputChange}
+          onChange={formik.handleChange}
           required
         />
-        <button className='btn__search'>
+        <button className='btn__search' type="submit">
           <Search color='white'/> 
         </button>
       </Form>

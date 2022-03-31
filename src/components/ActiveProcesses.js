@@ -1,39 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
-import { Edit, Trash } from "grommet-icons";
+import {Edit, Trash } from 'grommet-icons';
 import { SearchProcesses } from "./SearchProcesses";
-import "../styles/StyleActiveProcesses.css";
-import "../styles/config.css";
+import '../styles/StyleActiveProcesses.css'
+import '../styles/config.css'
 import { useDispatch, useSelector } from "react-redux";
-import {
-  deleteProcess,
-  editProcessAsync,
-  listProcessAsync,
-} from "../redux/actions/actionProcess";
+import { deleteProcess, deleteProcessAsync, editProcessAsync, listProcessAsync } from "../redux/actions/actionProcess";
 import { Link } from "react-router-dom";
 import EditProcesses from "./EditProcesses";
 import DetailProcess from "./DetailProcess";
 
+
 export const ActiveProcesses = () => {
+
   const dispatch = useDispatch();
 
   const [sendData, setSendData] = useState([]);
   const [detailData, setDetailData] = useState(false);
+  const [inactiveProcess, setInactiveProcess] = useState([])
 
-  const { process } = useSelector((store) => store.process);
+  const {process} = useSelector(store => store.process)
+  
 
   useEffect(() => {
-    dispatch(listProcessAsync());
-  }, [dispatch]);
+    dispatch(listProcessAsync())
+  }, [dispatch])
 
   const editarProcess = (id) => {
     console.log(id);
-    const getProcess = process.find((item) => item.id === id);
+    const getProcess = process.find(item => item.id === id)
     console.log(getProcess);
     setSendData(getProcess);
-  };
-  console.log(sendData);
+  }
+  // console.log(sendData);
 
+  // const disableProcess = (id) => {
+  //   const getProcess = process.find(item => item.id === id)
+  //   console.log(getProcess);
+  //   setInactiveProcess(getProcess);
+  // }
+  // console.log(inactiveProcess)
   return (
     <>
       <div className="containerAdd">
@@ -42,7 +48,7 @@ export const ActiveProcesses = () => {
         </div>
         <SearchProcesses />
         <section>
-          {process.map((item, index) => (
+        {process.map((item, index) => (
             <Card
               key={index}
               border="primary"
@@ -77,19 +83,21 @@ export const ActiveProcesses = () => {
                       src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648760168/GestWork/icons8-mensaje-borrado-30_bep2g1.png"
                       alt="icondelete"
                       style={{width:"30px"}}
-                      onClick={() => dispatch(deleteProcess())}
+                      onClick={() => dispatch(deleteProcess(item.id))}
                     />
                   </div>
-                </div>
-                <Card.Text>{item.descripcion}</Card.Text>
-                <Link to={`/detailProcess/${item.id}`}>
-                  <button className="btn__process">Ver</button>
-                </Link>
-              </Card.Body>
-            </Card>
-          ))}
+              </div>
+              <Card.Text>
+               {item.descripcion}
+              </Card.Text>
+              <Link to={`/detailProcess/${item.id}`}>
+              <button className="btn__process">Ver</button>
+              </Link>
+            </Card.Body>
+          </Card>
+           ))}
         </section>
-        {detailData === true ? <EditProcesses editData={sendData} /> : ""}
+        {detailData === true ? <EditProcesses editData={sendData}/> : "" }
       </div>
     </>
   );
