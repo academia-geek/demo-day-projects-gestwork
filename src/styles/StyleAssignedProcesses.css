@@ -1,5 +1,6 @@
 .item__assigned {
     margin: 20px;
+    padding-left: 35px;
 }
 
 .item__assigned--link {
@@ -8,12 +9,16 @@
 .icon__assigned {
     margin: 1% 22%;
 }
-.eJqlpY {
-    display: inline-block;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: 48px;
-    height: 48px;
-    margin: 2% 32%;
+
+.list__assigned {
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+}
+.btn__process--assigned {
+    width: 250%;
+    background-color: #05BE50;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
 }

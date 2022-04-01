@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Login } from "../components/Login";
-import { SingUp } from "../components/Register/SingUp";
 import { DashboardRoutes } from "./DashboardRoutes";
 import PrivateRoute from "../routers/PrivateRoute";
 import PublicRoute from "../routers/PublicRoute";
 import { useEffect, useState } from "react";
 
 import { Register } from "../components/Register/Register";
+import { Spinner } from "../components/accesories/Spinner";
 
 function AppRouter() {
   const [checking, setChecking] = useState(true);
@@ -29,7 +29,7 @@ function AppRouter() {
   }, []);
 
   if (checking) {
-    return <h1>Espere...</h1>;
+    return <Spinner/>;
   }
   return (
     <BrowserRouter>

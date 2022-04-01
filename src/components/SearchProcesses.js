@@ -4,11 +4,14 @@ import {Search } from 'grommet-icons';
 import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
-import { searchAsyn } from '../redux/actions/actionProcess';
+import { searchProcessAsync } from '../redux/actions/actionProcess';
 import '../styles/StyleActiveProcesses.css'
 import '../styles/config.css'
 
+
+
 export const SearchProcesses = () => {
+  
   const dispatch = useDispatch()
 
   const formik = useFormik({
@@ -19,8 +22,8 @@ export const SearchProcesses = () => {
       search: Yup.string().required()
     }),
     onSubmit:({search}) => {
-      console.log(search)
-      dispatch(searchAsyn(search))
+      console.log(search);
+      dispatch(searchProcessAsync(search))
     }
   })
   return (
@@ -31,10 +34,11 @@ export const SearchProcesses = () => {
           placeholder="Buscar propuestas por nombre"
           className="input__search"
           aria-label="Search"
-          onChange={formik.handleInputChange}
+          // onChange={formik.handleInputChange}
+          onChange={formik.handleChange}
           required
         />
-        <button className='btn__search'>
+        <button className='btn__search' type="submit">
           <Search color='white'/> 
         </button>
       </Form>

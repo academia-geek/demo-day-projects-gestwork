@@ -1,12 +1,20 @@
-import React from 'react'
-import {Trash } from 'grommet-icons';
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteProcessoAsync } from '../redux/actions/actionProcess';
+import { Link } from 'react-router-dom';
+import { listProcessAsync } from '../redux/actions/actionProcess';
+import '../styles/StyleAssignedProcesses.css'
+
 
 export const AssignedProcesses = () => {
   const dispatch = useDispatch();
 
   const {process} = useSelector(store => store.process)
+  console.log(process)
+
+  useEffect(() => {
+    dispatch(listProcessAsync())
+  }, [dispatch])
+
   return (
     <>
     <div className="containerAdd">
@@ -17,10 +25,15 @@ export const AssignedProcesses = () => {
       <section>
       {process.map((item , index) =>(  
         <ul key={index}>
-          <li className='item__assigned'>Proceso N° 45 <span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcessoAsync(item.number))}/> </span></li>
-          <li className='item__assigned'>Proceso N° 31 <span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcessoAsync(item.number))}/> </span></li>
-          <li className='item__assigned'>Proceso N° 45 <span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcessoAsync(item.number))}/> </span></li>
-          <li className='item__assigned'>Proceso N° 52 <span className='item__assigned--link'><Trash className="icon__assigned" color='plain' size='large' onClick={()=> dispatch(deleteProcessoAsync(item.number))}/> </span></li>
+          <li className='list__assigned' >
+            <p className='item__assigned mx-5'>
+            <span className='primary h4'>Proceso:</span>{item.nombre}
+            <br/>
+            <span className='mx-2 h4'>N°:</span>{item.id}</p>
+            <Link to={`/detailProcess/${item.id}`}>   
+            <button className="btn__process--assigned">Ver</button>
+            </Link>
+          </li>
         </ul>
          ))}
       </section>

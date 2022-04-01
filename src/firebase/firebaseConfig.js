@@ -3,12 +3,12 @@ import {getFirestore} from 'firebase/firestore';
 import { GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC1djpzu4p-xmh7ZnNhfHNJUrL7W3laq54",
-    authDomain: "gestwork-21e90.firebaseapp.com",
-    projectId: "gestwork-21e90",
-    storageBucket: "gestwork-21e90.appspot.com",
-    messagingSenderId: "734191707597",
-    appId: "1:734191707597:web:7652ef707bb7c76616d084"
+    apiKey: "AIzaSyBJotertv6S3zDqAZGHypKzCFFkwCsUjsw",
+    authDomain: "gestwork-bad1b.firebaseapp.com",
+    projectId: "gestwork-bad1b",
+    storageBucket: "gestwork-bad1b.appspot.com",
+    messagingSenderId: "810323040534",
+    appId: "1:810323040534:web:d24b14d5ba12b34b1e1837"
 };
 
 const app = initializeApp(firebaseConfig);
