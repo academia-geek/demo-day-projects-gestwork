@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 import { Register } from "../components/Register/Register";
 import { Spinner } from "../components/accesories/Spinner";
+import LandingPage from "../components/LandingPage";
 
 function AppRouter() {
   const [checking, setChecking] = useState(true);
@@ -34,6 +35,16 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route
+          path="/"
+          element={
+            <PublicRoute >
+        <Route path="/landing" element={<LandingPage/>}/> 
+
+        
+            </PublicRoute>
+          }
+        />
         <Route
           path="/login"
           element={
