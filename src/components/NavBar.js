@@ -10,8 +10,8 @@ import { Cargo } from "../redux/actions/actionLogin";
 
 
 export const NavBar = () => {
-  const [objtFav, setObjfav] = useState('bb');
-  const [nombre, setObjnombre] = useState('bb');
+  const [objtFav, setObjfav] = useState('Santiago Torres');
+  const [nombre, setObjnombre] = useState('');
 
   let estados = useSelector((state) => {
     return state;
@@ -57,7 +57,8 @@ useEffect(() => {
   return (
     <Navbar bg="light" className='container-fluid d-flex justify-content-end t-0'>
       <Container fluid className='container-fluid d-flex justify-content-end t-0'>
-      
+      <img style={{marginRight:"420px"}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt="logo"/>
+
           <Form className="sub_navBar">
             <div className="subtitle_navBar container-fluid d-flex justify-content-end">
               <h4>{nombre}</h4>

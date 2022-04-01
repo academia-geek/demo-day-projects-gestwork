@@ -85,7 +85,7 @@ export const AddProcess = () => {
 
   return (
     <div>
-      <div className="containerAdd rounded shadow">
+      <div className="containerAdd">
         <form className="form-group mt-0" onSubmit={formik.handleSubmit}>
           <Row className="row-form mt-0">
             <Col xs={4} className="col-file">
