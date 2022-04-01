@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { registroEmailPasswordNombre } from "../../redux/actions/actionRegister";
 import "../../styles/StyleRegister.css";
@@ -51,9 +50,9 @@ export const Register = () => {
   });
   return (
      <div className="body">
-    <div className="Container  col-xl-6 rounded shadow">
+    <div className="Container">
 
-      <div className="title">Registrate en Gestwork</div>
+      <div className="title">Registro</div>
       <form className="" onSubmit={formik.handleSubmit}>
         <div className="user-details">
            <div className='input-box'>
@@ -145,18 +144,12 @@ export const Register = () => {
         </div>
       
         </div>
-        <div className="my-3">
-              <span>
-                {" "}
-               Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
-              </span>
-            </div>
 
         {/* <button className="btn btn-danger mt-3 ml-3" type="reset">
               Google
             </button> */}
-        <button className="Btn btn btn-outline-success" type="submit">
-         Registrar
+        <button className="Btn" type="submit">
+         Register
         </button>
       </form>
     </div>

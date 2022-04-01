@@ -5,7 +5,8 @@ export const types = {
   logout_success:'logout_success',
   logout_error:'logout_error',
   set_user:'set_user',
-  login_success: 'login_success'
+  login_success: 'login_success',
+  cargo: 'cargo'
 };
 
 export const typesProcess = {

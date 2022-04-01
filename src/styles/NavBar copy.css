@@ -1,10 +1,22 @@
 .phone__profile {
     width: 90px;
-    height: 90px;
+    height: 60px;
     border-radius: 50%;
     padding-right: 10px;
     position: relative;
 }
+
+/**/
+/* .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius:50%;
+    overflow: hidden;
+}
+
+.text-muted{
+color:rgb(16, 19, 19);
+} */
 
 .logoImg{
     width: 310px;
@@ -17,15 +29,11 @@
 .subtitle_navBar {
     color: var(--titlesColor);
     padding: 10px 30px;
+    margin-right: 150px;
 }
 
 .sub_navBar  {
     display: flex;
-}
-.container-fluid{
-  position: relative;
-  padding: auto;
-
 }
 
 .icon_notification {
@@ -37,7 +45,11 @@
 @media (max-width: 525px) {
     .sub_navBar {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: center;
+        font-size: 15px;
+        margin:auto;
+
+
     }
     .phone__profile {
         width: 90px;

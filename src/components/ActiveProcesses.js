@@ -28,9 +28,9 @@ export const ActiveProcesses = () => {
 
   const editarProcess = (id) => {
     console.log(id);
-    const getProcess = process.find(item => item.id === id)
-    console.log(getProcess);
-    setSendData(getProcess);
+    // const getProcess = process.find(item => item.id === id)
+    // console.log(getProcess);
+    // setSendData(getProcess);
   }
   // console.log(sendData);
 
@@ -65,17 +65,18 @@ export const ActiveProcesses = () => {
                     </p>
                   </Card.Title>
                   <div>
-                    <Link to={"/editProcesses"}>
+                    <Link to={`/editProcesses/${item.id}`}>
                       <span className="item__assigned--link">
                         <img
                           src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648759675/GestWork/icons8-l%C3%A1piz-48_ptvvfb.png"
                           alt="lapiz"
                           className="me-3"
                           style={{width:"30px"}}
-                          onClick={() => {
-                            editarProcess(item.id);
-                            setDetailData(true);
-                          }}
+                          // onClick={() => {
+                          //   <EditProcesses editData={sendData}/>
+                          //   // editarProcess(item);
+                          //   setDetailData(true);
+                          // }}
                         />
                       </span>
                     </Link>
@@ -97,7 +98,7 @@ export const ActiveProcesses = () => {
           </Card>
            ))}
         </section>
-        {detailData === true ? <EditProcesses editData={sendData}/> : "" }
+        {/* {detailData === true ? <EditProcesses editData={sendData}/> : "" } */}
       </div>
     </>
   );

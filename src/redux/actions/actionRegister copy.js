@@ -1,10 +1,14 @@
 import {types} from '../types/types';
 import {getAuth, createUserWithEmailAndPassword, updateProfile}from "firebase/auth";
-import { collection, doc, getDoc, getDocs, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 import Swal from 'sweetalert2';
 
-export const registroEmailPasswordNombre = (name,email,cargo,password) => {
+    const fff = getDoc(collection(db, "users"))
+                console.log(fff)
+                console.log("fff")
+
+export const registroEmailPasswordNombre = (name,email,password, cargo) => {
     return(dispatch) => {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth,email,password)
@@ -22,12 +26,8 @@ export const registroEmailPasswordNombre = (name,email,cargo,password) => {
           })    
 
             const docuRef = doc(db, `users/${user.uid}`)
-            setDoc(docuRef,{id:user.uid,name: user.displayName, email: user.email,cargo: cargo})
-            const fff = getDocs(collection(db, "users"))
-            const hh= doc(db, "users", user.uid)
-            console.log(fff, hh)
-            console.log("fff")
-
+            console.log(docuRef,'doc')
+            setDoc(docuRef,{id:user.uid,name: user.displayName, email: user.email, cargo: cargo})
         })
         .catch(e =>{
             Swal.fire({
@@ -37,7 +37,7 @@ export const registroEmailPasswordNombre = (name,email,cargo,password) => {
                 showConfirmButton: true,
                 timer: 5000
               })    
-            console.log(e);
+            console.log(e,'error');
         })
     }
 }
@@ -45,13 +45,15 @@ export const registroEmailPasswordNombre = (name,email,cargo,password) => {
 
 
 export const registerS= (email,password,firstName) => {
+    // console.log('ide',paramuser)
 
     return{
        type: types.register,
        payload: {
            email,
            password,
-           firstName
+           firstName,
        }
+       
     }
 }

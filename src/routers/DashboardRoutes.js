@@ -19,7 +19,7 @@ export const DashboardRoutes = () => {
         <Route path="/activeProcesses" element={<ActiveProcesses/>}/> 
         <Route path="/assignedProcesses" element={<AssignedProcesses/>}/> 
         <Route path="/detailProcess/:id" element={<DetailProcess/>}/>
-        <Route path="/editProcesses" element={<EditProcesses/>}/>
+        <Route path="/editProcesses/:id" element={<EditProcesses/>}/>
         <Route path="/processInformation" element={<ProcessInformation/>}/> 
         <Route path="/profile" element={<Profile/>}/> 
         <Route path="/" element={<Navigate to="/addProcess" />} />

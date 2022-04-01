@@ -11,13 +11,12 @@
     height:100vh; 
     justify-content: center;
     align-items: center;
+    background: rgb(147, 241, 147);
     padding:15px;
-    margin:auto;
-    display:flex; 
 
 }
 .Container{
-    max-width: 800px;
+    max-width: 700px;
     width:100%;
     background: rgb(242, 248, 242);
     padding:65px 30px;
@@ -36,6 +35,7 @@
     bottom:0;
     height:3px;
     width: 30px; 
+    background: green
 }
 .Container form .user-details{
     display:flex; 
@@ -71,13 +71,14 @@ form .user-details .input-box{
      justify-content: center;
      display:flex;
      padding:5px; 
-     margin-right:15px !important;
+     margin: auto;
      height: 45px; 
      width:60%;
      font-size:19px;
      font-weight: 400; 
      border-radius: 5px; 
      letter-spacing:1px;
+     background-color: green;
 
 
  }

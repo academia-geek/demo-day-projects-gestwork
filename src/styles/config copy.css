@@ -1,0 +1,56 @@
+
+:root {
+  --btnbg: #05BE50;
+  --btnColor: #fff;
+  --titlesColor: #0039A6;
+  --menuColor: #1C1B1B;
+  --c-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+
+
+  --c-padding:1.8rem;
+  --padding-1:1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+  }
+  .Content{
+    display:grid;
+    margin:0 auto;
+
+  }
+
+  html{
+    font-size: 14px;
+  }
+  
+  body {
+   
+    font-size: 0.88rem;
+  } 
+ 
+ 
+  .title__section {
+    color: var(--titlesColor);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+  }
+  .container {
+    width: 50%;
+    margin: 5% 50%;
+    padding: 5% 80%;
+    position: absolute;
+    top:5%;
+  }
+  
