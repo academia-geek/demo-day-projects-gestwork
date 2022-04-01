@@ -63,7 +63,16 @@ export const editProcessAsync = (id, contentAll) => {
   return async (dispatch) => {
     updateDoc(doc(db, "process", id), contentAll);
     dispatch(editProcessSync(contentAll));
+    Swal.fire({
+
+      position: 'center',
+      icon: 'success',
+      title: 'Tu Proceso se edito con exito.',
+      showConfirmButton: true,
+      timer: 5000
+    })   
     dispatch(listProcessAsync());
+    
   };
 };
 
@@ -153,13 +162,11 @@ export const addProcessAsync = (newProcess) => {
     addDoc(collection(db, "process"), newProcess)
       .then((resp) => {
         dispatch(addProcessSync(newProcess));
-        console.log("Probando")    
-
         Swal.fire({
 
             position: 'center',
             icon: 'success',
-            title: 'Tu propuesta se subio con exito.',
+            title: 'Tu Proceso se subio con exito.',
             showConfirmButton: false,
             timer: 5000
           })    
