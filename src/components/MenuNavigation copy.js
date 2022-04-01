@@ -95,6 +95,11 @@ export const MenuNavigation = () => {
                     <span className="ms-1 d-none d-sm-inline">Sube tu Procesos</span>
                   </Link>
                 </div>
+                <div >
+                  <Link to="/DocumentUpload" className="nav-link px-0 align-middle"><Logout/>
+                    <span className="ms-1 d-none d-sm-inline">Procesos asignados</span>
+                  </Link>
+                </div>
               </li>
             </ul>
             <div className="dropdown pb-4">

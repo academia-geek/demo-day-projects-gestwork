@@ -1,6 +1,6 @@
 import {types} from '../types/types';
 import {getAuth, createUserWithEmailAndPassword, updateProfile}from "firebase/auth";
-import { doc, setDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 import Swal from 'sweetalert2';
 
@@ -23,6 +23,11 @@ export const registroEmailPasswordNombre = (name,email,cargo,password) => {
 
             const docuRef = doc(db, `users/${user.uid}`)
             setDoc(docuRef,{id:user.uid,name: user.displayName, email: user.email,cargo: cargo})
+            const fff = getDocs(collection(db, "users"))
+            const hh= doc(db, "users", user.uid)
+            console.log(fff, hh)
+            console.log("fff")
+
         })
         .catch(e =>{
             Swal.fire({

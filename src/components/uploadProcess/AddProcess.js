@@ -81,14 +81,14 @@ export const AddProcess = () => {
           }
         })
         .catch((e) => console.log(e)); // Or Error in console
-    };
+    }; 
   }
 
   return (
     <div>
-      <div className="containerAdd mt-1">
-        <form className="form-group" onSubmit={formik.handleSubmit}>
-          <Row className="row-form">
+      <div className="containerAdd rounded shadow">
+        <form className="form-group mt-0" onSubmit={formik.handleSubmit}>
+          <Row className="row-form mt-0">
             <Col xs={4} className="col-file">
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
               <label className="mb-3">Sube propuesta</label>

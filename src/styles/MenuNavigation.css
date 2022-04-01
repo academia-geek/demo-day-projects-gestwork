@@ -1,23 +1,22 @@
 .menu {
   list-style-type: none;
-  margin: 0px 10px 10px 10px;
-  padding: 0;
-  width: 25%;
+  margin: auto 10px auto 10px;
+  width: 24%;
   background-color: var(--menuColor);
   color: var(--btnColor);
   position: fixed;
   /* position: relative; */
   height: 100%;
-  overflow: auto;
-}
+  bottom: -10px; 
+} 
 
 .menu__item {
   display: block;
   color: var(--btnColor);
   font-size: 18px;
-  padding: 2px 16px;
+  padding: auto 10px;
   text-decoration: none;
-  margin: 65px 2px;
+  margin: 55px 2px;
 }
 
 .menu__item.active {
@@ -32,4 +31,9 @@
 
 .menu-logout{
   margin-bottom: 180px !important;
+}
+@media only screen and (max-width: 540px){
+  .ms-3 { 
+    color:red;
+    display:none; }
 }

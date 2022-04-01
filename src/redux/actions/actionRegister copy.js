@@ -4,6 +4,10 @@ import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 import Swal from 'sweetalert2';
 
+    const fff = getDoc(collection(db, "users"))
+                console.log(fff)
+                console.log("fff")
+
 export const registroEmailPasswordNombre = (name,email,password, cargo) => {
     return(dispatch) => {
         const auth = getAuth();

@@ -1,7 +1,13 @@
 import {types} from '../types/types'
 import {getAuth, signInWithEmailAndPassword, signInWithPopup,signOut} from 'firebase/auth'
 import{google} from '../../firebase/firebaseConfig'
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
 
+// Create a reference to the cities collection
+import { query, where } from "firebase/firestore";
+
+// Create a query against the collection.
 const loginStart=() =>({
 
     type: types.login_start,
@@ -37,18 +43,26 @@ export const loginGoogle = () => {
 }
 
 
-export const LoginS = (id, displayname) =>{
-   console.log(id,displayname)
+export const LoginS = (id, displayname, user) =>{
 
     return {
         type:types.login,
         payload:{
             id,
-            displayname
+            displayname,
+            email:user.email
         }
     }
  }
- 
+ export const Cargo = ( cargo) =>{
+     console.log("CARGOOOOOOOOOOOOOOOOOO")
+     return {
+         type:types.cargo,
+         payload:{
+             cargo
+         }
+     }
+  }
  const logoutE=() =>({
     type: types.logout,
   });
@@ -68,25 +82,39 @@ export const setuser = (user) =>({
     type:types.set_user,
     payload: user,
  })
- export const loginEmailPassword = (email,password) =>{
-    console.log( 'entro a funcion')
+ const listitem = async (email) => {
+    let cargo ='' ;
+  
+    const querySnapshot = await getDocs(collection(db, "users"));
+    querySnapshot.forEach((doc) => {
 
+      if (doc.data().email === email){
+        cargo= doc.data().cargo
+        console.log("if cargo")
+        console.log(cargo)
+        
+      }
+
+      
+    });
+    return(dispatch) =>{ dispatch(Cargo(cargo))}
+  };
+ export const loginEmailPassword = (email,password) =>{
     return (dispatch) =>{
-    console.log( 'dispatch')
 
         // dispatch(loginStart()  );
-    console.log( '222entro a funcion')
-
         const auth = getAuth();
 
         signInWithEmailAndPassword(auth,email,password)
        .then(({user}) =>{
-    console.log( 'enentro a then')
-
-             dispatch(
-                LoginS(user.uid,user.displayName),
-                login_success(user)
+          //listitem(user.email)
+          
+     dispatch(
+                LoginS(user.uid,user.displayName, user),
+                //login_success(user),
              ) 
+
+             
        })
        .catch(e =>{
             console.log('El usuario no existe');

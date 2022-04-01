@@ -22,6 +22,11 @@
 .sub_navBar  {
     display: flex;
 }
+.container-fluid{
+  position: relative;
+  padding: auto;
+
+}
 
 .icon_notification {
     padding: 2% 50%;
