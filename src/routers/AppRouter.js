@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 
 import { Register } from "../components/Register/Register";
 import { Spinner } from "../components/accesories/Spinner";
-import LandingPage from "../components/LandingPage";
 
 function AppRouter() {
   const [checking, setChecking] = useState(true);
@@ -36,12 +35,11 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
       <Route
-          path="/"
+          path="/Pages"
           element={
-            <PublicRoute >
-        <Route path="/landing" element={<LandingPage/>}/> 
-
-        
+            <PublicRoute isAuthenticated={isLoggedIn}>
+              
+              <Login />
             </PublicRoute>
           }
         />
