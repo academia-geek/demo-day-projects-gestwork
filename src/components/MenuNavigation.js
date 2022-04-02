@@ -33,7 +33,7 @@ export const MenuNavigation = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" className="menu__item">
+          <Link to="/addp" className="menu__item">
             <DocumentUpload size="large" />
             <label className="ms-3">Sube tus Procesos</label>
           </Link>
@@ -45,7 +45,7 @@ export const MenuNavigation = () => {
           </Link>
         </li>
         <li onClick={handleLogout}>
-          <Link to="/" className="menu__item menu-logout">
+          <Link to="/login" className="menu__item menu-logout">
             <Logout size="large" />
             <label className="ms-3">Salir</label>
           </Link>
