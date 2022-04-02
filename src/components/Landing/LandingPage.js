@@ -150,8 +150,8 @@ const LandingPage = () => {
     <footer id="contacto">
       <div class="container">
         <div class="email">
-          <img src="assets/paperplane.svg" />
-          <h2 class="title text-center">Fique por dentro das novidades</h2>
+          <img src="" alt='' />
+          <h2 class="title text-center">Contactanos</h2>
           <h4 class="subtitle text-center mb-4">
             Et sumi kapa namur aondeai rocus pocus est talaraum
           </h4>
@@ -162,7 +162,7 @@ const LandingPage = () => {
                 type="email"
                 class="form-control w-100"
                 id="email_input"
-                placeholder="seu email"
+                placeholder="email"
               />
             </div>
             <div class="flex-grow-1 flex-md-grow-0">
@@ -170,7 +170,7 @@ const LandingPage = () => {
                 type="submit"
                 class="btn btn-light button mb-3 d-md-inline d-block w-100"
               >
-                cadastre-se
+                cadastre
               </button>
             </div>
           </form>
@@ -178,24 +178,24 @@ const LandingPage = () => {
         <div class="logo py-4">
           <div class="row">
             <div class="col-md-6 align-self-center text-md-left text-center">
-              <img src="assets/logo.svg" class="img-fluid" />
+              <img src="" alt='' class="img-fluid" />
             </div>
             <div class="col-md-6 align-self-center text-right">
               <ul>
                 <li>
-                  <a href="#"><img src="assets/facebook.svg" /></a>
+                  <Link to="#"><img src="assets/facebook.svg" /></Link>
                 </li>
                 <li>
-                  <a href="#"><img src="assets/twitter.svg" /></a>
+                  <Link to="#"><img src="assets/twitter.svg" /></Link>
                 </li>
                 <li>
-                  <a href="#"><img src="assets/instagram.svg" /></a>
+                  <Link to="#"><img src="assets/instagram.svg" /></Link>
                 </li>
                 <li>
-                  <a href="#"><img src="assets/linkedin.svg" /></a>
+                  <Link to="#"><img src="assets/linkedin.svg" /></Link>
                 </li>
                 <li>
-                  <a href="#"><img src="assets/youtube.svg" /></a>
+                  <Link to="#"><img src="assets/youtube.svg" /></Link>
                 </li>
               </ul>
             </div>
