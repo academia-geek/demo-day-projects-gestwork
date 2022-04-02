@@ -135,7 +135,7 @@ const EditProcesses = ({editData}) => {
           <Col xs={8}>
           <Row className="mt-5">
               <Col>
-                <label>N° Orden</label>
+                <label>N° Solicitud</label>
                 <input
                   type="text"
                   className="form-control mt-2"
