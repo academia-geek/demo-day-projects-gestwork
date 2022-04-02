@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { db } from "../../firebase/firebaseConfig";
 import { addProcessAsync } from "../../redux/actions/actionProcess";
 import "../../styles/StyleAddProcess.css";
+import { MenuNavigation } from "../MenuNavigation";
 // import { guardarArchivo } from "../helpers/FileUpload";
 
 export const AddProcess = () => {
@@ -208,6 +209,7 @@ export const AddProcess = () => {
           </div>
         </form>
       </div>
+      <MenuNavigation />
     </div>
   );
 };

@@ -50,12 +50,18 @@ const LandingPage = () => {
               <img src={servicio} alt="" className="img-fluid" />
             </div>
             <div className="col-md-6 align-self-center order-md-2 order-1 mb-md-0 mb-4">
-              <h2 className="title">¿Qué es Gestwork?</h2>
-            
+              <h2 className="title">At vero eos et accusamus et iusto</h2>
+              <h4 className="subtitle">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque
+              </h4>
               <p>
-              Podrás tener un lugar de control para gestionar cada proceso y cada parte de este;
-              esto es indispensable para un mayor crecimiento en tu empresa y tener la posibilidad de darle visibilidad y prioridad a tus solicitudes e ideas,
-              con gestwork no hay espacio para perdidas de información y así todo tu equipo podrá mantenerse conectado en una misma red. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
               </p>
               {/* <Link className="btn btn-primary button button-primary"
               >Entre em contato</Link> */}

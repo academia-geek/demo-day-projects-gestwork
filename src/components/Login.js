@@ -39,7 +39,7 @@ const handleGoogle = () =>{
         </div>
         <div className="col">
           <div className="text-end">
-            <Link to='/'>GestWork</Link>
+            <Link to='/landing'>GestWork</Link>
           </div>
           <h2 className="fw-bold text-center py-5">Bienvenido</h2>
 

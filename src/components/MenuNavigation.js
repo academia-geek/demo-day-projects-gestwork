@@ -45,7 +45,7 @@ export const MenuNavigation = () => {
           </Link>
         </li>
         <li onClick={handleLogout}>
-          <Link to="/" className="menu__item menu-logout">
+          <Link to="/login" className="menu__item menu-logout">
             <Logout size="large" />
             <label className="ms-3">Salir</label>
           </Link>
