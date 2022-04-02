@@ -56,9 +56,9 @@ export const Profile = () => {
 
           <div className=" mt-4 container-btn-add">
             <input
-              value="Guardar Cambios"
+              value="GUARDAR CAMBIOS"
               type="submit"
-              className="btn btn-add-process px-5"
+              className="btn btn-profile px-5"
             />
           </div>
         </form>

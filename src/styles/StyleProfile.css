@@ -10,3 +10,7 @@
 .fotoPerfil{
     border-radius: 50%;
 }
+.btn-profile{
+    color:var(--btnbg) !important;
+    border: 1px solid var(--btnbg) !important;
+}
