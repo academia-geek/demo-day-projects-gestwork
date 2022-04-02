@@ -15,14 +15,14 @@ export const DashboardRoutes = () => {
       <NavBar />
       <MenuNavigation />
       <Routes>
-        <Route path="/*" element={<AddProcess />} />
+        <Route path="/addp" element={<AddProcess />} />
         <Route path="/activeProcesses" element={<ActiveProcesses/>}/> 
         <Route path="/assignedProcesses" element={<AssignedProcesses/>}/> 
         <Route path="/detailProcess/:id" element={<DetailProcess/>}/>
         <Route path="/editProcesses/:id" element={<EditProcesses/>}/>
         <Route path="/processInformation" element={<ProcessInformation/>}/> 
         <Route path="/profile" element={<Profile/>}/> 
-        <Route path="/" element={<Navigate to="/addProcess" />} />
+        <Route path="/addp" element={<Navigate to="/addProcess" />} />
       </Routes>
     </>
   );
