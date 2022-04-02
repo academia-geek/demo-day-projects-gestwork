@@ -29,6 +29,9 @@
   color: white;
 }
 
+.menuResponsive{
+  display: none !important;
+}
 .menu-logout{
   margin-bottom: 180px !important;
 }
@@ -36,4 +39,11 @@
   .ms-3 { 
     color:red;
     display:none; }
+
+  .menuResponsive{
+    display: block !important;
+  }
+  .menu{
+    display: none;
+  }
 }
