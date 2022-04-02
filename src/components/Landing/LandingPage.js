@@ -50,11 +50,8 @@ const LandingPage = () => {
               <img src={servicio} alt="" className="img-fluid" />
             </div>
             <div className="col-md-6 align-self-center order-md-2 order-1 mb-md-0 mb-4">
-              <h2 className="title">At vero eos et accusamus et iusto</h2>
-              <h4 className="subtitle">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque
-              </h4>
+              <h2 className="title">¿Qué es Gestwork?</h2>
+            
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
