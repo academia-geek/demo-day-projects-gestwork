@@ -38,7 +38,6 @@ export const listProcessAsync = () => {
     
     const querySnapshot = await getDocs(collection(db, "process"));
     const processes = [];
-    console.log("probando activos")
 
     querySnapshot.forEach((doc) => {
       let data = doc.data();

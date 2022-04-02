@@ -28,7 +28,7 @@ export const NavBar = () => {
               <img
                 className="phone__profile"
                 src={user.foto}
-             alt='' />
+             alt='Foto' />
              
             </div>
           </Form>
