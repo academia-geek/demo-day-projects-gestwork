@@ -7,11 +7,12 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
 import { useDispatch, useSelector } from "react-redux";
 import { Cargo } from "../redux/actions/actionLogin";
+import { getAuth } from "firebase/auth";
 
 
 export const NavBar = () => {
-  const [objtFav, setObjfav] = useState('bb');
-  const [nombre, setObjnombre] = useState('bb');
+  const [objtFav, setObjfav] = useState('');
+  const [nombre, setObjnombre] = useState('');
 
   let estados = useSelector((state) => {
     return state;
@@ -21,6 +22,7 @@ export const NavBar = () => {
   let dispatch = useDispatch();
 
   
+
 const listitem2 = async () => {
 console.log(estados)
 //console.log(estados.user.email)

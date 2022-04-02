@@ -22,7 +22,7 @@ export const AssignedProcesses = () => {
         <h2 className='title__section'>Procesos Asignados</h2>
       </div>
       <p>Mira aquí los procesos que te han sido asignados</p>
-      <section>
+      <section className='contaner__list'>
       {process.map((item , index) =>(  
         <ul key={index}>
           <li className='list__assigned' >
