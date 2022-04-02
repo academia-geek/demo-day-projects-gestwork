@@ -15,9 +15,6 @@ export const ActiveProcesses = () => {
 
   const dispatch = useDispatch();
 
-  const [sendData, setSendData] = useState([]);
-  const [detailData, setDetailData] = useState(false);
-  const [inactiveProcess, setInactiveProcess] = useState([])
 
   const {process} = useSelector(store => store.process)
   
@@ -32,14 +29,7 @@ export const ActiveProcesses = () => {
     // console.log(getProcess);
     // setSendData(getProcess);
   }
-  // console.log(sendData);
 
-  // const disableProcess = (id) => {
-  //   const getProcess = process.find(item => item.id === id)
-  //   console.log(getProcess);
-  //   setInactiveProcess(getProcess);
-  // }
-  // console.log(inactiveProcess)
   return (
     <>
       <div className="containerAdd">
@@ -68,20 +58,15 @@ export const ActiveProcesses = () => {
                     <Link to={`/editProcesses/${item.id}`}>
                       <span className="item__assigned--link">
                         <img
-                          src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648759675/GestWork/icons8-l%C3%A1piz-48_ptvvfb.png"
+                          src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648857762/GestWork/icons8-l%C3%A1piz-30_abusob.png"
                           alt="lapiz"
                           className="me-3"
                           style={{width:"30px"}}
-                          // onClick={() => {
-                          //   <EditProcesses editData={sendData}/>
-                          //   // editarProcess(item);
-                          //   setDetailData(true);
-                          // }}
                         />
                       </span>
                     </Link>
                     <img
-                      src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648760168/GestWork/icons8-mensaje-borrado-30_bep2g1.png"
+                      src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648857762/GestWork/icons8-basura-24_anbbqa.png"
                       alt="icondelete"
                       style={{width:"30px"}}
                       onClick={() => dispatch(deleteProcess(item.id))}
