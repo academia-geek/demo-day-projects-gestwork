@@ -13,7 +13,7 @@ export const NavBar = () => {
   return (
     <Navbar bg="light" className='container-fluid d-flex justify-content-end t-0'>
       <Container fluid className='container-fluid d-flex justify-content-end t-0'>
-      <img style={{marginRight:"420px"}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
+      <img className="logoImg" style={{marginRight:"420px"}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
 
           <Form className="sub_navBar">
             <div className="subtitle_navBar container-fluid d-flex justify-content-end">
@@ -25,11 +25,12 @@ export const NavBar = () => {
                   : (user.cargo = "")}</h4>
             </div>
             <div className="d-flex p-1">
-              <img
+              {user.foto !== undefined 
+              ?<img
                 className="phone__profile"
                 src={user.foto}
              alt='Foto' />
-             
+            :(user.foto = "https://res.cloudinary.com/df90q7vvj/image/upload/v1648860811/GestWork/23408e565fc3f43454636fec27572d1f_v8bhk3.jpg")}
             </div>
           </Form>
    
