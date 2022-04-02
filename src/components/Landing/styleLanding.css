@@ -47,7 +47,6 @@
 }
 .home{
     background-size:contain;
-    background-color: url(./asset/back.svg) no-repeat center bottom;
 }
 .home h1{
     text-transform: uppercase;
