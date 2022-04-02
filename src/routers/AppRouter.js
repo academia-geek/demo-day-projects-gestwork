@@ -34,7 +34,14 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/landing" element={<LandingPage />} />
+      <Route path="/" element={
+      
+      <PublicRoute>
+
+      <LandingPage />
+      </PublicRoute>
+      }
+      />
         <Route
           path="/login"
           element={
