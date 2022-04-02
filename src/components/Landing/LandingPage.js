@@ -20,18 +20,18 @@ const LandingPage = () => {
       </div>
       
       <section className="home">
-        <div className="container">
+        <div className="container pt-5">
           <div className="row">
-            <div className="col-md-4 align-self-center">
+            <div className="col-md-4 align-self-center mb-md-0 mb-4">
             
                 <h1>Gestwork.</h1>
-                <p>
+                <p  className='mb-4'>
                   {" "}
                   La importancia de la tecnología en los procesos de gestión y
                   comunicación
                 </p>
                 <div className="home-btn">
-                  <Link to='/login' className="btn btn-outline-danger to">Ir a App</Link>
+                  <Link to='/login' className="btn btn-outline-danger to d-md-inline-block d-block  mb-md-0">Ir a App</Link>
                 
               </div>
          

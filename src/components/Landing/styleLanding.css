@@ -43,5 +43,19 @@
     font-weight: 500;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
+
+}
+.home{
+    background-size:contain;
+    background-color: url(./asset/back.svg) no-repeat center bottom;
+}
+.home h1{
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+.home h1{
+    text-transform: uppercase;
+    font-size: 18px;
     
 }
