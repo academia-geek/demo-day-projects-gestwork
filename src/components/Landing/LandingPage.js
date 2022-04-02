@@ -27,7 +27,7 @@ const LandingPage = () => {
               </p>
               <div className="home-btn">
                 <Link
-                  to="/login"
+                  to="/*"
                   className="btn btn-outline-success to d-md-inline-block d-block"
                 >
                   Ir a App

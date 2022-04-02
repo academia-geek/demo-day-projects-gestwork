@@ -55,7 +55,6 @@ export const LoginS = (id, displayname, user) =>{
     }
  }
  export const Cargo = ( cargo) =>{
-     console.log("CARGOOOOOOOO")
      return {
          type:types.cargo,
          payload:{
