@@ -19,7 +19,7 @@ function AppRouter() {
     const auth = getAuth();
     return onAuthStateChanged(auth, (user) => {
       if (user?.uid) {
-        setId(user.uid)
+        setId(user.uid);
         setIsLoggedIn(true);
       } else {
         setIsLoggedIn(false);
@@ -29,19 +29,19 @@ function AppRouter() {
   }, []);
 
   if (checking) {
-    return <Spinner/>;
+    return <Spinner />;
   }
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={
-      
-      <PublicRoute>
-
-      <LandingPage />
-      </PublicRoute>
-      }
-      />
+        <Route
+          path="/"
+          element={
+            <PublicRoute>
+              <LandingPage />
+            </PublicRoute>
+          }
+        />
         <Route
           path="/login"
           element={
@@ -61,7 +61,7 @@ function AppRouter() {
         />
 
         <Route
-          path="/"
+          path="/*"
           element={
             <PrivateRoute isAuthenticated={isLoggedIn}>
               <DashboardRoutes />
