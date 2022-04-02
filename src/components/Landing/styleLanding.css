@@ -20,10 +20,7 @@
     outline:none!important;
 }
 
-.LogoL{
-    max-width:100%;
-    vertical-align:middle;
-}
+
 .navbar{
     padding: 15px 0;
     background-color:aqua;
@@ -37,7 +34,10 @@
     max-width:250px;
     width:200%;
 } */
-
+.LogoL{
+  max-width:100%;
+  vertical-align:middle;
+}
 .to{
     text-transform: lowercase;
     font-weight: 500;
@@ -47,7 +47,10 @@
 }
 .home{
     background-size:contain;
+    margin: 10px 20px;;
+    padding: 20px 20px;
 }
+
 .home h1{
     text-transform: uppercase;
     font-weight: 700;
@@ -64,14 +67,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 500;
 }
 
-a {
+.destaque{
   color: var(--primary);
 }
 
-a:hover {
+.destaque:hover {
   color: var(--secondary);
 }
 
@@ -85,6 +88,10 @@ a:hover {
 
 .block {
   margin-top: 50px;
+}
+.servicios{
+    margin-top: 10px;
+    padding: 20px 20px;
 
 }
 
@@ -100,12 +107,34 @@ a:hover {
   border-color: var(--primary);
 }
 
-.button-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
-}
+
 
 .button-primary-outline {
   border-color: var(--primary);
   color: var(--primary);
+}
+
+#servicos .destaque {
+  display: block;
+  background: var(--light);
+  border-radius: 5px;
+  text-align: center;
+  padding: 25px 20px;
+  color: #000;
+  text-decoration: none;
+  transition: all ease-out 0.2s;
+}
+
+#servicos .destaque:hover {
+  /* background:linear-gradient(white, #05BE50); */
+  border: 1px solid #05BE50;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+  transform: scale(1.05);
+}
+
+#servicos .destaque .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
 }
