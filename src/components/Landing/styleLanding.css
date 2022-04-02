@@ -1,0 +1,47 @@
+/* :root{
+  --verde: #05BE50;
+ 
+    --main-color:'';
+    --shadow-black-100: 0 5px 15px rgb(0,0,0,0,1);
+    --shadow-black-300: 0 5px 15px rgb(0,0,0,0,1);
+    --black-900:#000000;
+    --black-400: #55555559;
+}
+
+
+.bodyP{
+    font-size:16px;
+    font-weight: 400;
+    overflow: hidden;
+}
+*{
+    margin:0;
+    padding:0; 
+    outline:none!important;
+}
+
+.LogoL{
+    max-width:100%;
+    vertical-align:middle;
+}
+.navbar{
+    padding: 15px 0;
+    background-color:aqua;
+}
+.home{
+    min-height: 100hv;
+    padding: 150px 0;
+    background-color:purple;
+}
+.home-img img{
+    max-width:250px;
+    width:200%;
+} */
+
+.to{
+    text-transform: lowercase;
+    font-weight: 500;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    
+}
