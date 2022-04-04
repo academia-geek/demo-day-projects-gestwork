@@ -2,7 +2,7 @@
 :root {
   --btnbg: #05BE50;
   --btnColor: #fff;
-  --titlesColor: #0039A6;
+  --titlesColor: #05338a;
   --menuColor: #1C1B1B;
 }
 
@@ -32,5 +32,6 @@
     color: var(--titlesColor);
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 32px;
+    padding:25px;
   }
