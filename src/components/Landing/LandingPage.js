@@ -15,7 +15,7 @@ const LandingPage = () => {
         </nav>
       </div>
 
-      <section className="home container my-3">
+      <section className="home container my-1">
         <div className="container pt-5">
           <div className="row">
             <div className="col-md-4 align-self-center mb-md-0 mb-4 gest">
@@ -27,7 +27,7 @@ const LandingPage = () => {
               </p>
               <div className="home-btn">
                 <Link
-                  to="/*"
+                  to="/login"
                   className="btn btn-outline-success to d-md-inline-block d-block"
                 >
                   Ir a App
