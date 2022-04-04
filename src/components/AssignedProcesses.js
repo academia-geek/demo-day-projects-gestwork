@@ -9,7 +9,6 @@ export const AssignedProcesses = () => {
   const dispatch = useDispatch();
 
   const {process} = useSelector(store => store.process)
-  console.log(process)
 
   useEffect(() => {
     dispatch(listProcessAsync())

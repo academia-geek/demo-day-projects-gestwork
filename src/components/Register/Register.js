@@ -28,7 +28,7 @@ export const Register = () => {
           .email("Email is invalid")
           .required("Email is required"),
         cargo: Yup.string()
-          .max(15, "Must be 15 characters or less")
+          .max(30, "Must be 15 characters or less")
           .required("Required"),
         password: Yup.string()
           .min(6, "Password must be at least 6 charaters")
