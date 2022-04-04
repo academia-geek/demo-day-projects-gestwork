@@ -1,11 +1,12 @@
 .phone__profile {
     width:80px;
-    border-radius: 500px;
+    height: 70px;
+    border-radius: 50%;
     padding-right: 10px;
 }
 
 .logoImg{
-    width: 250px;
+    width: 300px;
     object-fit: cover;
 }
 .title_navBar {
@@ -19,6 +20,10 @@
 
 .sub_navBar  {
     display: flex;
+    align-items: center;
+}
+.link-name{
+    text-decoration: none;
 }
 .container-fluid{
   position: relative;
