@@ -2,12 +2,16 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import UserPerfil from "../hooks/UserPerfil";
 import '../styles/StyleProfile.css'
+import { MenuNavigation } from "./MenuNavigation";
+import { NavBar } from "./NavBar";
 
 export const Profile = () => {
   const user = UserPerfil();
 
   return (
     <div>
+       <NavBar />
+    <MenuNavigation/>
       <div className="containerAdd containerProfile w-95">
         <form className="form-group form-profile mt-0">
           <Row className="row-form mt-0">

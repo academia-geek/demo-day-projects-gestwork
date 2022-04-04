@@ -13,7 +13,8 @@ import InitialMenu from "../components/menuinicial/InitialMenu";
 export const DashboardRoutes = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar />
+        <MenuNavigation /> */}
       <Routes>
         <Route path="/*" element={<InitialMenu/>} />
         <Route path="/addp" element={<AddProcess />} />

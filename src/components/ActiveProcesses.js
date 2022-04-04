@@ -9,6 +9,8 @@ import { deleteProcess, deleteProcessAsync, editProcessAsync, listProcessAsync }
 import { Link } from "react-router-dom";
 import EditProcesses from "./EditProcesses";
 import DetailProcess from "./DetailProcess";
+import { NavBar } from "./NavBar";
+import { MenuNavigation } from "./MenuNavigation";
 
 
 export const ActiveProcesses = () => {
@@ -32,6 +34,8 @@ export const ActiveProcesses = () => {
 
   return (
     <>
+    <NavBar />
+      <MenuNavigation />
       <div className="containerAdd">
         <div>
           <h2 className="title__section">Procesos Activos</h2>
