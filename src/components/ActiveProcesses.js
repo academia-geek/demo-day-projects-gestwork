@@ -39,43 +39,40 @@ export const ActiveProcesses = () => {
       <div className="containerAdd">
         <div>
           <h2 className="title__section">Procesos Activos</h2>
-       
-       <div className=''>
+        </div>
         <SearchProcesses />
-        </div>
-        </div>
-        <section className='d-flex flex-wrap align-content-around'>
+        <section>
         {process.map((item, index) => (
             <Card
               key={index}
               border="primary"
-              className="card__process align-items-center" 
-              style={{}}
+              className="card__process"
+              style={{ width: "46.5rem" }}
             >
-              <Card.Body className='col-12 container-fluid mt-1' >
+              <Card.Body>
                 <div className="header__card">
-                  <Card.Title className="d-flex col-sm-6">
-                    <p className="item__assigned me-1 p-2 ">
+                  <Card.Title>
+                    <p className="item__assigned">
                       <span className="primary h4">Proceso:</span>
                       {item.nombre}/<span className="mx-2 h4">N°:</span>
                       {item.id}
                     </p>
                   </Card.Title>
-                  <div className='icons me-1 pt-4 row-sm-6'>
+                  <div>
                     <Link to={`/editProcesses/${item.id}`}>
-                      <span className="item__assigned--link float-start">
+                      <span className="item__assigned--link">
                         <img
                           src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648857762/GestWork/icons8-l%C3%A1piz-30_abusob.png"
                           alt="lapiz"
-                          className="mb-5"
-                          style={{width:"25px" , color:'red'}}
+                          className="me-3"
+                          style={{width:"30px"}}
                         />
                       </span>
                     </Link>
                     <img
                       src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648857762/GestWork/icons8-basura-24_anbbqa.png"
                       alt="icondelete"
-                      style={{width:"25px"}}
+                      style={{width:"30px"}}
                       onClick={() => dispatch(deleteProcess(item.id))}
                     />
                   </div>

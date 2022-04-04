@@ -2,8 +2,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NavBar } from '../NavBar';
-import './initial.css'
+import { NavBar } from '../NavBar'
 import { Logout, DocumentUpload, Copy, ChatOption } from "grommet-icons";
 
 
@@ -17,23 +16,25 @@ const InitialMenu = () => {
     <NavBar/>
 
     </div>
-    <div id="servicios" className="container">
-      <div className='container'>
-        <div className="containe">
-          <h4 className="title text-center mb-2 mt-5">Usa Gestwork</h4>
-        
+    <div id="servicos" className="block servicios">
+        <div className="container">
+          <h4 className="title text-center">Usa Gestwork</h4>
+          <h5 className="subtitle text-center mb-4">
+            Lorem ipsum dolor sit amet, consectetur adips Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Temporibus, dolor!
+          </h5>
         </div>
         <div className="container">
           <div className="row box">
             <div className="col-sm-5 col-md-6 contenido">
-              <Link to="/activeProcesses" className="destaque">
+              <Link to="" className="destaque">
                 
                 <div className="img-container mb-3 icon">
-            <DocumentUpload color='green' size="large" />
+            <DocumentUpload size="large" />
                   
                 </div>
                 <div className="text">
-                <h5 className="text">Procesos activos</h5>
+                <h5 className="text">procesos activos</h5>
                 <p className="mb-0">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
                   aut fugiat ut!
@@ -42,8 +43,8 @@ const InitialMenu = () => {
               </Link>
             </div>
 
-            <div className="col-sm-5 col-md-6 box">
-              <Link to="/assignedProcesses" className="destaque">
+            <div className="col-sm-5 col-md-6">
+              <Link to="" className="destaque">
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
@@ -56,12 +57,12 @@ const InitialMenu = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm- col-md-6 box">
-              <Link to="/addp" className="destaque">
+            <div className="col-sm-5 col-md-6">
+              <Link to="" className="destaque">
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text">Subir procesos</h5>
+                <h5 className="text">subir procesos</h5>
                 <p className="mb-0">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium
@@ -69,7 +70,7 @@ const InitialMenu = () => {
               </Link>
             </div>
 
-            <div className="col-sm-1 col-md-6 box">
+            <div className="col-sm-5 col-md-6">
               <Link to="" className="destaque">
               <div className="img-container mb-3 icon">
             <ChatOption size="large" />
@@ -85,7 +86,6 @@ const InitialMenu = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
 
   )
