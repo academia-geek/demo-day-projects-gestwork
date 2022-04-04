@@ -3,8 +3,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NavBar } from '../NavBar'
-import { Logout, DocumentUpload, Copy, ChatOption } from "grommet-icons";
-
+import { DocumentUpload, Copy, ChatOption, Attachment } from "grommet-icons";
+import './styleinitmenu.css';
 
 const InitialMenu = () => {
   return (
@@ -12,74 +12,69 @@ const InitialMenu = () => {
 
     <div>
 
-    <div className="containerAdd">
+    <div className="containerAdd navbarmenu">
+
     <NavBar/>
 
     </div>
-    <div id="servicos" className="block servicios">
+    <div id="servicios" className="block servicios">
         <div className="container">
           <h4 className="title text-center">Usa Gestwork</h4>
-          <h5 className="subtitle text-center mb-4">
-            Lorem ipsum dolor sit amet, consectetur adips Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Temporibus, dolor!
-          </h5>
+   
         </div>
         <div className="container">
           <div className="row box">
             <div className="col-sm-5 col-md-6 contenido">
-              <Link to="" className="destaque">
+              <Link to="/activeProcesses" className="destaque">
                 
                 <div className="img-container mb-3 icon">
-            <DocumentUpload size="large" />
+                <Copy size="large" color='green'/>
                   
                 </div>
                 <div className="text">
-                <h5 className="text">procesos activos</h5>
+                <h5 className="text">Procesos activos</h5>
                 <p className="mb-0">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                  aut fugiat ut!
+                  Podras ver todo lo que debes resolver de forma ugente.
                 </p>
                 </div>
               </Link>
             </div>
 
             <div className="col-sm-5 col-md-6">
-              <Link to="" className="destaque">
+              <Link to="assignedProcesses" className="destaque">
                 <div className="img-container mb-3">
-                  <img src="" alt="" className="img-fluid" />
+                <Attachment size="large" color='green'/>
                 </div>
                 <h5 className="text">Procesos asignados</h5>
                 <p className="mb-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium
+                 Cuanta tarea tienes por resolver
                 </p>
               </Link>
             </div>
           </div>
           <div className="row">
             <div className="col-sm-5 col-md-6">
-              <Link to="" className="destaque">
-                <div className="img-container mb-3">
-                  <img src="" alt="" className="img-fluid" />
-                </div>
-                <h5 className="text">subir procesos</h5>
+              <Link to="/addp" className="destaque">
+              <div>
+            <DocumentUpload size="large" color='green'/>
+
+              </div>
+                <h5 className="text">Subir procesos</h5>
                 <p className="mb-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium
-                </p>
+                  Sube y asigna procesos                </p>
               </Link>
+           
             </div>
 
             <div className="col-sm-5 col-md-6">
-              <Link to="" className="destaque">
+              <Link to="addp" className="destaque">
               <div className="img-container mb-3 icon">
-            <ChatOption size="large" />
+            <ChatOption size="large"color='green' />
                   
                 </div>
                 <h5 className="text">Escribele a tu colaboradores</h5>
                 <p className="mb-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium
+                  Ponte en contacto con tus compañeros
                 </p>
               </Link>
             </div>
