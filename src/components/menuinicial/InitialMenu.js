@@ -72,7 +72,7 @@ const InitialMenu = () => {
             <ChatOption size="large"color='green' />
                   
                 </div>
-                <h5 className="text">Escribele a tu colaboradores</h5>
+                <h5 className="text">Escribele a tus colaboradores</h5>
                 <p className="mb-0">
                   Ponte en contacto con tus compañeros
                 </p>
