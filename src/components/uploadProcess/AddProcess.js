@@ -8,7 +8,6 @@ import { addProcessAsync } from "../../redux/actions/actionProcess";
 import "../../styles/StyleAddProcess.css";
 import { MenuNavigation } from "../MenuNavigation";
 import { NavBar } from "../NavBar";
-// import { guardarArchivo } from "../helpers/FileUpload";
 
 export const AddProcess = () => {
   const [dataUser, setDataUser] = useState();
