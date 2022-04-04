@@ -50,18 +50,10 @@ const LandingPage = () => {
               <img src={servicio} alt="" className="img-fluid" />
             </div>
             <div className="col-md-6 align-self-center order-md-2 order-1 mb-md-0 mb-4">
-              <h2 className="title">At vero eos et accusamus et iusto</h2>
-              <h4 className="subtitle">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque
-              </h4>
+              <h2 className="title">Servicio </h2>
+   
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+              Es poder tener un lugar de control para gestionar cada proceso y cada parte de este; esto es indispensable para un mayor crecimiento y tener la posibilidad de darle visibilidad y prioridad a tus solicitudes e ideas, con gestwork no hay espacio para perdidas de información y así todo tu equipo podrá mantenerse conectado en una misma red.
               </p>
               {/* <Link className="btn btn-primary button button-primary"
               >Entre em contato</Link> */}
@@ -72,10 +64,6 @@ const LandingPage = () => {
       <div id="servicos" className="block servicios">
         <div className="container">
           <h4 className="title text-center">Beneficios Gestwork</h4>
-          <h5 className="subtitle text-center mb-4">
-            Lorem ipsum dolor sit amet, consectetur adips Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Temporibus, dolor!
-          </h5>
         </div>
         <div className="container">
           <div className="row">
@@ -84,10 +72,9 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Et sumi kapo</h5>
+                <h5 className="text-uppercase">Tareas mas organizadas</h5>
                 <p className="mb-0">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                  aut fugiat ut!
+                  Poder organizar, es poder optimizar tu tiempo
                 </p>
               </Link>
             </div>
@@ -97,10 +84,9 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Lorem Ipsun</h5>
+                <h5 className="text-uppercase">Centralizar informacion</h5>
                 <p className="mb-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium
+                  Unicamente la informacion de tu empresa
                 </p>
               </Link>
             </div>
@@ -111,10 +97,9 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Malarum Tor</h5>
+                <h5 className="text-uppercase">Priorizar procesos</h5>
                 <p className="mb-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium
+                  Poder priorizar tus tareas y asi cumplir a tiempo
                 </p>
               </Link>
             </div>
@@ -124,10 +109,9 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Aondeai Pocus</h5>
+                <h5 className="text-uppercase">Mayor Gestiòn</h5>
                 <p className="mb-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium
+                  Gestiona y optimiza el tiempo de tus colaboradores
                 </p>
               </Link>
             </div>
