@@ -34,7 +34,7 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={
+      <Route path="/landing" element={
       
       <PublicRoute>
 

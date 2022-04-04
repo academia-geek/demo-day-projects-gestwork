@@ -13,8 +13,8 @@ export const NavBar = () => {
   return (
     <Navbar bg="light" className='container-fluid d-flex justify-content-end t-0'>
       <Container fluid className='container-fluid d-flex justify-content-end t-0'>
-      <img className="logoImg" style={{marginRight:"310px"}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
-
+     <Link to='/*'>  <img className="logoImg" style={{marginRight:"310px"}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
+     </Link>
           <Form className="sub_navBar">
             <Link to="/profile" className="link-name">
             <div className="subtitle_navBar container-fluid d-flex justify-content-end">
