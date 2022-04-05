@@ -13,7 +13,7 @@ const LandingPage = () => {
             <img
               classNam="logoL"
               width="310"
-              src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg"
+              src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
               alt=""
             />
           </div>
@@ -26,7 +26,6 @@ const LandingPage = () => {
             <div className="col-md-4 align-self-center mb-md-0 mb-4 gest">
               <h1>Gestwork.</h1>
               <p className="mb-4 p">
-                {" "}
                 La importancia de la tecnología en los procesos de gestión y
                 comunicación
               </p>

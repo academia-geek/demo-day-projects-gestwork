@@ -31,7 +31,7 @@ export const NavBar = () => {
                 className="phone__profile"
                 src={user.foto}
              alt='Foto' />
-            :(user.foto = "https://res.cloudinary.com/df90q7vvj/image/upload/v1648860811/GestWork/23408e565fc3f43454636fec27572d1f_v8bhk3.jpg")}
+            :(user.foto = "https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png")}
             </div>
             <Notifications/>
           </Form>
