@@ -210,7 +210,6 @@ export const AddProcess = () => {
           </div>
         </form>
       </div>
-      <MenuNavigation />
     </div>
   );
 };

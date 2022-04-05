@@ -36,7 +36,7 @@ const LandingPage = () => {
                   to="/*"
                   className="btn w-50 to d-md-inline-block d-block "
                 >
-                  <h6 style={{ color: "black" }} className="fw-normal ">
+                  <h6 style={{ color: "white" }} className="fw-normal ">
                     Ir App
                   </h6>
                 </Link>

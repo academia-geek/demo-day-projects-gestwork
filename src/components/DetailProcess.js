@@ -31,7 +31,7 @@ const DetailProcess = () => {
       <MenuNavigation />
       <div className="containerAdd">
       
-        <h2 className="title__section"><Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>Información del Proceso</h2>
+        <h2 className="title__section mt-5"><Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>Información del Proceso</h2>
         <div className="d-flex">
           <Col xs={6} className="mx-5">
             <form className="form-group">
