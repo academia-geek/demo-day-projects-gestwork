@@ -1,7 +1,15 @@
 import { Toast } from 'bootstrap'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Notifications = () => {
+
+  const [show, setShow] = useState(false);
+  const [notification, setNotification] = useState({
+    nombre: '',
+    areaEncargada:'',
+    fecha: '',
+    responsable: ''
+  })
   return (
     <div>
        <Toast/>
