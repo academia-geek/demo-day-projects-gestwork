@@ -19,7 +19,7 @@ function AppRouter() {
     const auth = getAuth();
     return onAuthStateChanged(auth, (user) => {
       if (user?.uid) {
-        setId(user.uid)
+        setId(user.uid);
         setIsLoggedIn(true);
       } else {
         setIsLoggedIn(false);
@@ -29,7 +29,7 @@ function AppRouter() {
   }, []);
 
   if (checking) {
-    return <Spinner/>;
+    return <Spinner />;
   }
   return (
     <BrowserRouter>
