@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Button, Card } from "react-bootstrap";
-import {Edit, Trash } from 'grommet-icons';
+import React, { useEffect } from "react";
+import { Card } from "react-bootstrap";
 import { SearchProcesses } from "./SearchProcesses";
 import '../styles/StyleActiveProcesses.css'
 import '../styles/config.css'
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProcess, deleteProcessAsync, editProcessAsync, listProcessAsync } from "../redux/actions/actionProcess";
+import { deleteProcess, listProcessAsync } from "../redux/actions/actionProcess";
 import { Link } from "react-router-dom";
-import EditProcesses from "./EditProcesses";
-import DetailProcess from "./DetailProcess";
+import { NavBar } from "./NavBar";
+import { MenuNavigation } from "./MenuNavigation";
 
 
 export const ActiveProcesses = () => {
@@ -23,27 +22,23 @@ export const ActiveProcesses = () => {
     dispatch(listProcessAsync())
   }, [dispatch])
 
-  const editarProcess = (id) => {
-    console.log(id);
-    // const getProcess = process.find(item => item.id === id)
-    // console.log(getProcess);
-    // setSendData(getProcess);
-  }
-
+ 
   return (
     <>
-      <div className="containerAdd">
-        <div>
+    <NavBar />
+      <MenuNavigation />
+      <div className="containerAdd pt-4">
+        <div className="me-3 p-3 d-flex justify-content-center">
           <h2 className="title__section">Procesos Activos</h2>
         </div>
         <SearchProcesses />
-        <section>
+        <section className= 'm-3'>
         {process.map((item, index) => (
             <Card
               key={index}
               border="primary"
               className="card__process"
-              style={{ width: "46.5rem" }}
+              style={{ width: "85%" }}
             >
               <Card.Body>
                 <div className="header__card">
@@ -54,21 +49,21 @@ export const ActiveProcesses = () => {
                       {item.id}
                     </p>
                   </Card.Title>
-                  <div>
+                  <div className="m-2 p-1">
                     <Link to={`/editProcesses/${item.id}`}>
                       <span className="item__assigned--link">
                         <img
                           src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648857762/GestWork/icons8-l%C3%A1piz-30_abusob.png"
                           alt="lapiz"
                           className="me-3"
-                          style={{width:"30px"}}
+                          style={{width:"30px", color:'red'}}
                         />
                       </span>
                     </Link>
                     <img
                       src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648857762/GestWork/icons8-basura-24_anbbqa.png"
                       alt="icondelete"
-                      style={{width:"30px"}}
+                      style={{width:"25px"}}
                       onClick={() => dispatch(deleteProcess(item.id))}
                     />
                   </div>

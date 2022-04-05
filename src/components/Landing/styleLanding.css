@@ -1,39 +1,4 @@
-/* :root{
-  --verde: #05BE50;
- 
-    --main-color:'';
-    --shadow-black-100: 0 5px 15px rgb(0,0,0,0,1);
-    --shadow-black-300: 0 5px 15px rgb(0,0,0,0,1);
-    --black-900:#000000;
-    --black-400: #55555559;
-}
 
-
-.bodyP{
-    font-size:16px;
-    font-weight: 400;
-    overflow: hidden;
-}
-*{
-    margin:0;
-    padding:0; 
-    outline:none!important;
-}
-
-
-.navbar{
-    padding: 15px 0;
-    background-color:aqua;
-}
-.home{
-    min-height: 100hv;
-    padding: 150px 0;
-    background-color:purple;
-}
-.home-img img{
-    max-width:250px;
-    width:200%;
-} */
 .LogoL{
   max-width:100%;
   vertical-align:middle;
@@ -80,6 +45,7 @@ h6 {
 
 .title {
   text-transform: uppercase;
+  padding-bottom: 2rem;
 }
 
 .subtitle {
@@ -125,12 +91,12 @@ h6 {
   transition: all ease-out 0.2s;
 }
 
-#servicos .destaque:hover {
-  /* background:linear-gradient(white, #05BE50); */
+/* #servicos .destaque:hover {
+  background:linear-gradient(white, #05BE50);
   border: 1px solid #05BE50;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
   transform: scale(1.05);
-}
+} */
 
 #servicos .destaque .img-container {
   display: flex;

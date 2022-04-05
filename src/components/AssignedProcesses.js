@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { listProcessAsync } from '../redux/actions/actionProcess';
 import '../styles/StyleAssignedProcesses.css'
+import { MenuNavigation } from './MenuNavigation';
+import { NavBar } from './NavBar';
 
 
 export const AssignedProcesses = () => {
@@ -16,12 +18,14 @@ export const AssignedProcesses = () => {
 
   return (
     <>
+        <NavBar/>
+      <MenuNavigation/>
     <div className="containerAdd">
       <div>
         <h2 className='title__section'>Procesos Asignados</h2>
       </div>
       <p>Mira aquí los procesos que te han sido asignados</p>
-      <section>
+      <section className='contaner__list'>
       {process.map((item , index) =>(  
         <ul key={index}>
           <li className='list__assigned' >

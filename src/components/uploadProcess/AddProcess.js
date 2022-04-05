@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 import { db } from "../../firebase/firebaseConfig";
 import { addProcessAsync } from "../../redux/actions/actionProcess";
 import "../../styles/StyleAddProcess.css";
-// import { guardarArchivo } from "../helpers/FileUpload";
+import { MenuNavigation } from "../MenuNavigation";
+import { NavBar } from "../NavBar";
 
 export const AddProcess = () => {
   const [dataUser, setDataUser] = useState();
@@ -85,6 +86,8 @@ export const AddProcess = () => {
 
   return (
     <div>
+      <NavBar />
+      <MenuNavigation />
       <div className="containerAdd">
         <form className="form-group mt-0" onSubmit={formik.handleSubmit}>
           <Row className="row-form mt-0">
@@ -208,6 +211,7 @@ export const AddProcess = () => {
           </div>
         </form>
       </div>
+      <MenuNavigation />
     </div>
   );
 };

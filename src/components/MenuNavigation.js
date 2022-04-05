@@ -1,18 +1,14 @@
 import React from "react";
 import "../styles/config.css";
 import "../styles/MenuNavigation.css";
-import { Logout, DocumentUpload, Copy } from "grommet-icons";
+import { Logout, DocumentUpload, Copy,Chat } from "grommet-icons";
 import { Link } from "react-router-dom";
 import { logoutInitiate } from "../redux/actions/actionLogin";
 import { useDispatch } from "react-redux";
 import {
-  Button,
   Container,
-  Form,
-  FormControl,
   Nav,
   Navbar,
-  NavDropdown,
   Offcanvas,
 } from "react-bootstrap";
 
@@ -25,15 +21,19 @@ export const MenuNavigation = () => {
 
   return (
     <>
-      <ul className="menu overflow-hidden">
+      <ul className="menu overflow-hidden ">
+      <div>   <Link to='/*'>  <img className="logoImg" style={{width:"265px",}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
+     </Link></div>
+
+     
         <li>
           <Link to="/activeProcesses" className="menu__item">
             <Copy size="large" />
-            <label className="ms-3">Procesos Activos</label>
+            <label className="ms-2">Procesos Activos</label>
           </Link>
         </li>
         <li>
-          <Link to="/" className="menu__item">
+          <Link to="/addp" className="menu__item">
             <DocumentUpload size="large" />
             <label className="ms-3">Sube tus Procesos</label>
           </Link>
@@ -44,8 +44,15 @@ export const MenuNavigation = () => {
             <label className="ms-3">Procesos Asignados</label>
           </Link>
         </li>
+        <li>
+          <Link to="/chat" className="menu__item">
+            <Chat size="large" />
+            <label className="ms-3">Chat</label>
+          </Link>
+        </li>
+        
         <li onClick={handleLogout}>
-          <Link to="/" className="menu__item menu-logout">
+          <Link to="/login" className="menu__item menu-logout">
             <Logout size="large" />
             <label className="ms-3">Salir</label>
           </Link>
@@ -72,7 +79,7 @@ export const MenuNavigation = () => {
                   <label className="ms-2">Procesos Activos</label>
                 </Link>
               </Nav>
-              <Link to="/" className="menu__item">
+              <Link to="/addp" className="menu__item">
                 <DocumentUpload size="large" />
                 <label className="ms-2">Sube tus Procesos</label>
               </Link>

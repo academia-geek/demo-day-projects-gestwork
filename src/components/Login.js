@@ -5,7 +5,7 @@ import icon1 from "../styles/assets/icon1.svg";
 import  '../styles/StyleLogin.css';
 import {useForm } from '../hooks/useForm';
 import {useDispatch} from 'react-redux';
-import { LoginS, loginGoogle, loginEmailPassword } from "../redux/actions/actionLogin";
+import { loginGoogle, loginEmailPassword } from "../redux/actions/actionLogin";
 
 export const Login = () => {
 
@@ -31,17 +31,17 @@ const handleGoogle = () =>{
 
 
   return (
-    <div className="container w-75 bg-light  rounded shadow">
+    <div className="container w-95">
       <div className="row  align-items-stretch" >
-        <div className="col bg mt-5 d-none d-lg-block col-xl-6 rounded">
+        <div className="col bg mt-5 d-none d-lg-block col-xl-6">
 
           <img className="bg mt-5" src={icon1} alt="icon1" width='460' />
         </div>
         <div className="col">
           <div className="text-end">
-            <h1>GestWork</h1>
+            <Link className='a' to='/landing'>GestWork</Link>
           </div>
-          <h2 className="fw-bold text-center py-5">Bienvenido</h2>
+          <h2 className="text-center B py-5">Bienvenido</h2>
 
           {/* login */}
           <form onSubmit={handleLogin}>
@@ -69,14 +69,14 @@ const handleGoogle = () =>{
               />
             </div>
             <div className="my-3">
-              <span>
+              <span  >
                 {" "}
-                No tienes cuenta? <Link to="/register">Registrarte</Link>
+                No tienes cuenta? <Link to="/register" className="linkregistro">Registrate</Link>
               </span>
             </div>
             <div className="d-grid">
-              <button type="submit" className="btn btn-success">
-                Iniciar Sesión
+              <button type="submit" id='boton'className="btn">
+                Inicia Sesión
               </button>
               <button
                 type="submit"
