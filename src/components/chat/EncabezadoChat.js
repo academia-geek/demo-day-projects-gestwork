@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  Notifications,
   Room,
   PeopleAlt,
   Send,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const EncabezadoChat = ({nombreCanal}) => {
   return (
@@ -16,10 +16,7 @@ const EncabezadoChat = ({nombreCanal}) => {
         </h3>
       </div>
       <div className="chatHeader__right">
-        <Notifications />
-        <Room />
-        <PeopleAlt />
-
+        <Link to="/profile"><PeopleAlt /></Link>
         <Send/>
       </div>
     </div>
