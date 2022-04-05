@@ -243,3 +243,7 @@ code {
   color: white;
   text-decoration: none;
 }
+
+.link-gest:hover{
+  color: var(--titlesColor);
+}

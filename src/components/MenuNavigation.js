@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/config.css";
 import "../styles/MenuNavigation.css";
-import { Logout, DocumentUpload, Copy } from "grommet-icons";
+import { Logout, DocumentUpload, Copy,Chat } from "grommet-icons";
 import { Link } from "react-router-dom";
 import { logoutInitiate } from "../redux/actions/actionLogin";
 import { useDispatch } from "react-redux";
@@ -40,6 +40,13 @@ export const MenuNavigation = () => {
             <label className="ms-3">Procesos Asignados</label>
           </Link>
         </li>
+        <li>
+          <Link to="/chat" className="menu__item">
+            <Chat size="large" />
+            <label className="ms-3">Chat</label>
+          </Link>
+        </li>
+        
         <li onClick={handleLogout}>
           <Link to="/login" className="menu__item menu-logout">
             <Logout size="large" />

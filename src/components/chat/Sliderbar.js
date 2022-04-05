@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@material-ui/core";
-import { ExpandMore, Add} from "@material-ui/icons";
+import { ExpandMore, Add } from "@material-ui/icons";
 import "../../styles/StyleChat.css";
 import UserPerfil from "../../hooks/UserPerfil";
 import { app } from "../../firebase/firebaseConfig";
@@ -49,7 +49,9 @@ const Sliderbar = ({ setCanalActivo }) => {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <Link className="link-gest" to="/*"><h3>GestWork</h3></Link>
+        <Link className="link-gest" to="/*">
+          <h3>GestWork</h3>
+        </Link>
         <ExpandMore />
       </div>
 
@@ -67,7 +69,7 @@ const Sliderbar = ({ setCanalActivo }) => {
           {listaCanales
             ? listaCanales.map((canal) => {
                 return (
-                  <div onClick={()=>setCanalActivo(canal.nombre)}>
+                  <div onClick={() => setCanalActivo(canal.nombre)}>
                     <CanalEnSidebar
                       key={canal.id}
                       nombre={canal.nombre}

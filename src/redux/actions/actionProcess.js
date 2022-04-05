@@ -66,10 +66,11 @@ export const editProcessAsync = (id, contentAll) => {
 
       position: 'center',
       icon: 'success',
-      title: 'Tu Proceso se edito con exito.',
+      title: 'Proceso editado con exito.',
       showConfirmButton: true,
       timer: 5000
     })   
+
     dispatch(listProcessAsync());
     
   };
@@ -89,25 +90,6 @@ export const deleteProcess = (id) => {
   };
 };
 
-// export const deleteProcessAsync = (idProcess) => {
-//     console.log(idProcess)
-//     return async(dispatch) => {
-
-//       const estCollection = collection(db, "process");
-//       const q = query(estCollection,where("id","==", idProcess))
-     
-//       const datos = await getDocs(q);
-//       console.log(datos);
-//       datos.forEach((docu) => {
-//         console.log(docu);
-//           deleteDoc(doc(db,"process",docu.id));
-//           // const getProcess = docu.find(item => item.id === idProcess)
-//           // console.log(getProcess);
-//       })
-//       dispatch(deleteProcessSync(idProcess));
-//       dispatch(listProcessAsync());
-//     }
-// };
 
 
 export const deleteProcessSync = (id) => {
@@ -116,42 +98,6 @@ export const deleteProcessSync = (id) => {
       payload: id
   }
 }
-
-
-// export const deleteProcessAsync = (idProcess, contentAll) => {
-//   console.log(idProcess)
-//   return async (dispatch) => {
-//     // const getCollection = collection(db, "process");
-//     const getCollection = query(collection(db, "process"), where("id", "==", idProcess));
-//     // query(collection(db, "cities"), where("capital", "==", true));
-//     // const queryProcess = query(getCollection, where("id", "==", idProcess))
-//     // const datos = await getDocs(queryProcess);
-//     const datos = await getDocs(getCollection);
-//     // console.log(queryProcess)
-//     console.log(datos)
-//     // deleteDoc(doc(db, "process", id));
-//     // dispatch(deleteProcessSync(id));
-//     // dispatch(listProcessAsync());
-//   };
-// };
-
-
-
-
-
-
-// export const deleteProcessAsync = (id) => {
-//     return async(dispatch) => {
-//         const deleteCollection = collection(db, "process");
-//         const queryProcess = query(deleteCollection, where("id", "==", id))
-         
-//         const datos = await getDocs(queryProcess);
-//         datos.forEach((docu) => {
-//             deleteDoc(doc(db,"process", docu.id));
-//         })
-//         dispatch(deleteSync(id))
-//     }
-// }
 
 
 
@@ -165,7 +111,7 @@ export const addProcessAsync = (newProcess) => {
 
             position: 'center',
             icon: 'success',
-            title: 'Tu Proceso se subio con exito.',
+            title: 'Proceso subido con exito.',
             showConfirmButton: false,
             timer: 5000
           })    
