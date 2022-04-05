@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Col, Row, Spinner } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { editProcessAsync } from '../redux/actions/actionProcess';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useFormik } from "formik";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
 import { NavBar } from "./NavBar";
 import { MenuNavigation } from "./MenuNavigation";
+import { FormPrevious } from "grommet-icons";
 
 
 const EditProcesses = ({editData}) => {
@@ -95,6 +96,7 @@ const EditProcesses = ({editData}) => {
        <NavBar />
     <MenuNavigation />
     <div className="containerAdd mt-1">
+    <Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>
       <form className="form-group" onSubmit={formik.handleSubmit}>
         <Row className="row-form">
           <Col xs={4} className="col-file">
