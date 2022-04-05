@@ -22,7 +22,7 @@ export const MenuNavigation = () => {
   return (
     <>
       <ul className="menu overflow-hidden ">
-      <div>   <Link to='/*'>  <img className="logoImg" style={{width:"265px",}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
+      <div>   <Link to='/*'>  <img className="logoImg" style={{width:"265px",}} src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png" alt=""/>
      </Link></div>
 
      

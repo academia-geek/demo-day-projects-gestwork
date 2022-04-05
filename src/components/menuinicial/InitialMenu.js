@@ -30,7 +30,7 @@ const InitialMenu = () => {
               <img
                 className="logoImg "
                 style={{ marginRight: "710px" }}
-                src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg"
+                src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
                 alt=""
               />
             </Link>
@@ -63,7 +63,7 @@ const InitialMenu = () => {
         <div id="servicios" className="block servicios">
           <div className="container">
             <h5 className="text-center">Usa Gestwork</h5>
-             <h6 className="text-center mt-3">
+             <h6 className="text-center mt-5">
             La tecnología que te ayuda a gestionar el rendimiento de tu
             organización
             </h6>
@@ -72,7 +72,7 @@ const InitialMenu = () => {
           </div>
           <div className="container">
             <div className="row box">
-              <div className="col-sm-5 col-md-6 contenido mt-5">
+              <div className="col-sm-5 col-md-6 contenido">
                 <Link to="/activeProcesses" className="destaque">
                   <div className="img-container mb-3 icon">
                     <Copy size="large" color="#05BE50" />

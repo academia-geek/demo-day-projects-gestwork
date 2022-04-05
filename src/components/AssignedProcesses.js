@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { listProcessAsync } from '../redux/actions/actionProcess';
 import '../styles/StyleAssignedProcesses.css'
+import { convertirID } from './helpers/ConvertirId';
 import { MenuNavigation } from './MenuNavigation';
 import { NavBar } from './NavBar';
+
 
 
 export const AssignedProcesses = () => {
@@ -18,7 +20,7 @@ export const AssignedProcesses = () => {
 
   return (
     <>
-        <NavBar/>
+      <NavBar/>
       <MenuNavigation/>
     <div className="containerAdd">
       <div>
@@ -32,7 +34,7 @@ export const AssignedProcesses = () => {
             <p className='item__assigned mx-5'>
             <span className='primary h4'>Proceso:</span>{item.nombre}
             <br/>
-            <span className='mx-2 h4'>N°:</span>{item.id}</p>
+            <span className='mx-2 h4'>N°:</span>{convertirID(item.id)}</p>
             <Link to={`/detailProcess/${item.id}`}>   
             <button className="btn__process--assigned">Ver</button>
             </Link>

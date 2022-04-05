@@ -10,6 +10,7 @@ import InitialMenu from "../components/menuinicial/InitialMenu";
 import React, { } from "react";
 import CanalRoute from "../components/chat/CanalRoute";
 
+
 export const DashboardRoutes = () => {
 
   return (
