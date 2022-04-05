@@ -1,4 +1,3 @@
-import { getAuth } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -90,6 +89,17 @@ const DetailProcess = () => {
                 required
               />
             </Row>
+            <Row>
+              <label className="mt-4">Resumen Proceso</label>
+              <textarea
+                className="form-control mt-2"
+                placeholder="Descripción"
+                name="descripcion"
+                value={detailItem.responsable}
+                disabled
+                required
+              ></textarea>
+          </Row>
           </form>
         </Col>
         <Col xs={3}>

@@ -5,7 +5,7 @@ import icon1 from "../styles/assets/icon1.svg";
 import  '../styles/StyleLogin.css';
 import {useForm } from '../hooks/useForm';
 import {useDispatch} from 'react-redux';
-import { LoginS, loginGoogle, loginEmailPassword } from "../redux/actions/actionLogin";
+import { loginGoogle, loginEmailPassword } from "../redux/actions/actionLogin";
 
 export const Login = () => {
 

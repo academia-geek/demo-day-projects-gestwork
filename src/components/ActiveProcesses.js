@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Button, Card } from "react-bootstrap";
-import {Edit, Trash } from 'grommet-icons';
+import React, { useEffect } from "react";
+import { Card } from "react-bootstrap";
 import { SearchProcesses } from "./SearchProcesses";
 import '../styles/StyleActiveProcesses.css'
 import '../styles/config.css'
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProcess, deleteProcessAsync, editProcessAsync, listProcessAsync } from "../redux/actions/actionProcess";
+import { deleteProcess, listProcessAsync } from "../redux/actions/actionProcess";
 import { Link } from "react-router-dom";
-import EditProcesses from "./EditProcesses";
-import DetailProcess from "./DetailProcess";
 import { NavBar } from "./NavBar";
 import { MenuNavigation } from "./MenuNavigation";
 
@@ -25,12 +22,6 @@ export const ActiveProcesses = () => {
     dispatch(listProcessAsync())
   }, [dispatch])
 
-  const editarProcess = (id) => {
-    console.log(id);
-    // const getProcess = process.find(item => item.id === id)
-    // console.log(getProcess);
-    // setSendData(getProcess);
-  }
 
   return (
     <>
