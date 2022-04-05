@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { listProcessAsync } from '../redux/actions/actionProcess';
-import '../styles/StyleAssignedProcesses.css'
-import { convertirID } from './helpers/ConvertirId';
-import { MenuNavigation } from './MenuNavigation';
-import { NavBar } from './NavBar';
+import { listProcessAsync } from '../../redux/actions/actionProcess';
+import '../../styles/StyleAssignedProcesses.css'
+import { convertirID } from '../helpers/ConvertirId';
+import { MenuNavigation } from '../MenuNavigation';
+import { NavBar } from '../NavBar';
 
 
 

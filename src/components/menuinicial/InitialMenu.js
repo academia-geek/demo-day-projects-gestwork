@@ -20,11 +20,11 @@ const InitialMenu = () => {
 
     <Navbar bg="light" className='container-fluid d-flex justify-content-end t-0' id='mm'>
       <Container fluid className='container-fluid d-flex justify-content-end t-0'>
-     <Link to='/*'>  <img className="logoImg " style={{marginRight:"610px"}} src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png" alt=""/>
+     <Link to='/*'>  <img className="logoImg " style={{width:"200px",marginRight:"610px"}} src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png" alt=""/>
      </Link>
           <Form className="sub_navBar">
             <Link to="/profile" className="link-name">
-            <div className="subtitle_navBar container-fluid d-flex justify-content-end">
+            <div className="subtitle_navBar subtitle_perfil_menu container-fluid d-flex justify-content-end">
               <h4> {user.nombre !== undefined
                   ? user.nombre
                   : (user.nombre = "")}</h4>
@@ -52,7 +52,7 @@ const InitialMenu = () => {
       </div>
       <div id="servicios" className="block servicios">
         <div className="container">
-          <h3 className="text-center title__section">Usa Gestwork</h3>
+          <h3 className="text-center title__section titleMenu">Usa Gestwork</h3>
           <h6 className="text-center my-5">
             La tecnología que te ayuda a gestionar el rendimiento de tu
             organización.

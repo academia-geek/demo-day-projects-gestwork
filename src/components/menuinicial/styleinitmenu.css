@@ -13,7 +13,9 @@ width: 100%;;
   padding-left: 1.4rem;
   padding-right: 1.4rem;
 }
-
+.titleMenu{
+  margin-top: 0;
+}
 .button-primary {
   background-color: var(--primary);
   border-color: var(--primary);
@@ -38,6 +40,10 @@ display: flex;
   transition: all ease-out 0.2s;
 }
 
+.subtitle_perfil_menu > h4{
+  color: var(--titlesColor);
+  font-weight: 400;
+}
 #servicios .destaque:hover {
   /* background:linear-gradient(white, #05BE50); */
   border: 1px solid #05BE50;

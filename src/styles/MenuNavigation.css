@@ -1,14 +1,13 @@
 .menu {
   list-style-type: none;
-  margin: auto 10px auto 10px;
+  margin: auto 10px auto 0px;
   width: 24%;
   background-color: var(--menuColor);
   color: var(--btnColor);
   position: fixed;
-  /* position: relative; */
   height: 100%;
-  bottom: -10px; 
-} 
+  bottom: -10px;
+}
 
 .menu__item {
   display: block;
@@ -20,36 +19,34 @@
 }
 
 .menu__item.active {
-  /* background-color: #999e9c; */
   color: white;
 }
 
 .menu__item:hover:not(.active) {
-  /* background-color: #555; */
   color: white;
 }
 
-.menuResponsive{
+.menuResponsive {
   display: none !important;
 }
-.menu-logout{
+.menu-logout {
   margin-bottom: 180px !important;
 }
-.logoImg{
+.logoImg {
   display: block;
-  font-size: 18px;
-  padding: 0 px!important;
+  padding: 0 px !important;
   margin: 5px -18px;
 }
-@media only screen and (max-width: 540px){
-  .ms-3 { 
-    color:red;
-    display:none; }
+@media only screen and (max-width: 540px) {
+  .ms-3 {
+    color: red;
+    display: none;
+  }
 
-  .menuResponsive{
+  .menuResponsive {
     display: block !important;
   }
-  .menu{
+  .menu {
     display: none;
   }
 }

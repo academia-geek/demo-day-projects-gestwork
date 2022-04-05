@@ -31,7 +31,7 @@ const DetailProcess = () => {
       <MenuNavigation />
       <div className="containerAdd">
       
-        <h2 className="title__section"><Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>Información del Proceso</h2>
+        <h2 className="title__section mt-5"><Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>Información del Proceso</h2>
         <div className="d-flex">
           <Col xs={6} className="mx-5">
             <form className="form-group">
@@ -102,7 +102,7 @@ const DetailProcess = () => {
               <Row className="mb-5">
                 <label className="mt-4">Resumen Proceso</label>
                 <textarea
-                  className="form-control mt-2"
+                  className="form-control textareaResumen mt-2"
                   placeholder="Descripción"
                   name="descripcion"
                   value={detailItem.descripcion}

@@ -17,15 +17,20 @@ export const MenuNavigation = () => {
   return (
     <>
       <ul className="menu overflow-hidden ">
-        <div>
-          {" "}
-
-        </div>
-
+        <Link to="/*">
+          <img
+            className="logoImg mt-2"
+            style={{ width: "200px", marginLeft: "5%" }}
+            src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
+            alt=""
+          />
+        </Link>
         <li>
           <Link to="/activeProcesses" className="menu__item">
             <Copy size="large" />
-            <label className="ms-2">Procesos Activos</label>
+            <label className="ms-3" style={{ marginTop: "10%" }}>
+              Procesos Activos
+            </label>
           </Link>
         </li>
         <li>
@@ -85,12 +90,19 @@ export const MenuNavigation = () => {
                   <label className="ms-2">Procesos Asignados</label>
                 </Link>
               </li>
+              <li>
+                <Link to="/chat" className="menu__item">
+                  <Chat size="large" />
+                  <label className="ms-2">Chat</label>
+                </Link>
+              </li>
               <li onClick={handleLogout}>
                 <Link to="/" className="menu__item menu-logout">
                   <Logout size="large" />
                   <label className="ms-2">Salir</label>
                 </Link>
               </li>
+
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>

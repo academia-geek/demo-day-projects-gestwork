@@ -1,22 +1,20 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AddProcess } from "../components/uploadProcess/AddProcess";
-import { ActiveProcesses } from "../components/ActiveProcesses";
 import { ProcessInformation } from "../components/ProcessInformation";
-import { AssignedProcesses } from "../components/AssignedProcesses";
 import { Profile } from "../components/Profile";
 import DetailProcess from "../components/DetailProcess";
 import EditProcesses from "../components/EditProcesses";
 import InitialMenu from "../components/menuinicial/InitialMenu";
 import React, { } from "react";
 import CanalRoute from "../components/chat/CanalRoute";
+import { ActiveProcesses } from "../components/getProcess/ActiveProcesses";
+import { AssignedProcesses } from "../components/getProcess/AssignedProcesses";
 
 
 export const DashboardRoutes = () => {
 
   return (
     <div>
-      {/* <NavBar />
-        <MenuNavigation /> */}
       <Routes>
         <Route path="/*" element={<InitialMenu/>} />
         <Route path="/addp" element={<AddProcess />} />
