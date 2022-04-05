@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { listProcessAsync } from "../redux/actions/actionProcess";
 import "../styles/StyleDetailProcess.css"
+import { convertirID } from "./helpers/ConvertirId";
 import { MenuNavigation } from "./MenuNavigation";
 import { NavBar } from "./NavBar";
 
@@ -39,7 +40,7 @@ const DetailProcess = () => {
                 name="numero proceso"
                 className="form-control mt-2"
                 autoComplete="off"
-                value={detailItem.id}
+                value={detailItem.id !== undefined ? convertirID(detailItem.id): ""}
                 disabled
                 required
               />

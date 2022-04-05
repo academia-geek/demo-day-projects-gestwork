@@ -8,6 +8,7 @@ import { deleteProcess, listProcessAsync } from "../redux/actions/actionProcess"
 import { Link } from "react-router-dom";
 import { NavBar } from "./NavBar";
 import { MenuNavigation } from "./MenuNavigation";
+import { convertirID } from "./helpers/ConvertirId";
 
 
 export const ActiveProcesses = () => {
@@ -46,7 +47,7 @@ export const ActiveProcesses = () => {
                     <p className="item__assigned">
                       <span className="primary h4">Proceso:</span>
                       {item.nombre}/<span className="mx-2 h4">N°:</span>
-                      {item.id}
+                      {convertirID(item.id)}
                     </p>
                   </Card.Title>
                   <div>
