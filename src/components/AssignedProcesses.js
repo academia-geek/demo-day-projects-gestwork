@@ -8,6 +8,7 @@ import { MenuNavigation } from './MenuNavigation';
 import { NavBar } from './NavBar';
 
 
+
 export const AssignedProcesses = () => {
   const dispatch = useDispatch();
 
@@ -19,7 +20,7 @@ export const AssignedProcesses = () => {
 
   return (
     <>
-        <NavBar/>
+      <NavBar/>
       <MenuNavigation/>
     <div className="containerAdd">
       <div>

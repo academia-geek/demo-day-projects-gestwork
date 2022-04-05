@@ -20,7 +20,7 @@ const InitialMenu = () => {
 
     <Navbar bg="light" className='container-fluid d-flex justify-content-end t-0' id='mm'>
       <Container fluid className='container-fluid d-flex justify-content-end t-0'>
-     <Link to='/*'>  <img className="logoImg " style={{marginRight:"710px"}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
+     <Link to='/*'>  <img className="logoImg " style={{marginRight:"710px"}} src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png" alt=""/>
      </Link>
           <Form className="sub_navBar">
             <Link to="/profile" className="link-name">

@@ -1,0 +1,35 @@
+.title__body {
+    color: var(--titlesColor);
+    font-weight: bold;
+}
+.title__main {
+    font-style: italic;
+    font-weight:900;
+}
+.container__notifications {
+    margin-top: 5%;
+}
+
+.notification__header {
+    position: relative;
+}
+.alert__permission {
+    width: 225px;
+    position: absolute;
+    border-radius: 5px;
+    top: 40px;
+    right: 15px;
+    padding: 5px 8px; 
+}
+
+.alert__permission-success {
+    color: rgb(25, 78, 5);
+    background-color: rgb(158, 238, 189); 
+    border: 1px solid rgb(25, 78, 5); 
+}
+.alert__permission-danger {
+    color: rgb(224, 8, 8);
+    background-color: rgb(238, 204, 204); 
+    border: 1px solid rgb(224, 8, 8); 
+}
+
