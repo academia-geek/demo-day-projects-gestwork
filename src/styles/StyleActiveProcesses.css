@@ -32,3 +32,12 @@
 .icon__assigned {
     margin: 8px;
 }
+.etiqueta{
+    background-color: rgb(164, 180, 202);
+    color:gray;
+    
+    font-weight: 550;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+}

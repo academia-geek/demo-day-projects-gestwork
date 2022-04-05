@@ -69,8 +69,9 @@ export const ActiveProcesses = () => {
                   </div>
               </div>
               <Card.Text>
-               {item.descripcion}
+              <div >{item.descripcion} </div>
               </Card.Text>
+             
               <Link to={`/detailProcess/${item.id}`}>
               <button className="btn__process">Ver</button>
               </Link>
