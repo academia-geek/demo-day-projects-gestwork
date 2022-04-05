@@ -8,6 +8,7 @@ import { deleteProcess, listProcessAsync } from "../redux/actions/actionProcess"
 import { Link } from "react-router-dom";
 import { NavBar } from "./NavBar";
 import { MenuNavigation } from "./MenuNavigation";
+import { convertirID } from "./helpers/ConvertirId";
 
 
 export const ActiveProcesses = () => {
@@ -46,7 +47,7 @@ export const ActiveProcesses = () => {
                     <p className="item__assigned">
                       <span className="primary h4">Proceso:</span>
                       {item.nombre}/<span className="mx-2 h4">N°:</span>
-                      {item.id}
+                      {convertirID(item.id)}
                     </p>
                   </Card.Title>
                   <div className="m-2 p-1">
@@ -68,12 +69,16 @@ export const ActiveProcesses = () => {
                     />
                   </div>
               </div>
+              <div className="ms-3">
               <Card.Text>
                {item.descripcion}
               </Card.Text>
-              <Link to={`/detailProcess/${item.id}`}>
+              <div className="container-process">
+               <Link to={`/detailProcess/${item.id}`}>
               <button className="btn__process">Ver</button>
               </Link>
+              </div>
+              </div>
             </Card.Body>
           </Card>
            ))}
