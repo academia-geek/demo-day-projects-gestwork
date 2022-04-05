@@ -6,6 +6,7 @@ import { listProcessAsync } from "../redux/actions/actionProcess";
 import "../styles/StyleDetailProcess.css"
 import { MenuNavigation } from "./MenuNavigation";
 import { NavBar } from "./NavBar";
+import Notifications from "./Notifications";
 
 const DetailProcess = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const DetailProcess = () => {
 
   return (
    <div>
-        <NavBar />
+    <NavBar />
     <MenuNavigation/>
     <div className="containerAdd">
     

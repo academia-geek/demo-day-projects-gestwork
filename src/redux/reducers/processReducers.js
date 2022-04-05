@@ -28,6 +28,14 @@ export const processReducers = (state = inicialState, action) => {
       return {
         process: action.payload
       };
+    case typesProcess.addNotifications:
+      return {
+        process:[action.payload] 
+      };
+    case typesProcess.listNotifications:
+      return {
+        process: [...action.payload]
+      };
     default:
       return state;
   }

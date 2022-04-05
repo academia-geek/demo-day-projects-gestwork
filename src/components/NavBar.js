@@ -3,7 +3,7 @@ import { Container, Form, Navbar } from "react-bootstrap";
 import UserPerfil from "../hooks/UserPerfil";
 import "../styles/NavBar.css";
 import {Link} from 'react-router-dom'
-import {  Notification } from 'grommet-icons';
+import Notifications from "./Notifications";
 
 
 export const NavBar = () => {
@@ -33,7 +33,7 @@ export const NavBar = () => {
              alt='Foto' />
             :(user.foto = "https://res.cloudinary.com/df90q7vvj/image/upload/v1648860811/GestWork/23408e565fc3f43454636fec27572d1f_v8bhk3.jpg")}
             </div>
-            <Notification/>
+            <Notifications/>
           </Form>
    
       </Container>
