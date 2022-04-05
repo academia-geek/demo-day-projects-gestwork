@@ -66,8 +66,8 @@ const Notifications = () => {
       </Toast>
       ))}
       <div className="notification__header">
-        {isTokenFound && <span className='alert__permission-success  alert__permission'> Notification permission enabled</span>}
-        {!isTokenFound && <span className='alert__permission-danger  alert__permission'> Need notification permission</span>}
+        {/* {isTokenFound && <span className='alert__permission-success  alert__permission'> Notification permission enabled</span>}
+        {!isTokenFound && <span className='alert__permission-danger  alert__permission'> Need notification permission</span>} */}
         <Notification onClick={() => setShow(true)}/> 
       </div>
     </div>
