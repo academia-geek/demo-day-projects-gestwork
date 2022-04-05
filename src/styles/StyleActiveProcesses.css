@@ -19,7 +19,9 @@
     width: 150px;
 }
 .input__search {
-    width: 82%;
+    width: 80%; 
+    margin-right:3px;
+    padding-right:3px 15px;
 }
 .header__card {
     display: flex;

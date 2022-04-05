@@ -3,9 +3,8 @@
     padding: 20px 20px;
 
 }
-.navbarmenu{
-
-
+#navbarmenu{
+width: 100%;;
 }
 
 .button {
@@ -19,9 +18,10 @@
   background-color: var(--primary);
   border-color: var(--primary);
 }
-
-
-
+#mm{
+width: 100% !important;
+display: flex;
+}
 .button-primary-outline {
   border-color: var(--primary);
   color: var(--primary);
@@ -50,4 +50,7 @@
   align-items: center;
   justify-content: center;
   height: 30px;
+}
+#Iconenlace{
+  color: red !important;
 }

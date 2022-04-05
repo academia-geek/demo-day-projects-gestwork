@@ -21,11 +21,15 @@ export const MenuNavigation = () => {
 
   return (
     <>
-      <ul className="menu overflow-hidden">
+      <ul className="menu overflow-hidden ">
+      <div>   <Link to='/*'>  <img className="logoImg" style={{width:"265px",}} src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg" alt=""/>
+     </Link></div>
+
+     
         <li>
           <Link to="/activeProcesses" className="menu__item">
             <Copy size="large" />
-            <label className="ms-3">Procesos Activos</label>
+            <label className="ms-2">Procesos Activos</label>
           </Link>
         </li>
         <li>
