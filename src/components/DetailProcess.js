@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { listProcessAsync } from "../redux/actions/actionProcess";
-import "../styles/StyleDetailProcess.css"
+import "../styles/StyleDetailProcess.css";
 import { convertirID } from "./helpers/ConvertirId";
 import { MenuNavigation } from "./MenuNavigation";
 import { NavBar } from "./NavBar";
@@ -24,28 +24,31 @@ const DetailProcess = () => {
   }, [dispatch]);
 
   return (
-   <div>
-        <NavBar />
-    <MenuNavigation/>
-    <div className="containerAdd">
-    
-      <h2 className="title__section">Información del Proceso</h2>
-      <div className="d-flex">
-        <Col xs={6} className="mx-5">
-          <form className="form-group">
-            <Row className="mt-5">
-              <label>N° de solicitud</label>
-              <input
-                type="text"
-                name="numero proceso"
-                className="form-control mt-2"
-                autoComplete="off"
-                value={detailItem.id !== undefined ? convertirID(detailItem.id): ""}
-                disabled
-                required
-              />
-
-              <Row className="mt-5">
+    <div>
+      <NavBar />
+      <MenuNavigation />
+      <div className="containerAdd">
+        <h2 className="title__section">Información del Proceso</h2>
+        <div className="d-flex">
+          <Col xs={6} className="mx-5">
+            <form className="form-group">
+              <Row className="mt-4">
+                <label>N° de solicitud</label>
+                <input
+                  type="text"
+                  name="numero proceso"
+                  className="form-control mt-2"
+                  autoComplete="off"
+                  value={
+                    detailItem.id !== undefined
+                      ? convertirID(detailItem.id)
+                      : ""
+                  }
+                  disabled
+                  required
+                />
+              </Row>
+              <Row className="mt-4">
                 <label>Nombre de la iniciativa</label>
                 <input
                   type="text"
@@ -67,7 +70,8 @@ const DetailProcess = () => {
                   value={detailItem.areaEncargada}
                   disabled
                   required
-                />
+                /></Row>
+                <Row className="mt-4">
                 <label>Fecha Aproximada de solución</label>
                 <input
                   type="date"
@@ -79,51 +83,54 @@ const DetailProcess = () => {
                   required
                 />
               </Row>
-              <label className="mt-4">Lider / responsable</label>
-              <input
-                type="text"
-                className="form-control mt-2"
-                name="responsable"
-                autoComplete="off"
-                value={detailItem.responsable}
-                disabled
-                required
-              />
-            </Row>
-            <Row>
-              <label className="mt-4">Resumen Proceso</label>
-              <textarea
-                className="form-control mt-2"
-                placeholder="Descripción"
-                name="descripcion"
-                value={detailItem.responsable}
-                disabled
-                required
-              ></textarea>
-          </Row>
-          </form>
-        </Col>
-        <Col xs={3}>
-          <Row className="mt-4">
-            <h3 className="title__section h3">Documento de la iniciativa</h3>
-          </Row>
-          <Row className="w-59 mt-4">
-            <div>
-              <a className="verpdf" href={detailItem.url} target="_black">
-                <img
-                  src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648758995/GestWork/icons8-pdf-file-64_lsk1q0.png"
-                  alt="pdf"
+              <Row>
+                <label className="mt-4">Lider / responsable</label>
+                <input
+                  type="text"
+                  className="form-control mt-2"
+                  name="responsable"
+                  autoComplete="off"
+                  value={detailItem.responsable}
+                  disabled
+                  required
                 />
-                <br />
-                <label style={{cursor:'pointer'}} className="me-5">Ver Pdf</label>
-              </a>
-            </div>
-          </Row>
-        </Col>
+              </Row>
+
+              <Row className="mb-5">
+                <label className="mt-4">Resumen Proceso</label>
+                <textarea
+                  className="form-control mt-2"
+                  placeholder="Descripción"
+                  name="descripcion"
+                  value={detailItem.responsable}
+                  disabled
+                  required
+                ></textarea>
+              </Row>
+            </form>
+          </Col>
+          <Col xs={3}>
+            <Row className="mt-4">
+              <h3 className="title__section h3">Documento de la iniciativa</h3>
+            </Row>
+            <Row className="w-59 mt-4">
+              <div>
+                <a className="verpdf" href={detailItem.url} target="_black">
+                  <img
+                    src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648758995/GestWork/icons8-pdf-file-64_lsk1q0.png"
+                    alt="pdf"
+                  />
+                  <br />
+                  <label style={{ cursor: "pointer" }} className="me-5">
+                    Ver Pdf
+                  </label>
+                </a>
+              </div>
+            </Row>
+          </Col>
+        </div>
       </div>
     </div>
-   </div>
-
   );
 };
 
