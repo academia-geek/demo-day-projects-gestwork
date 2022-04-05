@@ -1,16 +1,11 @@
 import React from "react";
 import "../styles/config.css";
 import "../styles/MenuNavigation.css";
-import { Logout, DocumentUpload, Copy,Chat } from "grommet-icons";
+import { Logout, DocumentUpload, Copy, Chat } from "grommet-icons";
 import { Link } from "react-router-dom";
 import { logoutInitiate } from "../redux/actions/actionLogin";
 import { useDispatch } from "react-redux";
-import {
-  Container,
-  Nav,
-  Navbar,
-  Offcanvas,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 
 export const MenuNavigation = () => {
   const dispatch = useDispatch();
@@ -22,10 +17,11 @@ export const MenuNavigation = () => {
   return (
     <>
       <ul className="menu overflow-hidden ">
-      <div>   <Link to='/*'>  <img className="logoImg mt-2" style={{width:"240px",marginLeft:"2%"}} src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png" alt=""/>
-     </Link></div>
+        <div>
+          {" "}
 
-     
+        </div>
+
         <li>
           <Link to="/activeProcesses" className="menu__item">
             <Copy size="large" />
@@ -50,7 +46,7 @@ export const MenuNavigation = () => {
             <label className="ms-3">Chat</label>
           </Link>
         </li>
-        
+
         <li onClick={handleLogout}>
           <Link to="/login" className="menu__item menu-logout">
             <Logout size="large" />
