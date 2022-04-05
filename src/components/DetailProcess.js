@@ -105,7 +105,7 @@ const DetailProcess = () => {
                   className="form-control mt-2"
                   placeholder="Descripción"
                   name="descripcion"
-                  value={detailItem.responsable}
+                  value={detailItem.descripcion}
                   disabled
                   required
                 ></textarea>
