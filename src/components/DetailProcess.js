@@ -1,7 +1,8 @@
+import { FormPrevious } from "grommet-icons";
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { listProcessAsync } from "../redux/actions/actionProcess";
 import "../styles/StyleDetailProcess.css";
 import { convertirID } from "./helpers/ConvertirId";
@@ -29,7 +30,8 @@ const DetailProcess = () => {
       <NavBar />
       <MenuNavigation />
       <div className="containerAdd">
-        <h2 className="title__section">Información del Proceso</h2>
+      
+        <h2 className="title__section"><Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>Información del Proceso</h2>
         <div className="d-flex">
           <Col xs={6} className="mx-5">
             <form className="form-group">

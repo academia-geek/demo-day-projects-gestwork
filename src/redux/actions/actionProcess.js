@@ -66,7 +66,7 @@ export const editProcessAsync = (id, contentAll) => {
 
       position: 'center',
       icon: 'success',
-      title: 'Proceso editado con exito.',
+      title: 'Proceso editado con éxito.',
       showConfirmButton: true,
       timer: 5000
     })   
@@ -109,7 +109,7 @@ export const addProcessAsync = (newProcess) => {
 
             position: 'center',
             icon: 'success',
-            title: 'Proceso subido con exito.',
+            title: 'Proceso subido con éxito.',
             showConfirmButton: false,
             timer: 5000
           })  
