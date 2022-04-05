@@ -11,26 +11,18 @@ export const NavBar = () => {
 
   return (
     <Navbar
-      bg="light"
+      style={{backgroundColor:"#1c1b1b"}}
       className="container-fluid d-flex justify-content-end t-0"
     >
       <Container
         fluid
         className="container-fluid d-flex justify-content-end t-0"
       >
-        <Link to="/*">
-          <img
-            className="logoImg mt-2"
-            style={{ width: "200px", marginRight: "365px" }}
-            src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
-            alt=""
-          />
-        </Link>
+        
         <Form className="sub_navBar">
           <Link to="/profile" className="link-name">
             <div className="subtitle_navBar container-fluid d-flex justify-content-end">
-              <h4>
-                {" "}
+              <h4 className="nameUser">
                 {user.nombre !== undefined ? user.nombre : (user.nombre = "")}
               </h4>
             </div>

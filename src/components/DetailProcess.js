@@ -102,7 +102,7 @@ const DetailProcess = () => {
               <Row className="mb-5">
                 <label className="mt-4">Resumen Proceso</label>
                 <textarea
-                  className="form-control mt-2"
+                  className="form-control textareaResumen mt-2"
                   placeholder="Descripción"
                   name="descripcion"
                   value={detailItem.descripcion}

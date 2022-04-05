@@ -1,6 +1,6 @@
 .menu {
   list-style-type: none;
-  margin: auto 10px auto 10px;
+  margin: auto 10px auto 0px;
   width: 24%;
   background-color: var(--menuColor);
   color: var(--btnColor);

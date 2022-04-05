@@ -37,6 +37,13 @@
     /* position: absolute; */
     /* top: 40px; */
 }
+.nameUser{
+    font-weight: 400;
+    font-size: 22px;
+}
+.subtitle_navBar  > h4{
+    color:#fff;
+}
 @media (max-width: 525px) {
     .sub_navBar {
         display: flex;
