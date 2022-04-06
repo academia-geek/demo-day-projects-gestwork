@@ -119,8 +119,8 @@ h2 {
   width: 100%;
 }
 .text-register {
-  color: var(--btnbg);
+  color: var(--btnbg) !important;
 }
 .text-register:hover {
-  color: #fff;
+  color: #fff !important;
 }
