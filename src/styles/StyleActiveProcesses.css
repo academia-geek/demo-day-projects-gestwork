@@ -37,12 +37,13 @@
 .card__process {
   width: 85%;
   margin: auto;
+  padding-left: 2%;
   border: 1px solid rgb(149, 149, 170);
 }
 .input__search {
   width: 80%;
   margin-right: 3px;
-  padding: 5px 20px;
+  padding: 5px 0 5px 30px;
   border: 1px solid rgb(198, 197, 197);
   border-radius: 5px 0px 0 5px;
 }

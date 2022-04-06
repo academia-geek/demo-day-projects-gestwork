@@ -25,10 +25,10 @@ export const MenuNavigation = () => {
             alt=""
           />
         </Link>
-        <li>
+        <li className="menu-li">
           <Link to="/activeProcesses" className="menu__item">
             <Copy size="large" />
-            <label className="ms-3" style={{ marginTop: "10%" }}>
+            <label className="ms-3 label-menu" style={{ marginTop: "10%", }}>
               Procesos Activos
             </label>
           </Link>
@@ -36,26 +36,26 @@ export const MenuNavigation = () => {
         <li>
           <Link to="/addp" className="menu__item">
             <DocumentUpload size="large" />
-            <label className="ms-3">Sube tus Procesos</label>
+            <label className="ms-3 label-menu">Sube tus Procesos</label>
           </Link>
         </li>
         <li>
           <Link to="/assignedProcesses" className="menu__item">
             <Copy size="large" />
-            <label className="ms-3">Procesos Asignados</label>
+            <label className="ms-3 label-menu">Procesos Asignados</label>
           </Link>
         </li>
         <li>
           <Link to="/chat" className="menu__item">
             <Chat size="large" />
-            <label className="ms-3">Chat</label>
+            <label className="ms-3 label-menu">Chat</label>
           </Link>
         </li>
 
         <li onClick={handleLogout}>
           <Link to="/login" className="menu__item menu-logout">
             <Logout size="large" />
-            <label className="ms-3">Salir</label>
+            <label className="ms-3 label-menu">Salir</label>
           </Link>
         </li>
       </ul>
