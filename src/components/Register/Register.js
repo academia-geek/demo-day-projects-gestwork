@@ -168,7 +168,7 @@ export const Register = () => {
 {/* <button className="btn btn-danger mt-3 ml-3" type="reset">
       Google
     </button> */}
-<button className="Btn btn" id='' type="submit">
+<button className="Btn btn align-items-center" id='centrar' type="submit">
  Registrar
 </button>
 </form>

@@ -72,8 +72,6 @@ form .user-details .input-box{
  .Btn{
      justify-content: center;
      align-items: center !important;
-     display:flex;
-     padding:18px; 
      height: 38px; 
      width:82%;
      font-size:19px;
@@ -81,8 +79,11 @@ form .user-details .input-box{
      border-color: #05BE50 !important;
     border-style: solid!important;
 
+ }
+ #centrar{
 
-
+    display:flex;
+    margin-left:65px!important;
  }
 
 .Btn:hover{

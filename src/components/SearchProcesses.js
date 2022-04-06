@@ -27,15 +27,12 @@ export const SearchProcesses = () => {
     }
   })
   return (
-    <Form className="d-flex m-3 pb-4" onSubmit={formik.handleSubmit}>
-        <input
-          type="text"
+    <Form className="d-flex m-3 pb-4" onSubmit={formik.handleSubmit} style={{justifyContent: 'center'}}>
+        <input          type="text"
           name="search"
-          placeholder="Buscar propuestas por nombre"
+          placeholder="Buscar procesos por nombre"
           className="input__search"
           aria-label="Search"
-
-          // onChange={formik.handleInputChange}
           onChange={formik.handleChange}
           required
         />
