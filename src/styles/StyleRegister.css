@@ -118,3 +118,9 @@ h2 {
   white-space: nowrap;
   width: 100%;
 }
+.text-register {
+  color: var(--btnbg);
+}
+.text-register:hover {
+  color: #fff;
+}

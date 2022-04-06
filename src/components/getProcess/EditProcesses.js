@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row, Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { editProcessAsync } from "../redux/actions/actionProcess";
+import { editProcessAsync } from "../../redux/actions/actionProcess";
 import { Link, useParams } from "react-router-dom";
 import { useFormik } from "formik";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase/firebaseConfig";
-import { NavBar } from "./NavBar";
-import { MenuNavigation } from "./MenuNavigation";
+import { db } from "../../firebase/firebaseConfig";
+import { NavBar } from "../NavBar";
+import { MenuNavigation } from "../MenuNavigation";
 import { FormPrevious } from "grommet-icons";
-import { convertirID } from "./helpers/ConvertirId";
+import { convertirID } from "../helpers/ConvertirId";
 
 const EditProcesses = ({ editData }) => {
   const [dataUser, setDataUser] = useState();

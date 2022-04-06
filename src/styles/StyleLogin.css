@@ -27,6 +27,12 @@
 
 } */
 
+.text-login {
+    color: var(--btnbg) !important;
+}
+.text-login:hover {
+    color: #fff !important;
+}
 #boton{
     border-style: solid!important;
     border-color:  var(--btnbg)!important;

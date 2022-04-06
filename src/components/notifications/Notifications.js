@@ -2,10 +2,10 @@ import { Notification } from 'grommet-icons';
 import React, { useEffect, useState } from 'react'
 import { Button, Toast } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { db, getToke, onMessageListener } from '../firebase/firebaseConfig';
-import UserPerfil from '../hooks/UserPerfil';
-import { listNotificationsAsync, listProcessAsync } from '../redux/actions/actionProcess';
-import '../styles/Notifications.css'
+import { db, getToke, onMessageListener } from '../../firebase/firebaseConfig';
+import UserPerfil from '../../hooks/UserPerfil';
+import { listNotificationsAsync, listProcessAsync } from '../../redux/actions/actionProcess';
+import '../../styles/Notifications.css'
 
 const Notifications = () => {
 

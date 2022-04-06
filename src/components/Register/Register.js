@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
-import imgg1 from "../../components/Landing/asset/imgg1.svg"
+import imgg1 from "../../asset/imgg1.svg"
 import { registroEmailPasswordNombre } from "../../redux/actions/actionRegister";
  import "../../styles/StyleRegister.css";
 
@@ -164,8 +164,8 @@ export const Register = () => {
       </p>
     </div>
 
-<button className="Btn btn align-items-center" id='centrar' type="submit">
- Registrar
+<button className="Btn btn align-items-center text-register" id='centrar' type="submit">
+  Registrar
 </button>
 </form>
       </div>
