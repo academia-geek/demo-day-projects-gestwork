@@ -129,7 +129,13 @@ code {
   margin: 20px;
   border-top: 1px solid gray;
   background-color: #474b53;
+  width:72%;
+  height:115px;
+  position:absolute;
+  bottom:0;
 }
+
+
 
 .chat__input > form > input {
   padding: 15px;
@@ -245,5 +251,5 @@ code {
 }
 
 .link-gest:hover{
-  color: var(--titlesColor);
+  color: white !important;
 }
