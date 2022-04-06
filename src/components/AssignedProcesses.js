@@ -24,7 +24,7 @@ export const AssignedProcesses = () => {
       <MenuNavigation/>
     <div className="containerAdd">
       <div>
-        <h2 className='title__section'>Procesos Asignados</h2>
+        <h2 className='title__section mt-5'>Procesos Asignados</h2>
       </div>
       <p>Mira aquí los procesos que te han sido asignados</p>
       <section className='contaner__list'>

@@ -18,7 +18,7 @@
 }
 .Container{
     max-width: 800px;
-    width:100%;
+    width:250%;
     background: rgb(242, 248, 242);
     padding:65px 30px;
     border-radius: 5px;
@@ -27,6 +27,8 @@
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    width:150%;
+
 }
 .Container .title::before{
     content: '';
@@ -34,8 +36,8 @@
     height:3px;
     left:0;
     bottom:0;
-    height:3px;
-    width: 30px; 
+    
+    width: 40px; 
 }
 .Container form .user-details{
     display:flex; 
@@ -53,7 +55,7 @@ form .user-details .input-box{
  }
  .user-details .input-box input{ 
      height: 45px; 
-     width:100%;
+     width:125%;
      outline: none;
      border-radius: 5px; 
      border:1px solid #ccc;
@@ -69,19 +71,32 @@ form .user-details .input-box{
  }
  .Btn{
      justify-content: center;
+     align-items: center !important;
      display:flex;
-     padding:5px; 
-     margin-right:15px !important;
-     height: 45px; 
-     width:60%;
+     padding:18px; 
+     height: 38px; 
+     width:82%;
      font-size:19px;
-     font-weight: 400; 
      border-radius: 5px; 
-     letter-spacing:1px;
+     border-color: #05BE50 !important;
+    border-style: solid!important;
+
 
 
  }
+
+.Btn:hover{
+    background-color: #05BE50;
+    color:#fff;
+}
  
+ .linkini{
+    outline:none;
+    text-decoration: none;
+    color:#0039A6;
+    font-size: 18px;
+ }
+
 @media (max-width:584px){
     .Container{
         max-width:100%
@@ -98,3 +113,10 @@ form .user-details .input-box{
 
     } */
 } 
+h2{font-size:30px;
+font-weight:330;
+color:#0039A6;
+text-overflow: ellipsis;
+white-space: nowrap;
+width: 100%;
+}

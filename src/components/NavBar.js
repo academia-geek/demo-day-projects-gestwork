@@ -33,7 +33,7 @@ export const NavBar = () => {
              alt='Foto' />
             :(user.foto = "https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png")}
             </div>
-            <Notifications/>
+            {/* <Notifications/> */}
           </Form>
    
       </Container>
