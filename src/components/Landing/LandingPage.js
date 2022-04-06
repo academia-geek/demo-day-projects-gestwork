@@ -1,8 +1,8 @@
 import React from "react";
-import "./styleLanding.css";
+import "../../styles/styleLanding.css";
 import { Link } from "react-router-dom";
-import imgg1 from "./asset/imgg1.svg";
-import servicio from "./asset/servicio.svg";
+import imgg1 from "../../asset/imgg1.svg";
+import servicio from "../../asset/servicio.svg";
 
 const LandingPage = () => {
   return (

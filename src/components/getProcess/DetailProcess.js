@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { listProcessAsync } from "../redux/actions/actionProcess";
-import "../styles/StyleDetailProcess.css";
-import { convertirID } from "./helpers/ConvertirId";
-import { MenuNavigation } from "./MenuNavigation";
-import { NavBar } from "./NavBar";
-import Notifications from "./Notifications";
+import { listProcessAsync } from "../../redux/actions/actionProcess";
+import "../../styles/StyleDetailProcess.css";
+import { convertirID } from "../helpers/ConvertirId";
+import { MenuNavigation } from "../MenuNavigation";
+import { NavBar } from "../NavBar";
+import Notifications from "../notifications/Notifications";
 
 const DetailProcess = () => {
   const { id } = useParams();
@@ -29,8 +29,10 @@ const DetailProcess = () => {
       <NavBar />
       <MenuNavigation />
       <div className="containerAdd">
-      
-        <h2 className="title__section mt-5"><Link  to={'/activeProcesses'}><FormPrevious size='large'/></Link>Información del Proceso</h2>
+        <h2 className="title__section mt-5">
+          <Link  to={'/activeProcesses'}>
+          <FormPrevious size='large'/>
+          </Link>Información del Proceso</h2>
         <div className="d-flex">
           <Col xs={6} className="mx-5">
             <form className="form-group">

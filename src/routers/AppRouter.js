@@ -6,9 +6,9 @@ import PrivateRoute from "../routers/PrivateRoute";
 import PublicRoute from "../routers/PublicRoute";
 import { useEffect, useState } from "react";
 
-import { Register } from "../components/Register/Register";
+import { Register } from "../components/register/Register";
 import { Spinner } from "../components/accesories/Spinner";
-import LandingPage from "../components/Landing/LandingPage";
+import LandingPage from "../components/landing/LandingPage";
 
 function AppRouter() {
   const [checking, setChecking] = useState(true);

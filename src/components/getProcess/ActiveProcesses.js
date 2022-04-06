@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { SearchProcesses } from "../SearchProcesses";
+import { SearchProcesses } from "./SearchProcesses";
 import "../../styles/StyleActiveProcesses.css";
 import "../../styles/config.css";
 import { useDispatch, useSelector } from "react-redux";

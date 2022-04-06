@@ -2,7 +2,7 @@ import React from "react";
 import UserPerfil from "../hooks/UserPerfil";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
-import Notifications from "./Notifications";
+import Notifications from "../components/notifications/Notifications";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";

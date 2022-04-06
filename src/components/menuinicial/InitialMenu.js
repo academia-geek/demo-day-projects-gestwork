@@ -1,17 +1,14 @@
 //procesos activos, subir procesos, chat, asignados
-
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { DocumentUpload, Copy, ChatOption, Attachment } from "grommet-icons";
-import "./styleinitmenu.css";
-
 import { Container, Navbar } from "react-bootstrap";
 import UserPerfil from "../../hooks/UserPerfil";
+import { DocumentUpload, Copy, ChatOption, Attachment } from "grommet-icons";
 import { Avatar, Box, Toolbar } from "@material-ui/core";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
+import "../../styles/styleinitmenu.css";
 
 const InitialMenu = () => {
   const user = UserPerfil();

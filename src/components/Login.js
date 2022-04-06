@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import g from "../styles/assets/g.jpg.crdownload";
-import icon1 from "../styles/assets/icon1.svg";
+// import g from "../assets/g.jpg.crdownload";
+import g from "../asset/g.png"
+import icon1 from "../asset/icon1.svg";
 import  '../styles/StyleLogin.css';
 import {useForm } from '../hooks/useForm';
 import {useDispatch} from 'react-redux';
 import { loginGoogle, loginEmailPassword } from "../redux/actions/actionLogin";
+
+
 
 export const Login = () => {
 
@@ -71,12 +74,11 @@ const handleGoogle = () =>{
             </div>
             <div className="my-3">
               <span>
-                {" "}
                 No tienes cuenta? <Link to="/register" className="linkregistro">Registrate</Link>
               </span>
             </div>
             <div className="d-grid">
-              <button type="submit" id='boton'className="btn">
+              <button type="submit" id='boton'className="btn text-login">
                 Inicia Sesión
               </button>
               <button
@@ -86,7 +88,7 @@ const handleGoogle = () =>{
               >
                 <div className="row align-items-center">
                   <div className="col-3 text-center">
-                    <img src={g} alt="google" width="45" />
+                    <img src={g} alt="google" width="25" />
                   </div>
                   <div className="col-6">Inicia con Google</div>
                 </div>
