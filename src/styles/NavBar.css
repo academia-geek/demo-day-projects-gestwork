@@ -41,8 +41,8 @@
     font-weight: 400;
     font-size: 22px;
 }
-.subtitle_navBar  > h4{
-    color:#fff;
+.subtitle_navBar{
+    color:#fff !important;
 }
 @media (max-width: 525px) {
     .sub_navBar {

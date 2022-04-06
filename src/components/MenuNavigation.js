@@ -20,7 +20,7 @@ export const MenuNavigation = () => {
         <Link to="/*">
           <img
             className="logoImg mt-2"
-            style={{ width: "200px", marginLeft: "5%" }}
+            style={{ width: "180px", marginLeft: "5%" }}
             src="https://res.cloudinary.com/df90q7vvj/image/upload/v1649206712/GestWork/Gestworkblanco_m96cac.png"
             alt=""
           />
