@@ -15,7 +15,6 @@ const DetailProcess = () => {
   const [detailItem, setDetailItem] = useState([]);
   const dispatch = useDispatch();
   const { process } = useSelector((store) => store.process);
-  console.log(process);
 
   useEffect(() => {
     dispatch(listProcessAsync());
@@ -114,7 +113,7 @@ const DetailProcess = () => {
           </Col>
           <Col xs={3}>
             <Row className="mt-4">
-              <h3 className="title__section h3">Documento de la iniciativa</h3>
+              <h3 className="title__section docH3">Documento de la iniciativa</h3>
             </Row>
             <Row className="w-59 mt-4">
               <div>

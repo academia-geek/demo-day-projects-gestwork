@@ -158,16 +158,12 @@ export const Register = () => {
 </div>
 
 </div>
-<div className="">
+<div style={{marginLeft: "25%"}} >
       <p>
-        {" "}
        Ya tienes cuenta? <Link to="/login" className="linkini">Inicia sesión</Link>
       </p>
     </div>
 
-{/* <button className="btn btn-danger mt-3 ml-3" type="reset">
-      Google
-    </button> */}
 <button className="Btn btn align-items-center" id='centrar' type="submit">
  Registrar
 </button>

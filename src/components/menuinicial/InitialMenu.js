@@ -6,8 +6,12 @@ import { Link } from "react-router-dom";
 import { DocumentUpload, Copy, ChatOption, Attachment } from "grommet-icons";
 import "./styleinitmenu.css";
 
-import { Container, Form, Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 import UserPerfil from "../../hooks/UserPerfil";
+import { Avatar, Box, Toolbar } from "@material-ui/core";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
+import Button from "@mui/material/Button";
 
 const InitialMenu = () => {
   const user = UserPerfil();
@@ -15,47 +19,63 @@ const InitialMenu = () => {
 
   return (
     <div>
-
-    <div  id='navbarmenu'>
-
-    <Navbar bg="light" className='container-fluid d-flex justify-content-end t-0' id='mm'>
-      <Container fluid className='container-fluid d-flex justify-content-end t-0'>
-     <Link to='/*'>  <img className="logoImg " style={{width:"200px",marginRight:"610px"}} src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png" alt=""/>
-     </Link>
-       
-            <Form className="sub_navBar">
-              <Link to="/profile" className="link-name">
-                <div className="subtitle_navBar container-fluid d-flex justify-content-end">
-                  <h4>
-                    {" "}
-                    {user.nombre !== undefined
-                      ? user.nombre
-                      : (user.nombre = "")}
-                  </h4>
-                </div>
-              </Link>
-
-              <div className="d-flex p-1">
-                {user.foto !== undefined ? (
-                  <img className="phone__profile" src={user.foto} alt="Foto" />
-                ) : (
-                  (user.foto =
-                    "https://res.cloudinary.com/df90q7vvj/image/upload/v1648860811/GestWork/23408e565fc3f43454636fec27572d1f_v8bhk3.jpg")
-                )}
-              </div>
-            </Form>
+      <div id="navbarmenu">
+        <Navbar
+          bg="light"
+          className="container-fluid d-flex justify-content-end t-0"
+          id="mm"
+        >
+          <Container
+            fluid
+            className="container-fluid d-flex justify-content-end t-0"
+          >
+            <Link to="/*">
+              {" "}
+              <img
+                className="logoImg "
+                style={{ width: "200px", marginRight: "682px" }}
+                src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
+                alt=""
+              />
+            </Link>
+            <Toolbar disableGutters>
+              <Box
+                sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+              ></Box>
+              <Box sx={{ flexGrow: 0 }}>
+                <Tooltip title="Open settings">
+                  <IconButton sx={{ p: 0 }}>
+                    <Link to="/profile" className="link-name">
+                      <Button className="nameuserMenu" color="inherit">
+                        {user.nombre !== undefined
+                          ? user.nombre
+                          : (user.nombre = "")}
+                      </Button>
+                    </Link>
+                    {user.foto !== undefined ? (
+                      <Avatar alt="Remy Sharp" src={user.foto} />
+                    ) : (
+                      (user.foto =
+                        "https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png")
+                    )}
+                  </IconButton>
+                </Tooltip>
+              </Box>
+            </Toolbar>
           </Container>
         </Navbar>
       </div>
       <div id="servicios" className="block servicios">
-        <div className="container">
-          <h3 className="text-center title__section titleMenu">Usa Gestwork</h3>
-          <h6 className="text-center my-5">
-            La tecnología que te ayuda a gestionar el rendimiento de tu
-            organización
+        <div className="containerAdd navbarmenu"></div>
+        <div id="servicios" className="block servicios">
+          <div className="container">
+            <h3 className="text-center title__section titleMenu">
+              Usa Gestwork
+            </h3>
+            <h6 className="text-center my-5">
+              La tecnología que te ayuda a gestionar el rendimiento de tu
+              organización.
             </h6>
-            
-        
           </div>
           <div className="container">
             <div className="row box">
@@ -67,7 +87,7 @@ const InitialMenu = () => {
                   <div className="text">
                     <h5 className="text">Procesos activos</h5>
                     <p className="mb-0">
-                      Podras ver todo lo que debes resolver de forma ugente.
+                      Podras ver todo lo que debes resolver de forma urgente.
                     </p>
                   </div>
                 </Link>
@@ -79,7 +99,7 @@ const InitialMenu = () => {
                     <Attachment size="large" color="#05BE50" />
                   </div>
                   <h5 className="text">Procesos asignados</h5>
-                  <p className="mb-0">Cuanta tarea tienes por resolver</p>
+                  <p className="mb-0">Cuanta tarea tienes por resolver.</p>
                 </Link>
               </div>
             </div>
@@ -90,7 +110,7 @@ const InitialMenu = () => {
                     <DocumentUpload size="large" color="#05BE50" />
                   </div>
                   <h5 className="text">Subir procesos</h5>
-                  <p className="mb-0">Sube y asigna procesos </p>
+                  <p className="mb-0">Sube y asigna procesos.</p>
                 </Link>
               </div>
 
@@ -100,14 +120,14 @@ const InitialMenu = () => {
                     <ChatOption size="large" color="#05BE50" />
                   </div>
                   <h5 className="text">Chat público y crea salas</h5>
-                  <p className="mb-0">Ponte en contacto con tus compañeros</p>
+                  <p className="mb-0">Ponte en contacto con tus compañeros.</p>
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 

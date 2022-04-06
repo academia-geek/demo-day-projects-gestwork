@@ -34,7 +34,9 @@ h5,
 h6 {
   font-weight: 500;
 }
-
+.btn-landing{
+  text-transform: capitalize;
+}
 .destaque{
   color: var(--primary);
 }
@@ -42,7 +44,9 @@ h6 {
 .destaque:hover {
   color: var(--secondary);
 }
-
+.logoL{
+  margin-left: 6%;
+}
 .title {
   text-transform: uppercase;
   padding-bottom: 2rem;

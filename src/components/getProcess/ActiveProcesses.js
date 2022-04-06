@@ -36,7 +36,7 @@ export const ActiveProcesses = () => {
             className="me-3  p-3 d-flex"
             style={{ justifyContent: "center" }}
           >
-            <h2 className="title__section">Procesos Activos</h2>
+            <h2 className="title__section text-center">Procesos Activos</h2>
           </div>
           <SearchProcesses />
           <section className="m-3">

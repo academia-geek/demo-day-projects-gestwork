@@ -6,7 +6,9 @@
 #navbarmenu{
 width: 100%;;
 }
-
+.nameuserMenu{
+  color: var(--titlesColor) !important;
+}
 .button {
   text-transform: lowercase;
   font-weight: 500;
@@ -40,10 +42,7 @@ display: flex;
   transition: all ease-out 0.2s;
 }
 
-.subtitle_perfil_menu > h4{
-  color: var(--titlesColor);
-  font-weight: 400;
-}
+
 #servicios .destaque:hover {
   /* background:linear-gradient(white, #05BE50); */
   border: 1px solid #05BE50;

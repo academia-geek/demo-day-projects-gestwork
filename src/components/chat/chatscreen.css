@@ -1,9 +1,7 @@
 .chat__input{
-    margin: auto !important;
-    width:75%;
-    height:135px;
+    width:72%;
+    height:115px;
     position:absolute;
     bottom:0;
-    background-color:rgb(8, 8, 8) !important;
 }
 

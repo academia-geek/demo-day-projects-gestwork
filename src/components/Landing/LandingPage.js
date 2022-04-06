@@ -11,10 +11,10 @@ const LandingPage = () => {
         <nav className="navbar navbar-expand-ms">
           <div className="container-fluid CL">
             <img
-              classNam="logoL"
+              className="logoL"
               width="310"
-              src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
-              alt=""
+              src="https://res.cloudinary.com/df90q7vvj/image/upload/v1649207772/GestWork/GestworkAzul_lfe7yf.svg"
+              alt="logo"
             />
           </div>
         </nav>
@@ -24,7 +24,8 @@ const LandingPage = () => {
         <div className="container pt-5">
           <div className="row">
             <div className="col-md-4 align-self-center mb-md-0 mb-4 gest">
-              <h1 className="title__section my-4">Gestwork.</h1>
+              <h2 className="title title__section">Gestwork </h2>
+
               <p className="mb-4 p">
                 La importancia de la tecnología en los procesos de gestión y
                 comunicación.
@@ -36,7 +37,7 @@ const LandingPage = () => {
                   to="/*"
                   className="btn w-50 to d-md-inline-block d-block "
                 >
-                  <h6 style={{ color: "white" }} className="fw-normal ">
+                  <h6 style={{ color: "white" }} className="fw-normal btn-landing">
                     Ir App
                   </h6>
                 </Link>
@@ -76,7 +77,9 @@ const LandingPage = () => {
       </div>
       <div id="servicos" className="block servicios">
         <div className="container">
-          <h4 className="title text-center title__section my-4">Beneficios Gestwork</h4>
+          <h4 className="title text-center title__section my-4">
+            Beneficios Gestwork
+          </h4>
         </div>
         <div className="container">
           <div className="row">
@@ -136,11 +139,6 @@ const LandingPage = () => {
             <section className="">
               <form action="">
                 <div className="row d-flex justify-content-center">
-                  {/* <div className="col-auto">
-            <p className="pt-2">
-              <strong></strong>
-            </p>
-          </div> */}
                 </div>
               </form>
             </section>
