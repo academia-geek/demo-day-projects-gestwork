@@ -11,6 +11,7 @@ import {
 } from "firebase/firestore";
 import UserPerfil from "../../hooks/UserPerfil";
 import Mensaje from "../chat/Mensaje";
+import './chatscreen.css'
 
 const firestore = getFirestore(app);
 

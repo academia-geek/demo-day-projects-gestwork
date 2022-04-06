@@ -17,6 +17,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.title-active{
+  text-align: center !important;
+}
 .btn__process {
   width: 15%;
   margin: auto;
@@ -40,6 +44,7 @@
   padding-left: 2%;
   border: 1px solid rgb(149, 149, 170);
 }
+
 .input__search {
   width: 80%;
   margin-right: 3px;
@@ -52,4 +57,13 @@
   font-weight: 350;
   color: var(--titlesColor);
   font-size: 22px;
+}
+.etiqueta{
+    background-color: rgb(164, 180, 202);
+    color:gray;
+    
+    font-weight: 550;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
 }
