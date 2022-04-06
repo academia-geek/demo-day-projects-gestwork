@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import UserPerfil from "../hooks/UserPerfil";
-import '../styles/StyleProfile.css'
+import "../styles/StyleProfile.css";
 import { MenuNavigation } from "./MenuNavigation";
 import { NavBar } from "./NavBar";
 
@@ -10,8 +10,8 @@ export const Profile = () => {
 
   return (
     <div>
-       <NavBar />
-    <MenuNavigation/>
+      <NavBar />
+      <MenuNavigation />
       <div className="containerAdd containerProfile w-95">
         <form className="form-group form-profile mt-0">
           <Row className="row-form mt-0">
@@ -37,7 +37,7 @@ export const Profile = () => {
                     name="nombre"
                     value={user.nombre}
                     autoComplete="off"
-                    required
+                    disabled
                   />
                 </Col>
               </Row>
@@ -51,20 +51,12 @@ export const Profile = () => {
                     name="correo"
                     value={user.correo}
                     autoComplete="off"
-                    required
+                    disabled
                   />
                 </Col>
               </Row>
             </Col>
           </Row>
-
-          <div className=" mt-4 container-btn-add">
-            <input
-              value="GUARDAR CAMBIOS"
-              type="submit"
-              className="btn btn-profile px-5"
-            />
-          </div>
         </form>
       </div>
     </div>

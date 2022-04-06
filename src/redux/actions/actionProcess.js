@@ -66,7 +66,7 @@ export const editProcessAsync = (id, contentAll) => {
 
       position: 'center',
       icon: 'success',
-      title: 'Proceso editado con exito.',
+      title: 'Proceso editado con éxito.',
       showConfirmButton: true,
       timer: 5000
     })   
@@ -90,8 +90,6 @@ export const deleteProcess = (id) => {
   };
 };
 
-
-
 export const deleteProcessSync = (id) => {
   return {
       type: typesProcess.delete,
@@ -111,10 +109,11 @@ export const addProcessAsync = (newProcess) => {
 
             position: 'center',
             icon: 'success',
-            title: 'Proceso subido con exito.',
+            title: 'Proceso subido con éxito.',
             showConfirmButton: false,
             timer: 5000
-          })    
+          })  
+          dispatch(addNotificationsAsync());  
       })
       .catch((error) => {
         console.log(error);
@@ -127,3 +126,43 @@ export const addProcessSync = (process) => {
     payload: process,
   };
 };
+
+export const addNotificationsAsync = (NewNotification) => {
+  return (dispatch) => {
+    addDoc(collection(db, "notifications"), NewNotification )
+    .then((resp) => {
+      dispatch(addNotificationsSync(NewNotification))
+    })
+    .catch((error)=> {
+      console.log(error);
+    })
+  }
+}
+export const addNotificationsSync = (notification) => {
+  return {
+    type: typesProcess.addNotifications,
+    payload: notification
+  }
+}
+
+
+export const  listNotificationsAsync = () => {
+  return async(dispatch) => {
+    const queryNotification = await getDocs(collection(db, "notifications"));
+    const dbNotifications =[];
+    queryNotification.forEach((doc) => {
+      let data = doc.data();
+      data["id"] = doc.id;
+      dbNotifications.push({
+        ...data,
+      });
+    });
+    dispatch(listNotificationsSync(dbNotifications))
+  }
+}
+export const  listNotificationsSync = (notification) => {
+  return {
+    type: typesProcess.listNotifications,
+    payload: notification
+  }
+}

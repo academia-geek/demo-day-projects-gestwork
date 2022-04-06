@@ -13,7 +13,7 @@ const LandingPage = () => {
             <img
               classNam="logoL"
               width="310"
-              src="https://res.cloudinary.com/df90q7vvj/image/upload/v1648513403/GestWork/Free_Sample_By_Wix_1_lvgyss.jpg"
+              src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
               alt=""
             />
           </div>
@@ -24,11 +24,10 @@ const LandingPage = () => {
         <div className="container pt-5">
           <div className="row">
             <div className="col-md-4 align-self-center mb-md-0 mb-4 gest">
-              <h1>Gestwork.</h1>
+              <h1 className="title__section my-4">Gestwork.</h1>
               <p className="mb-4 p">
-                {" "}
                 La importancia de la tecnología en los procesos de gestión y
-                comunicación
+                comunicación.
               </p>
               <div className="home-btn">
                 <Link
@@ -37,7 +36,7 @@ const LandingPage = () => {
                   to="/*"
                   className="btn w-50 to d-md-inline-block d-block "
                 >
-                  <h6 style={{ color: "black" }} className="fw-normal ">
+                  <h6 style={{ color: "white" }} className="fw-normal ">
                     Ir App
                   </h6>
                 </Link>
@@ -59,7 +58,7 @@ const LandingPage = () => {
               <img src={servicio} alt="" className="img-fluid" />
             </div>
             <div className="col-md-6 align-self-center order-md-2 order-1 mb-md-0 mb-4">
-              <h2 className="title">Servicio </h2>
+              <h2 className="title title__section">Servicio </h2>
 
               <p>
                 Es poder tener un lugar de control para gestionar cada proceso y
@@ -77,7 +76,7 @@ const LandingPage = () => {
       </div>
       <div id="servicos" className="block servicios">
         <div className="container">
-          <h4 className="title text-center">Beneficios Gestwork</h4>
+          <h4 className="title text-center title__section my-4">Beneficios Gestwork</h4>
         </div>
         <div className="container">
           <div className="row">
@@ -86,9 +85,9 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Tareas mas organizadas</h5>
+                <h5 className="text-uppercase">Tareas más organizadas</h5>
                 <p className="mb-0">
-                  Poder organizar, es poder optimizar tu tiempo
+                  Poder organizar, es poder optimizar tu tiempo.
                 </p>
               </Link>
             </div>
@@ -98,8 +97,8 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Centralizar informacion</h5>
-                <p className="mb-0">Unicamente la informacion de tu empresa</p>
+                <h5 className="text-uppercase">Centralizar información</h5>
+                <p className="mb-0">Unicamente la información de tu empresa.</p>
               </Link>
             </div>
           </div>
@@ -111,7 +110,7 @@ const LandingPage = () => {
                 </div>
                 <h5 className="text-uppercase">Priorizar procesos</h5>
                 <p className="mb-0">
-                  Poder priorizar tus tareas y asi cumplir a tiempo
+                  Poder priorizar tus tareas y asi cumplir a tiempo.
                 </p>
               </Link>
             </div>
@@ -121,9 +120,9 @@ const LandingPage = () => {
                 <div className="img-container mb-3">
                   <img src="" alt="" className="img-fluid" />
                 </div>
-                <h5 className="text-uppercase">Mayor Gestiòn</h5>
+                <h5 className="text-uppercase">Mayor Gestión</h5>
                 <p className="mb-0">
-                  Gestiona y optimiza el tiempo de tus colaboradores
+                  Gestiona y optimiza el tiempo de tus colaboradores.
                 </p>
               </Link>
             </div>

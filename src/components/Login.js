@@ -69,7 +69,7 @@ const handleGoogle = () =>{
               />
             </div>
             <div className="my-3">
-              <span  >
+              <span>
                 {" "}
                 No tienes cuenta? <Link to="/register" className="linkregistro">Registrate</Link>
               </span>

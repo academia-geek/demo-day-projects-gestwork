@@ -4,12 +4,11 @@ body {
 .containerAdd {
   width: 67% !important;
   margin-left: 28% !important;
-  
 }
 
 .subtitle-text {
   color: var(--titlesColor);
-  font-weight: 400;
+  font-weight: 300;
 }
 .col-resum {
   text-align: center;
@@ -26,6 +25,7 @@ body {
 .btn-add-process {
   background-color: var(--btnbg) !important;
   color: var(--btnColor) !important;
+  margin-bottom: 2%;
 }
 
 .btn-add-process::placeholder {

@@ -13,9 +13,10 @@ const Mensaje = ({ mensajeFirebase }) => {
           </span>
         </h4>
         <p>{mensajeFirebase.mensaje}</p>
+        {/* style={{ color: "black" }} */}
       </div>
     </div>
   );
-};
+}; 
 
 export default Mensaje;

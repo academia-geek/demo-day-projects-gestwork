@@ -93,7 +93,7 @@ export const AddProcess = () => {
           <Row className="row-form mt-0">
             <Col xs={4} className="col-file">
               <h2 className="subtitle-text mb-4">Sube tu proceso</h2>
-              <label className="mb-3">Sube propuesta</label>
+              <label className="mb-3">Por favor subir archivos en formato pdf</label>
               <br />
               <input
                 id="fileSelector"
@@ -211,7 +211,6 @@ export const AddProcess = () => {
           </div>
         </form>
       </div>
-      <MenuNavigation />
     </div>
   );
 };
