@@ -21,7 +21,7 @@ export const MenuNavigation = () => {
           <img
             className="logoImg mt-2"
             style={{ width: "200px", marginLeft: "5%" }}
-            src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
+            src="https://res.cloudinary.com/df90q7vvj/image/upload/v1649206712/GestWork/Gestworkblanco_m96cac.png"
             alt=""
           />
         </Link>

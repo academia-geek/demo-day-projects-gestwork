@@ -11,12 +11,19 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.btn__process--assigned {
-  width: 250%;
-  background-color: #05be50;
-  color: #fff;
+
+.btnAssign{
+  color: #fff !important;
+}
+
+.card-assign{
   border: none;
-  margin-top: 12%;
-  padding: 3px;
-  border-radius: 5px;
+}
+
+.title-assign{
+  margin-top: 50% !important;
+}
+
+.containerAssigned{
+  display: flex;
 }

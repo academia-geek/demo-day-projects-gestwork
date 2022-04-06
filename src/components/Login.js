@@ -38,10 +38,11 @@ const handleGoogle = () =>{
           <img className="bg mt-5" src={icon1} alt="icon1" width='460' />
         </div>
         <div className="col">
-          <div className="text-end">
-            <Link className='a' to='/landing'>GestWork</Link>
+
+          <h2 className="text-center B pt-5">Bienvenido a</h2>
+          <div className="text-center mb-4">
+            <Link className='a ' to='/landing'>GestWork</Link>
           </div>
-          <h2 className="text-center B py-5">Bienvenido</h2>
 
           {/* login */}
           <form onSubmit={handleLogin}>

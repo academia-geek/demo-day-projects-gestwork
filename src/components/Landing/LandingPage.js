@@ -11,10 +11,10 @@ const LandingPage = () => {
         <nav className="navbar navbar-expand-ms">
           <div className="container-fluid CL">
             <img
-              classNam="logoL"
+              className="logoL"
               width="310"
-              src="https://res.cloudinary.com/dss4kjwzk/image/upload/v1649172010/GestWork/Gestwork_oieal5.png"
-              alt=""
+              src="https://res.cloudinary.com/df90q7vvj/image/upload/v1649207772/GestWork/GestworkAzul_lfe7yf.svg"
+              alt="logo"
             />
           </div>
         </nav>

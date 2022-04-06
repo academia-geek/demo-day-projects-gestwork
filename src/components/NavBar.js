@@ -7,7 +7,6 @@ import Notifications from "./Notifications";
 
 export const NavBar = () => {
   const user = UserPerfil();
-  console.log(user);
 
   return (
     <Navbar

@@ -42,7 +42,9 @@ h6 {
 .destaque:hover {
   color: var(--secondary);
 }
-
+.logoL{
+  margin-left: 6%;
+}
 .title {
   text-transform: uppercase;
   padding-bottom: 2rem;

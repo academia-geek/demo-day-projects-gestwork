@@ -15,7 +15,6 @@ const DetailProcess = () => {
   const [detailItem, setDetailItem] = useState([]);
   const dispatch = useDispatch();
   const { process } = useSelector((store) => store.process);
-  console.log(process);
 
   useEffect(() => {
     dispatch(listProcessAsync());
