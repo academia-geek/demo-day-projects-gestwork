@@ -16,7 +16,7 @@ podras clonar y/o forkear el codigo de gestwork haciendo uso del git clone o git
 
 Podras hacer uso del comando  *npm install* y asi instalar todas las dependencias y librerias usadas en el proyecto, para correar el proyecto hacer uso de *npm start*
 
-![image](https://drive.google.com/drive/folders/1ccYrWkNUWajxeJXFrLTpC4_Mts5ElR7T)
+![image](https://ibb.co/zfQ5CJb)
 
 
 
