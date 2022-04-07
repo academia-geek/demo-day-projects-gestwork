@@ -3,9 +3,13 @@
 ##  Gestwork
 Gestwork es poder tener un lugar de control para gestionar cada proceso y cada parte de este; esto es indispensable para un mayor crecimiento y tener la posibilidad de darle visibilidad y prioridad a tus solicitudes e ideas, con gestwork no hay espacio para perdidas de información y así todo tu equipo podrá mantenerse conectado en una misma red.
 
-### Link Despliegue
+*********************
+
+### Despliegue 📦
 
 [Link del despliegue](https://gestwork-bad1b.web.app/landing)
+
+*********************
 
  ### Tecnologias usadas
 
