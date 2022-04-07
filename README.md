@@ -12,7 +12,7 @@ Gestwork es poder tener un lugar de control para gestionar cada proceso y cada p
 
 podras clonar y/o forkear el codigo de gestwork haciendo uso del git clone o git fork, según sea el caso
 
-### Correar App
+### Correr App
 
 Podras hacer uso del comando  *npm install* y asi instalar todas las dependencias y librerias usadas en el proyecto, para correar el proyecto hacer uso de *npm start*
 
