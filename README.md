@@ -1,7 +1,8 @@
 # Hi there 👋 Gestwork
 
 ##  Gestwork
-Gestwork es poder tener un lugar de control para gestionar cada proceso y cada parte de este; esto es indispensable para un mayor crecimiento y tener la posibilidad de darle visibilidad y prioridad a tus solicitudes e ideas, con gestwork no hay espacio para perdidas de información y así todo tu equipo podrá mantenerse conectado en una misma red.
+Es poder tener un lugar de control para gestionar cada proceso; esto es indispensable para un mayor crecimiento y tener la posibilidad de darle visibilidad y prioridad a las solicitudes e ideas, con gestwork no hay espacio para pérdidas de información y así todo su equipo podrá mantenerse
+conectado en una misma red.
 
 *********************
 
@@ -10,10 +11,16 @@ Gestwork es poder tener un lugar de control para gestionar cada proceso y cada p
 [Link del despliegue](https://gestwork-bad1b.web.app/landing)
 
 *********************
+### Wiki 📖
 
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/academia-geek/demo-day-projects-gestwork/wiki)
+
+**********************
  ### Tecnologias usadas
 
 `REACT JS / REDUX /FIREBASE / BOOTSTRAP/ CSS`
+
+*********************
 
 ### Clonar repositorio
 
