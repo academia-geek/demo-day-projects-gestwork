@@ -41,9 +41,3 @@ podras clonar y/o forkear el codigo de gestwork haciendo uso del git clone o git
 * Anyelith Jacobo   - Desarrolladora frontend - [anyelithj](https://github.com/anyelithj)
 * Juliana Jimenez   - Desarrolladora frontend - [Jimenezo94](https://github.com/Jimenezo94)
 
-#### Landing page
- ![Image text](https://res.cloudinary.com/dpczuiwwq/image/upload/v1649348054/image_qqcj3h.jpg)
- 
- #### Login inicio
-
-![Image text](https://res.cloudinary.com/dpczuiwwq/image/upload/v1649345475/imagelogin_xuhmak.png)
