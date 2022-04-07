@@ -15,9 +15,11 @@ https://gestwork-bad1b.web.app/landing
 
 podras clonar y/o forkear el codigo de gestwork haciendo uso del git clone o git fork, según sea el caso
 
-### Correar App
+### instalar y Correar  App
 
-Podras hacer uso del comando  `npm install` para instalar todas las dependencias y librerias usadas en el proyecto, podrás correr el proyecto hacer uso de `npm install`
+- Podras hacer uso del comando  `npm install` para instalar todas las dependencias y librerias usadas en el proyecto
+
+- podrás correr el proyecto hacer uso de `npm run start`
 
 #### Landing page
  ![Image text](https://res.cloudinary.com/dpczuiwwq/image/upload/v1649348054/image_qqcj3h.jpg)
