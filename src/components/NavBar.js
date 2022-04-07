@@ -2,7 +2,6 @@ import React from "react";
 import UserPerfil from "../hooks/UserPerfil";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
-import Notifications from "../components/notifications/Notifications";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -40,8 +39,5 @@ export const NavBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-
-    //       {/* <Notifications/> */}
-
   );
 };

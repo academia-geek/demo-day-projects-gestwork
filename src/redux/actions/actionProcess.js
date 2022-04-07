@@ -113,7 +113,6 @@ export const addProcessAsync = (newProcess) => {
             showConfirmButton: false,
             timer: 5000
           })  
-          dispatch(addNotificationsAsync());  
       })
       .catch((error) => {
         console.log(error);
@@ -127,42 +126,5 @@ export const addProcessSync = (process) => {
   };
 };
 
-export const addNotificationsAsync = (NewNotification) => {
-  return (dispatch) => {
-    addDoc(collection(db, "notifications"), NewNotification )
-    .then((resp) => {
-      dispatch(addNotificationsSync(NewNotification))
-    })
-    .catch((error)=> {
-      console.log(error);
-    })
-  }
-}
-export const addNotificationsSync = (notification) => {
-  return {
-    type: typesProcess.addNotifications,
-    payload: notification
-  }
-}
 
 
-export const  listNotificationsAsync = () => {
-  return async(dispatch) => {
-    const queryNotification = await getDocs(collection(db, "notifications"));
-    const dbNotifications =[];
-    queryNotification.forEach((doc) => {
-      let data = doc.data();
-      data["id"] = doc.id;
-      dbNotifications.push({
-        ...data,
-      });
-    });
-    dispatch(listNotificationsSync(dbNotifications))
-  }
-}
-export const  listNotificationsSync = (notification) => {
-  return {
-    type: typesProcess.listNotifications,
-    payload: notification
-  }
-}
