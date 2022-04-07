@@ -7,7 +7,7 @@ Gestwork es poder tener un lugar de control para gestionar cada proceso y cada p
 
 https://gestwork-bad1b.web.app/landing
 
- ## Tecnologias usadas
+ ### Tecnologias usadas
 
 `REACT JS / REDUX /FIREBASE / BOOTSTRAP/ CSS`
 
