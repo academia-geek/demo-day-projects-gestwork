@@ -34,10 +34,12 @@ podras clonar y/o forkear el codigo de gestwork haciendo uso del git clone o git
 
 - podrás correr el proyecto hacer uso de `npm run start`
 
+**********************
+
 ### Autoras ✒️
-Damaris Hernandez - Desarrolladora frontend - [damarislh10](https://github.com/damarislh10)
-Anyelith Jacobo   - Desarrolladora frontend - [anyelithj](https://github.com/anyelithj)
-Juliana Jimenez   - Desarrolladora frontend - [Jimenezo94](https://github.com/Jimenezo94)
+* Damaris Hernandez - Desarrolladora frontend - [damarislh10](https://github.com/damarislh10)
+* Anyelith Jacobo   - Desarrolladora frontend - [anyelithj](https://github.com/anyelithj)
+* Juliana Jimenez   - Desarrolladora frontend - [Jimenezo94](https://github.com/Jimenezo94)
 
 #### Landing page
  ![Image text](https://res.cloudinary.com/dpczuiwwq/image/upload/v1649348054/image_qqcj3h.jpg)
