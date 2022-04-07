@@ -16,7 +16,7 @@ conectado en una misma red.
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/academia-geek/demo-day-projects-gestwork/wiki)
 
 **********************
- ### Tecnologias usadas
+ ### Tecnologias usadas 💻
 
 `REACT JS / REDUX /FIREBASE / BOOTSTRAP/ CSS`
 
@@ -25,6 +25,8 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 ### Clonar repositorio
 
 podras clonar y/o forkear el codigo de gestwork haciendo uso del git clone o git fork, según sea el caso
+
+*********************
 
 ### instalar y Correar  App
 
