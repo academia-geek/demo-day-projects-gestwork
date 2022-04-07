@@ -8,7 +8,7 @@ import "../../styles/StyleDetailProcess.css";
 import { convertirID } from "../helpers/ConvertirId";
 import { MenuNavigation } from "../MenuNavigation";
 import { NavBar } from "../NavBar";
-import Notifications from "../notifications/Notifications";
+
 
 const DetailProcess = () => {
   const { id } = useParams();

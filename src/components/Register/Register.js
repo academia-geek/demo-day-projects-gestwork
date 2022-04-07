@@ -51,9 +51,8 @@ export const Register = () => {
     },
   });
   return (
-     <div className="container mt-3 pt-2 body">
+    <div className="container mt-3 pt-2 body">
     <div className="row">
-
       <div className="col-md-4">
         <h2 className='input mb-4'> Registrate en Gestwork </h2>
       <form className=" mb-4" onSubmit={formik.handleSubmit}>

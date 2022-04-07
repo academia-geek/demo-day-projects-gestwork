@@ -15,6 +15,4 @@ export const typesProcess = {
   edit: "edit",
   delete: "delete",
   searchProcess: "searchProcess",
-  addNotifications: "addNotifications",
-  listNotifications: " listNotifications"
 };
