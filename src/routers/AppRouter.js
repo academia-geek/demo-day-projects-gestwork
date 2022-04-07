@@ -5,10 +5,9 @@ import { DashboardRoutes } from "./DashboardRoutes";
 import PrivateRoute from "../routers/PrivateRoute";
 import PublicRoute from "../routers/PublicRoute";
 import { useEffect, useState } from "react";
-
-import { Register } from "../components/register/Register";
+import LandingPage from '../components/Landing/LandingPage'
 import { Spinner } from "../components/accesories/Spinner";
-import LandingPage from "../components/landing/LandingPage";
+import { Register } from "../components/Register/Register";
 
 function AppRouter() {
   const [checking, setChecking] = useState(true);
@@ -38,7 +37,7 @@ function AppRouter() {
       
       <PublicRoute>
 
-      <LandingPage />
+      <LandingPage/>
       </PublicRoute>
       }
       />
@@ -55,7 +54,7 @@ function AppRouter() {
           path="/register"
           element={
             <PublicRoute isAuthenticated={isLoggedIn}>
-              <Register />
+              <Register/>
             </PublicRoute>
           }
         />
