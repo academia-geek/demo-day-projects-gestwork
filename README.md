@@ -5,7 +5,7 @@ Gestwork es poder tener un lugar de control para gestionar cada proceso y cada p
 
 ### Link Despliegue
 
-[Link 5 por que](https://gestwork-bad1b.web.app/landing)
+[Link del despliegue](https://gestwork-bad1b.web.app/landing)
 
  ### Tecnologias usadas
 
