@@ -1,4 +1,4 @@
-# Hi there 👋 ![image](https://res.cloudinary.com/df90q7vvj/image/upload/v1649207772/GestWork/GestworkAzul_lfe7yf.svg)
+# Hi there 👋 <img src="https://res.cloudinary.com/df90q7vvj/image/upload/v1649207772/GestWork/GestworkAzul_lfe7yf.svg" style="width: 200px;" >
 
 
 ##  Gestwork
