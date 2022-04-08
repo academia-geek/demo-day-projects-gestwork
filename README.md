@@ -29,7 +29,7 @@ podras clonar y/o forkear el código de Gestwork haciendo uso del git clone o gi
 
 *********************
 
-### instalar y Ejecutar el aplicativo
+### Instalar y Ejecutar el aplicativo
 
 - Podras hacer uso del comando  `npm install` para instalar todas las dependencias y librerias usadas en el proyecto
 
