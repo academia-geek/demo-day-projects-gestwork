@@ -25,7 +25,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 ### Clonar repositorio
 
-podras clonar y/o forkear el codigo de Gestwork haciendo uso del git clone o git fork, según sea el caso
+podras clonar y/o forkear el codigo de Gestwork haciendo uso del git clone o git fork, según sea el caso.
 
 *********************
 
