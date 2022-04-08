@@ -17,7 +17,7 @@ conectado en una misma red.
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/academia-geek/demo-day-projects-gestwork/wiki).
 
 **********************
- ### Tecnologias usadas 💻
+ ### Tecnologías usadas 💻
 
 `REACT JS / REDUX /FIREBASE / BOOTSTRAP/ CSS`
 
